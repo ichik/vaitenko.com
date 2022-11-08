@@ -1,0 +1,16 @@
+.clip.intro .inner {
+    gap: var(--space-2xs);
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-links {
+    flex-direction: row;
+    gap: var(--space-xs);
+}
+.intro-links li {
+    list-style-type: none;
+}

@@ -1,0 +1,14 @@
+* {
+    scrollbar-color: var(--fg) transparent;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--fg);
+}

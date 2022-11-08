@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="{{ description }}"/>
+        <meta name="viewport"
+              content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no"/>
+        <title>{{ title }} | Portfolio of Vadim Vaitenko</title>
+        <link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
+        <link rel="apple-touch-icon" href="../apple-touch-icon.png"/>
+        <link rel="manifest" href="../manifest.webmanifest"/>
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:description" content="{{ description }}">
+        <meta property="og:image"
+              content="https://vaitenko.com/{{ slug }}/images/og.webp">
+        <link rel="preload" as="style" type="text/css" href="../style/style.css"/>
+        <link rel="stylesheet" href="../style/style.css"/>
+        {% block colors %}{% endblock %}
+    </head>
+    <body>
+        {% include 'partials/homelink.njk' %}
+        <main class="case-grid">
+            <h1>{{ title }}</h1>
+            {% block content %}{% endblock %}
+        </main>
+        {% include 'partials/footer.njk' %}
+    </body>
+</html>
+</endblock>

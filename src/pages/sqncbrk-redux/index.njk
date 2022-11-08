@@ -1,0 +1,257 @@
+{% extends "case.njk" %}
+{% set title = 'SqncBrk Redux' %}
+{% set slug = 'sqncbrk-redux' %}
+{% set description = 'A redesign of SqncBrk done in 2015–2016, personal project dedicated to the games of metroidvania genre' %}
+{% block colors %}
+    <style type="text/css">
+            :root {
+                --bg: #000a14;
+                --fg: #fffcfa;
+                --card-bg: #291600;
+                --link: #ff8800;
+                --link-underline: #fda947;
+                --link-hover: #ffe7cc;
+                --link-hover-underline: #fffcfa;
+            }
+    </style>
+{% endblock %}
+{% block content %}
+    <p>
+        In May of 2014 I've launched a
+        <a href="https://sqncbrk.com">site about metroidvanias</a>. It was a hasty launch
+        with a lot of tinkering afterwards. A year later I've decided to remake it from
+        scratch.
+    </p>
+    <p>
+        <em>
+            This case study describes creation of 2015–2016 version of SqncBrk that was live
+            until early 2019 when I redesigned it once again. I urge you to read a
+            <a href="../sqncbrk/">case study</a> about that.
+        </em>
+    </p>
+    <figure class="full">
+        <img srcset="images/splash-400.webp 400w,
+                     images/splash-600.webp 600w,
+                     images/splash-800.webp 800w,
+                     images/splash-1000.webp 1000w,
+                     images/splash-1600.webp 1600w"
+             sizes="100vw"
+             src="images/splash-400.webp"
+             alt="Pixel art of a flying piece of earth with grass in it. Red and orange title “The Sequence Break” in English and Japanese on it"
+             width="4"
+             height="3"
+             loading="eager"/>
+        <figcaption>
+            Main visual motif
+        </figcaption>
+    </figure>
+    <p>
+        Initial site used Wordpress as a backend with the Ink theme by
+        <a href="https://codestag.com">CodeStag</a>. I've made a few tweaks and ended up
+        making a rather extensive
+        <a href="https://github.com/ichik/Sequence-Break">child theme</a> for a task that
+        was actually more of removing clutter, than adding stuff.
+    </p>
+    <figure class="full">
+        <img src="images/sidebar.gif"
+             alt="Hamburger menu sliding out from the right"
+             width="4"
+             height="3"
+             class="clamped"
+             style="--width: 400px"
+             loading="lazy"/>
+        <figcaption>
+            Side menu of original SqncBrk
+        </figcaption>
+    </figure>
+    <p>
+        So I tuned the typography, changed and added some animations, moved a few things
+        around a bit. And every time there was something in need of fixing I got that
+        feeling of inner panic that I have when I see someone else's code and have no idea
+        what's going on there. I'm not a stranger to stuff like HTML and CSS, I've written a
+        few lines of code here and there. But there's a huge difference between making JS
+        prototype and writing production code.
+    </p>
+    <figure class="full">
+        <img src="images/images.gif"
+             alt="Images covering the whole width of the page"
+             width="4"
+             height="3"
+             class="clamped"
+             style="--width: 400px"
+             loading="lazy"/>
+        <figcaption>
+            Image layout of original SqncBrkk
+        </figcaption>
+    </figure>
+    <p>
+        That didn't stop me from adding fullscreen-width images (as seen above) to blog
+        posts a few months before it became possible with a simple setting in original
+        theme.
+    </p>
+    <p>
+        In May of 2014 I've ended up with something that was looking good, but was too much
+        of a hassle to work with. There was still a lot to be done under the hood like
+        removing the usage of Fontawesome (which is awesome, but too much of an overkill for
+        a site with 3 icons).
+    </p>
+    <figure class="full">
+        <img srcset="images/last-400.webp 400w,
+                     images/last-600.webp 600w,
+                     images/last-800.webp 800w,
+                     images/last-1088.webp 1088w"
+             sizes="100vw"
+             src="images/last-400.webp"
+             alt="Screenshot of home page, headings in the center of big screenshots of games leading to individual articles"
+             width="1088"
+             height="1293"
+             loading="lazy"/>
+        <figcaption>
+            Last Wordpress version
+        </figcaption>
+    </figure>
+    <p>
+        I've started by making a basic
+        <a href="https://github.com/ichik/SqncBrk">HTML-boilerplate</a>
+        for all 4 (and a half) templates the site was using. I've loosely copied the
+        existing site layout and started polishing various layout elements in no particular
+        order.
+    </p>
+    <figure class="full">
+        <div class="video clamped" style="--width: 600px; --aspect-ratio: 4/3">
+            <video preload="metadata"
+                   autoplay
+                   loop
+                   muted
+                   playsinline
+                   poster="./video/mixblendmode.webp">
+                <source src="./video/mixblendmode.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <figcaption>
+            “Difference” blend mode on a sticky logo
+        </figcaption>
+    </figure>
+    <p>
+        At the same time I was working on something you could have noticed on the previous
+        image. I've always liked Museo, high-legible low-contrast geometric font with nice
+        cyrillic glyphs.
+    </p>
+    <figure class="full">
+        <img srcset="images/typography-400.webp 400w,
+                     images/typography-600.webp 600w,
+                     images/typography-800.webp 800w,
+                     images/typography-1000.webp 1000w,
+                     images/typography-1600.webp 1600w,
+                     images/typography-2800.webp 2800w"
+             sizes="100vw"
+             src="images/typography-400.webp"
+             alt="Typography comparison, old looser typography on the left. Tighter one on the right"
+             width="175"
+             height="127"
+             loading="lazy"/>
+        <figcaption>
+            Typography comparison, Wordpress version on the left. New on the right
+        </figcaption>
+    </figure>
+    <p>
+        Based on that fancy new search I've made a new template for search results
+        differentiating it from the homepage and providing some text description for blog
+        entries.
+    </p>
+    <figure class="full">
+        <img srcset="images/search-400.webp 400w,
+                     images/search-600.webp 600w,
+                     images/search-800.webp 800w,
+                     images/search-1000.webp 1000w,
+                     images/search-1600.webp 1600w,
+                     images/search-2800.webp 2800w"
+             sizes="100vw"
+             src="images/search-400.webp"
+             alt="Search results comparsion. Old layout mimicking index page. New more hierarchical layout"
+             width="2800"
+             height="2841"
+             loading="lazy"/>
+        <figcaption>
+            Search results comparison, Wordpress version on the left. New on the right
+        </figcaption>
+    </figure>
+    <p>
+        There was also a matter of adding proper responsive styling for nice layouts on
+        mobile and tablet. With my own CSS in place it was much easier to do that hacking
+        something on top of someone else's Wordpress theme.
+    </p>
+    <figure class="full">
+        <div class="video clamped" style="--width: 600px; --aspect-ratio: 4/3">
+            <video preload="metadata"
+                   autoplay
+                   loop
+                   muted
+                   playsinline
+                   poster="./video/responsive.webp">
+                <source src="./video/responsive.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <figcaption>
+            Responsive layout demo
+        </figcaption>
+    </figure>
+    <p>
+        At some point I started thinking that it would be actually a good idea to look for a
+        different backend. Instead of a highly complex and feature-heavy Wordpress I
+        would've prefer something simple, fast and flexible. I was in need of CMS where
+        really important things like server-side image resizing (for mobiles) were taken
+        care of. And this backend also should've been flexible to add few things missing in
+        the base package. I've ended up choosing flat-file
+        <a href="https://getgrav.org">GRAV</a> which is awesomely fast and extendable.
+    </p>
+    <p>
+        Since I have a very specific layout in mind, I wrote a plugin for my image output
+        serving it just right with the help of
+        <a href="https://github.com/dinbror/blazy/">bLazy</a> library to do the
+        lazy-loading.
+    </p>
+    <figure class="full">
+        <div class="video clamped" style="--width: 600px; --aspect-ratio: 4/3">
+            <video preload="metadata"
+                   autoplay
+                   loop
+                   muted
+                   playsinline
+                   poster="./video/textselection.webp">
+                <source src="./video/textselection.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <figcaption>
+            Text selection comparison of default and tweaked behavior
+        </figcaption>
+    </figure>
+    <p>
+        There's tons of small stuff like refined text selection highlight (seen above) or
+        404 page. And many things just seemed hard for me, but turned out to be quite easy
+        when I approached them. Loading more items ended up being nothing more than a
+        special template and 20 lines of JS.
+    </p>
+    <p>
+        You can't really stop trying to make something better. SqncBrk since then had
+        numerous new blog entries, design improvements, and eventually was
+        <a href="../sqncbrk/">redesigned fully</a> again.
+    </p>
+    <figure class="full">
+        <img srcset="images/final-400.webp 400w,
+                     images/final-600.webp 600w,
+                     images/final-800.webp 800w,
+                     images/final-1000.webp 1000w,
+                     images/final-1600.webp 1600w,
+                     images/final-2880.webp 2880w"
+             sizes="100vw"
+             src="images/final-400.webp"
+             alt="Final Redux version. Titles are moved to the corner not to obscure the screenshot"
+             width="2880"
+             height="3997"
+             loading="lazy"/>
+        <figcaption>
+            Final Redux version
+        </figcaption>
+    </figure>
+{% endblock %}

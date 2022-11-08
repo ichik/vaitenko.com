@@ -1,0 +1,13 @@
+a {
+    --time: 0.2s;
+    color: var(--link);
+    text-decoration-color: var(--link-underline);
+    text-decoration-thickness: 0.5px;
+    text-underline-offset: 0.2em;
+    transition: color var(--time) ease-out, text-decoration-color var(--time) ease-out;
+    will-change: color, text-decoration-color;
+}
+a:hover {
+    color: var(--link-hover);
+    text-decoration-color: var(--link-hover-underline);
+}

@@ -1,0 +1,38 @@
+.index-grid {
+    display: grid;
+    margin: var(--space-m) auto;
+    max-width: 440px;
+
+    align-items: start;
+    grid-template-columns: minmax(auto, 440px);
+    grid-auto-flow: dense;
+    gap: var(--space-l) 0;
+}
+
+.clip {
+    aspect-ratio: var(--aspect-ratio);
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    /* Oh how I dream of container queries */
+    .index-grid {
+        max-width: 800px;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: var(--space-l) var(--space-s);
+    }
+
+    .twoforone {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 1320px) {
+    .index-grid {
+        max-width: 1580px;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: var(--space-s);
+    }
+}

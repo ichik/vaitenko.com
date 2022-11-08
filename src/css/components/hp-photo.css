@@ -1,0 +1,7 @@
+.clip.photo {
+    align-self: end;
+    justify-self: center;
+}
+.clip.photo img {
+    width: 100%;
+}

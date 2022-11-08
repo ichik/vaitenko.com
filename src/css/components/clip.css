@@ -1,0 +1,48 @@
+.clip {
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.15));
+}
+
+.clip::after {
+    content: '';
+    display: block;
+    height: 110%;
+    width: 110%;
+
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    z-index: -1;
+
+    clip-path: polygon(var(--shape));
+    background-color: var(--card-bg);
+}
+.clip .inner {
+    display: flex;
+    height: 100%;
+
+    flex-direction: column;
+    gap: var(--space-3xs);
+    padding: var(--space-s) 3%;
+}
+.clip .inner h2 {
+    /* forgive me, mother */
+    font-size: var(--step-1);
+}
+
+a.clip {
+    text-decoration: none;
+}
+a.clip.home,
+a.clip h2 {
+    text-decoration: underline 0.5px var(--link-underline);
+    text-underline-offset: 0.1em;
+}
+
+a.clip.home:hover,
+a.clip:hover h2 {
+    text-decoration-color: var(--link-hover-underline);
+}
+
+a.clip p {
+    color: var(--fg);
+}

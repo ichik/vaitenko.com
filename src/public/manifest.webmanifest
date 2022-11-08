@@ -1,0 +1,12 @@
+{
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "name": "Portfolio of Vadim Vaitenko",
+    "short_name": "Vadim Vaitenko",
+    "start_url": ".",
+    "display": "browser",
+    "description": "Select case studies over the years",
+    "icons": [
+        { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+        { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+    ]
+}

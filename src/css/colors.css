@@ -1,0 +1,14 @@
+:root {
+    --bg: #f9d400;
+    --fg: #2a0609;
+    --card-bg: #fff;
+    --link: #0060a0;
+    --link-underline: #6ea8cf;
+    --link-hover: #e20016;
+    --link-hover-underline: #fb4b5c;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+}

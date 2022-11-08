@@ -1,0 +1,23 @@
+footer.clip {
+    --shape: 4% 27%, 80% 10%, 100% 30%, 96% 100%, 0 100%;
+    max-width: 52ch;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--space-xl);
+}
+footer p {
+    font-size: var(--step--2);
+}
+
+@media (min-width: 360px) {
+    footer.clip {
+        padding-left: var(--space-xs);
+    }
+}
+@media (min-width: 460px) {
+    /* I'm not proud of this */
+    footer p {
+        font-size: var(--step--1);
+    }
+}

@@ -1,0 +1,58 @@
+/* @link https://utopia.fyi/type/calculator?c=320,27,1.333,1800,36,1.5,1,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,3xs-s */
+
+:root {
+    --step--2: clamp(0.95rem, calc(0.94rem + 0.05vw), 1rem);
+    --step--1: clamp(1.27rem, calc(1.22rem + 0.25vw), 1.5rem);
+    --step-0: clamp(1.69rem, calc(1.57rem + 0.61vw), 2.25rem);
+    --step-1: clamp(2.25rem, calc(2.01rem + 1.22vw), 3.38rem);
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Petrona';
+    font-style: regular;
+    font-weight: 400 700;
+    src: url('../fonts/petrona.woff2') format('woff2');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Petrona';
+    font-style: italic;
+    font-weight: 400 700;
+    src: url('../fonts/petrona-italic.woff2') format('woff2');
+}
+
+* {
+    font-family: 'Petrona', serif;
+}
+
+h1,
+h2 {
+    font-weight: 700;
+    line-height: 95%;
+}
+
+h1 {
+    font-size: var(--step-1);
+}
+h2 {
+    font-size: var(--step-0);
+}
+p,
+li {
+    font-size: var(--step--1);
+    line-height: 130%;
+}
+
+ul {
+    list-style-type: '— ';
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+}
+
+pre,
+pre * {
+    font-family: monospace;
+    white-space: pre-wrap;
+}

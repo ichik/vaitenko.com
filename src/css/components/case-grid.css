@@ -1,0 +1,44 @@
+.case-grid {
+    --gutter: 1ch;
+    --full: minmax(var(--gutter), 1fr);
+    --content: min(66ch, 100% - var(--gutter) * 2);
+    display: grid;
+    grid-template-columns:
+        [full-start] var(--full)
+        [content-start] var(--content) [content-end]
+        var(--full) [full-end];
+    gap: var(--space-xs) 0;
+}
+.case-grid > * {
+    grid-column: content;
+}
+.full {
+    grid-column: full;
+}
+.case-grid figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.case-grid figure * {
+    width: clamp(320px, 100vw, 1600px);
+}
+.case-grid figure .clamped {
+    overflow: hidden;
+    width: clamp(320px, 100vw, var(--width));
+    aspect-ratio: var(--aspect-ratio);
+}
+
+.case-grid figure figcaption {
+    font-size: var(--step--1);
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: var(--space-l);
+    text-align: center;
+}
+
+.case-grid h2 {
+    margin-top: var(--space-l);
+}

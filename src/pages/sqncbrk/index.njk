@@ -1,0 +1,241 @@
+{% extends "case.njk" %}
+{% set title = 'SqncBrk Rebirth' %}
+{% set slug = 'sqncbrk' %}
+{% set description = 'A latest redesign of SqncBrk, personal project dedicated to the games of metroidvania genre' %}
+{% block colors %}
+    <style type="text/css">
+            :root {
+                --bg: #000a12;
+                --fg: #fffcfa;
+                --card-bg: #001b37;
+                --link: #ff8800;
+                --link-underline: #fda947;
+                --link-hover: #ffe7cc;
+                --link-hover-underline: #fffcfa;
+            }
+    </style>
+{% endblock %}
+{% block content %}
+    <em>
+        <p>
+            Case study of the most recent redesign of
+            <a href="https://sqncbrk.com">SqncBrk</a>, done in 2018–2019.
+        </p>
+        <p>
+            The&nbsp;redesign of 2015–2016 is covered in a
+            <a href="../sqncbrk-redux/">separate study</a>.
+        </p>
+    </em>
+    <figure class="full">
+        <img srcset="images/introshot-400.webp 400w,
+                     images/introshot-600.webp 600w,
+                     images/introshot-800.webp 800w,
+                     images/introshot-1000.webp 1000w,
+                     images/introshot-1600.webp 1600w,
+                     images/introshot-2000.webp 2000w,
+                     images/introshot-2812.webp 2812w"
+             sizes="100vw"
+             src="images/introshot-400.webp"
+             alt="Screenshot of SqcnBrk homepage"
+             width="703"
+             height="498"
+             loading="eager"/>
+        <figcaption>
+            Screenshot of SqncBrk homepage
+        </figcaption>
+    </figure>
+    <p>
+        By late 2018 I hade a small list of UX issues, architectural issues and just general
+        visual improvements that I wanted to introduce to a new version of SqncBrk. It was
+        time for a big rewrite. Firstly, I wanted to part ways with old logo and set way for
+        new glitchy branding reflecting updated vision for the project.
+    </p>
+    <figure class="full">
+        <div class="video clamped" style="--width: 800px; --aspect-ratio: 2">
+            <video preload="metadata"
+                   autoplay
+                   loop
+                   muted
+                   playsinline
+                   poster="./video/newLogo.webp">
+                <source src="./video/newLogo.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <figcaption>
+            New logo hover animation
+        </figcaption>
+    </figure>
+    <p>
+        New tone was set by blocky Alternate Gothic Pro that was used to typeset the logo
+        and glitch effect used for the hover. The “Load more” button got an appropriate
+        matching hover style.
+    </p>
+    <figure class="full">
+        <div class="video clamped" style="--width: 800px; --aspect-ratio: 4/3">
+            <video preload="metadata"
+                   autoplay
+                   loop
+                   muted
+                   playsinline
+                   poster="./video/loadmore.webp">
+                <source src="./video/loadmore.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <figcaption>
+            “Load more” button hover animation
+        </figcaption>
+    </figure>
+    <p>
+        Same visual style continues throghout the whole site motif: i.e. the styling for
+        lazy-loading images embraces lo-fi pixelated aesthetic instead of going for more
+        traditional blur-up technique or showing spinning preloader.
+    </p>
+    <figure class="full">
+        <img srcset="images/loading-400.webp 400w,
+                     images/loading-600.webp 600w,
+                     images/loading-800.webp 800w,
+                     images/loading-1000.webp 1000w,
+                     images/loading-1500.webp 1500w"
+             sizes="100vw"
+             src="images/loading-400.webp"
+             alt="Pixelated low-quality loading state on the left. Fully loaded, high quality image on the right"
+             width="75"
+             height="46"
+             loading="lazy"/>
+        <figcaption>
+            Screenshots of loading progress on mobile viewport
+        </figcaption>
+    </figure>
+    <p>
+        The general layout of the page was refined and re-done with CSS grid. The
+        asymmetrical distribution of whitespace stayed, but the proportion of it and looks
+        on big HD screens was fine-tuned to be less awkward. Mobile layouts were improved as
+        well.
+    </p>
+    <figure class="full">
+        <div class="gallery horizontal">
+            <img srcset="images/FirewatchHD-400.webp 400w,
+                         images/FirewatchHD-600.webp 600w,
+                         images/FirewatchHD-800.webp 800w,
+                         images/FirewatchHD-1200.webp 1200w,
+                         images/FirewatchHD-1600.webp 1600w,
+                         images/FirewatchHD-2499.webp 2499w"
+                 sizes="(min-width: 1600px): 1120px,
+                        (min-width: 1320px) 70vw,
+                        60vw"
+                 src="images/FirewatchHD-400.webp"
+                 alt="Screenshot of upper portion of the article about Firewatch on large viewport. Two-column layout, wide crop of cover image"
+                 width="2499"
+                 height="1992"
+                 loading="lazy"/>
+            <img srcset="images/FirewatchMobile-400.webp 400w,
+                         images/FirewatchMobile-600.webp 600w,
+                         images/FirewatchMobile-800.webp 800w,
+                         images/FirewatchMobile-1128.webp 1128w"
+                 sizes="(min-width: 1600px): 320px,
+                        (min-width: 1320px) 20vw,
+                        30vw"
+                 src="images/FirewatchMobile-400.webp"
+                 alt="Screenshot of upper portion of the article about Firewatch on mobile viewport. Single-column layout, narrow crop of cover image"
+                 width="282"
+                 height="609"
+                 class="mobile"
+                 loading="lazy"/>
+        </div>
+        <figcaption>
+            Comparison of HD and mobile layouts
+        </figcaption>
+    </figure>
+    <p>
+        One of the best things to come out of this redesign was finally getting rid of
+        <a href="https://en.wikipedia.org/wiki/Hamburger_button">hamburger menu</a> which
+        was there for the first two versions of SqncBrk. I always disliked it for all its UX
+        shortcomings, but couldn't quite figure out how else to provide top-level links to
+        two most important articles on the website (<a href="https://sqncbrk.com/about/">About</a
+        >
+        and <a href="https://sqncbrk.com/metroidvanias/">On Metroidvanias</a>). The solution
+        was simply letting go of the idea of their importance and realizing that the key
+        interaction in that menu was search which now was a key action. Links to the two
+        articles were just attached to it as suggestions.
+    </p>
+    <figure class="full">
+        <div class="video clamped"
+             style="--width: 1200px;
+                    --aspect-ratio: 960/543">
+            <video preload="metadata"
+                   autoplay
+                   loop
+                   muted
+                   playsinline
+                   poster="./video/search.webp">
+                <source src="./video/search.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <figcaption>
+            Search animation
+        </figcaption>
+    </figure>
+    <p>
+        Search results page was revamped to follow suit. Another minor accessibility fix
+        that was introduced — a prompt on how to trigger search request right underneath the
+        huge prominent search input.
+    </p>
+    <figure class="full">
+        <img srcset="images/searchresults-400.webp 400w,
+                     images/searchresults-600.webp 600w,
+                     images/searchresults-800.webp 800w,
+                     images/searchresults-1000.webp 1000w,
+                     images/searchresults-1600.webp 1600w,
+                     images/searchresults-2428.webp 2428w"
+             sizes="100vw"
+             src="images/searchresults-400.webp"
+             alt="Search results page with two-column output with previews"
+             width="1214"
+             height="635"
+             loading="lazy"/>
+        <figcaption>
+            Screenshot of search results page
+        </figcaption>
+    </figure>
+    <p>
+        The last piece of eye candy was all new “slide-in” footer. It utilized the same grid
+        as everything else and just a tiny bit of creative CSS for pleasant visual effect.
+    </p>
+    <figure class="full">
+        <div class="video clamped"
+             style="--width: 1200px;
+                    --aspect-ratio: 960/543">
+            <video preload="metadata"
+                   autoplay
+                   loop
+                   muted
+                   playsinline
+                   poster="./video/footer.webp">
+                <source src="./video/footer.webm" type="video/webm" />
+            </video>
+        </div>
+        <figcaption>
+            Footer animation
+        </figcaption>
+    </figure>
+    <p>
+        Performance of the site was also vastly improved with this rewrite. While it was
+        good previosly, there were still a few things to improve. This time having more
+        knowledge about optimization techniques and component-based CSS model I managed to
+        achieve a
+        <a href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fsqncbrk.com&tab=mobile">perfect score</a
+            >
+            in Google's Pagespeed Insights. Fast loading time was a win for my readers as much
+            as it was a reason to be proud of my developers' prowess.
+        </p>
+        <img srcset="images/score-400.webp 400w,
+                     images/score-600.webp 600w,
+                     images/score-850.webp 850w"
+             sizes="(min-width: 700px): 700px,
+                    100vw"
+             src="images/score-400.webp"
+             alt="100/100 speed score of sqncbrk.com"
+             width="425"
+             height="263"
+             loading="lazy"/>
+    {% endblock %}
