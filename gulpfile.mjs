@@ -39,7 +39,7 @@ const paths = {
         dest: `${dirs.output}/fonts`,
     },
     images: {
-        src: `${dirs.entry}/pages/**/images/*.+(png|webp|svg|gif)`,
+        src: `${dirs.entry}/pages/**/images/*.+(jpg|png|webp|svg|gif)`,
         dest: `${dirs.output}`,
     },
     videos: {
