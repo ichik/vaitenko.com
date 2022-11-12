@@ -1,6 +1,5 @@
 User-agent: *
 Disallow: /sqncbrk-redux
 Disallow: /zenmate/zenmateswtich
-Disallow: /images
 
 Sitemap: https://vaitenko.com/sitemap.xml
