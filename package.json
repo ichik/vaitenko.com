@@ -13,7 +13,7 @@
     "name": "vaitenko.com",
     "version": "1.0.0",
     "description": "Vadim Vaitenko's Portfolio",
-    "repository": "ichik/beta.ichik.xyz",
+    "repository": "ichik/vaitenko.com",
     "main": "gulpfile.mjs",
     "author": "Vadim <vadim@vaitenko.com>",
     "license": "UNLICENSED",
