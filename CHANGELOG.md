@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2 (18.11.2022)
+
+-   Removed some faulty assets in SqncBrk Redux Case ([e845b94](https://github.com/ichik/vaitenko.com/commit/e845b94c7e27de776a1fdb8c823a341ad8080fde))
+
 ## 1.0.1 (12.11.2022)
 
 -   Fixed OpenGraph images ([5b2f6ee](ehttps://github.com/ichik/vaitenko.com/commit/5b2f6ee05d2f2284d3e28c15b028f24ff86d9b7e))
