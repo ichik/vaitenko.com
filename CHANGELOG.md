@@ -1,12 +1,16 @@
 # Changelog
 
+## 1.0.3 (01.01.2023)
+
+-   Updated CV ([b8f74c1](https://github.com/ichik/vaitenko.com/commit/b8f74c172c0f61aa6368f88d243d9e7d5e0d63d5))
+
 ## 1.0.2 (18.11.2022)
 
--   Removed some faulty assets in SqncBrk Redux Case ([e845b94](https://github.com/ichik/vaitenko.com/commit/e845b94c7e27de776a1fdb8c823a341ad8080fde))
+-   Removed some faulty assets in SqncBrk Redux Case ([4d9c5fe](https://github.com/ichik/vaitenko.com/commit/4d9c5fe54382e4ad4f492d7a7937bb1cb9467076))
 
 ## 1.0.1 (12.11.2022)
 
--   Fixed OpenGraph images ([5b2f6ee](ehttps://github.com/ichik/vaitenko.com/commit/5b2f6ee05d2f2284d3e28c15b028f24ff86d9b7e))
+-   Fixed OpenGraph images ([0b90b92](https://github.com/ichik/vaitenko.com/commit/0b90b921c5f2855637e37d74293cd0e468816fd8))
 
 ## 1.0.0 (08.11.2022)
 
