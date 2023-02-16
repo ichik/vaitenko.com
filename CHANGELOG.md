@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.4 (16.02.2023)
+
+-   Updated date in the footer ([b1c0697](https://github.com/ichik/vaitenko.com/commit/b1c0697516184802f77bd0bb90f19782d8fac4df))
+-   Small placeholder for Preply case study ([db20b58](https://github.com/ichik/vaitenko.com/commit/db20b58ffff611b0b25ab0b2ab93092e9628457c))
+
 ## 1.0.3 (01.01.2023)
 
 -   Updated CV ([b8f74c1](https://github.com/ichik/vaitenko.com/commit/b8f74c172c0f61aa6368f88d243d9e7d5e0d63d5))
