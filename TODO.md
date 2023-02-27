@@ -1,6 +1,7 @@
 ## Overarching
 
 -   [ ] Add Twitter markup for image previews (?)
+-   [ ] Write a good readme
 
 ## Index
 
