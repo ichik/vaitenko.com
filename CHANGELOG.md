@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.5 (12.03.2023)
+
+-   Small index page layout update
+
 ## 1.0.4 (16.02.2023)
 
 -   Updated date in the footer ([b1c0697](https://github.com/ichik/vaitenko.com/commit/b1c0697516184802f77bd0bb90f19782d8fac4df))
