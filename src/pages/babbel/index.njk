@@ -3,8 +3,9 @@
 {% set slug = 'babbel' %}
 {% set description = 'A set of tools and guidelines for designers and developers' %}
 {% block colors %}
-    <style type="text/css">
-        :root {
+    <style>
+        type="text/css":root
+        {
             --bg: #f2f2f2;
             --fg: #0c2e44;
         }
@@ -21,23 +22,23 @@
 {% endblock %}
 {% block content %}
     <p>
-        I joined <a href="https://www.babbel.com">Babbel</a>, a language-learning company
-        from Berlin as a product designer in August 2018. At the time the product design
-        team headcount was seven product designers, one copywriter and one UX researcher.
-        The operating model was similar to an internal agency servicing multiple agile teams
-        (about six at the time, although the number of teams was rapidly increasing — there
-        are more than 20 at the time of writing this study). Product designers collaborated
-        with these agile teams mainly using design sprints, although the process of
-        transforming it into a more meaningful long-term relationship was on the way.
+        I joined
+        <a href="https://www.babbel.com">Babbel</a>, a language-learning company from Berlin as a product designer in August
+            2018. At the time the product design team headcount was seven product designers, one copywriter and one UX researcher.
+            The operating model was similar to an internal agency servicing multiple agile teams (about six at the time, although
+            the number of teams was rapidly increasing — there are more than 20 at the time of writing this study). Product
+            designers collaborated with these agile teams mainly using design sprints, although the process of transforming it into
+            a more meaningful long-term relationship was on the way.
     </p>
     <figure class="full">
         <div class="video clamped" style="--width: 948px; --aspect-ratio: 948/713">
-            <video preload="auto"
-                   autoplay
-                   loop
-                   muted
-                   playsinline
-                   poster="./video/textfield-poster.webp">
+            <video
+                preload="auto"
+                autoplay="autoplay"
+                loop="loop"
+                muted="muted"
+                playsinline="playsinline"
+                poster="./video/textfield-poster.webp">
                 <source src="./video/textfield.mp4" type="video/mp4"/>
             </video>
         </div>
@@ -46,12 +47,10 @@
         </figcaption>
     </figure>
     <p>
-        We had the foundations of design system tooling in place to keep the experience
-        cohesive, but without the dedicated maintainer, so it was up to every designer to be
-        mindful of whether the results of their work should be shared with others. Babbel
-        had just went through a visual style refresh in 2018 which was still not fully
-        rolled out everywhere due to resource constraint, and new features, projects and
-        experiments were rapidly pulling the cohesiveness apart.
+        We had the foundations of design system tooling in place to keep the experience cohesive, but without the dedicated
+        maintainer, so it was up to every designer to be mindful of whether the results of their work should be shared with
+        others. Babbel had just went through a visual style refresh in 2018 which was still not fully rolled out everywhere due
+        to resource constraint, and new features, projects and experiments were rapidly pulling the cohesiveness apart.
     </p>
     <p>The tooling itself was:</p>
     <ul>
@@ -61,34 +60,30 @@
     </ul>
     <figure class="full">
         <div class="gallery">
-            <img srcset="images/sketch-libraries-400.webp 400w,
-                         images/sketch-libraries-600.webp 600w,
-                         images/sketch-libraries-800.webp 800w,
-                         images/sketch-libraries-1000.webp 1000w,
-                         images/sketch-libraries-1200.webp 1200w,
-                         images/sketch-libraries-1398.webp 1398w"
-                 sizes="(min-width: 1600px): 800px,
-                        (min-width: 1320px) 50vw,
-                        100vw"
-                 src="images/sketch-libraries-400.webp"
-                 alt="Screenshot of components in Sketch UI kit used by Babbel in November 2018"
-                 width="699"
-                 height="592"
-                 loading="lazy"/>
-            <img srcset="images/brand-foundations-400.webp 400w,
-                         images/brand-foundations-600.webp 600w,
-                         images/brand-foundations-800.webp 800w,
-                         images/brand-foundations-1000.webp 1000w,
-                         images/brand-foundations-1200.webp 1200w,
-                         images/brand-foundations-1398.webp 1398w"
-                 sizes="(min-width: 1600px): 800px,
-                        (min-width: 1320px) 50vw,
-                        100vw"
-                 src="images/brand-foundations-400.webp"
-                 alt="Screenshot of brand foundations guidelines in Sketch UI kit used by Babbel in November 2018"
-                 width="699"
-                 height="370"
-                 loading="lazy"/>
+            <img
+                srcset="images/sketch-libraries-400.webp 400w, images/sketch-libraries-600.webp 600w, images/sketch-libraries-800.webp
+                    800w, images/sketch-libraries-1000.webp 1000w, images/sketch-libraries-1200.webp 1200w, images/sketch-libraries-1398.webp
+                    1398w"
+                sizes="(min-width: 1600px): 800px,
+                                            (min-width: 1320px) 50vw,
+                                            100vw"
+                src="images/sketch-libraries-400.webp"
+                alt="Screenshot of components in Sketch UI kit used by Babbel in November 2018"
+                width="699"
+                height="592"
+                loading="lazy"/>
+            <img
+                srcset="images/brand-foundations-400.webp 400w, images/brand-foundations-600.webp 600w, images/brand-foundations-800.webp
+                    800w, images/brand-foundations-1000.webp 1000w, images/brand-foundations-1200.webp 1200w,
+                    images/brand-foundations-1398.webp 1398w"
+                sizes="(min-width: 1600px): 800px,
+                                            (min-width: 1320px) 50vw,
+                                            100vw"
+                src="images/brand-foundations-400.webp"
+                alt="Screenshot of brand foundations guidelines in Sketch UI kit used by Babbel in November 2018"
+                width="699"
+                height="370"
+                loading="lazy"/>
         </div>
         <figcaption>
             Babbel's Sketch UI kit for web platform, November&nbsp;2018
@@ -96,42 +91,35 @@
     </figure>
     <h2>Evolving tooling for designers</h2>
     <p>
-        At my previous job at <a href="../moneymap/">MoneyMap</a> I had a chance to try out
-        Figma and I've quite enjoyed the following main advantage that it brought to the
+        At my previous job at
+        <a href="../moneymap/">MoneyMap</a>
+        I had a chance to try out Figma and I've quite enjoyed the following main advantage that it brought to the
         table:
     </p>
     <p>
-        <strong>Side-stepping the version control problem</strong>. While there are
-        excellent tools such as Abstract that help a lot with the design process
-        organization, version control in design tools can be quite messy. Syncing files
-        manually, uploading them to multiple external tools (i.e. InVision for simple
-        prototyping) and avoiding stepping on each others' toes requires effort from design
-        teams. Figma does not give you “true” branching and versioning, but because it is a
-        tool that runs in the cloud, you always have access to the latest version of version
-        history.
+        <strong>Side-stepping the version control problem</strong>. While there are excellent tools such as Abstract that help a
+            lot with the design process organization, version control in design tools can be quite messy. Syncing files manually,
+            uploading them to multiple external tools (i.e. InVision for simple prototyping) and avoiding stepping on each others'
+            toes requires effort from design teams. Figma does not give you “true” branching and versioning, but because it is a
+            tool that runs in the cloud, you always have access to the latest version of version history.
     </p>
     <p>
-        For this and few other reasons (not the least of which were significant performance
-        gains) for my third or fourth feature project instead of sticking to Sketch I
-        switched over to Figma. I imported the latest versions of our UI kits and used them
-        for that project while at the same time doing some refinements on DS components and
-        thinking on how to organize the collaboration process with other designers a bit
-        better.
+        For this and few other reasons (not the least of which were significant performance gains) for my third or fourth
+        feature project instead of sticking to Sketch I switched over to Figma. I imported the latest versions of our UI kits
+        and used them for that project while at the same time doing some refinements on DS components and thinking on how to
+        organize the collaboration process with other designers a bit better.
     </p>
     <figure class="full">
-        <img srcset="images/figma-libraries-400.webp 400w,
-                     images/figma-libraries-600.webp 600w,
-                     images/figma-libraries-800.webp 800w,
-                     images/figma-libraries-1000.webp 1000w,
-                     images/figma-libraries-1600.webp 1600w,
-                     images/figma-libraries-2000.webp 2000w,
-                     images/figma-libraries-2560.webp 2560w"
-             sizes="100vw"
-             src="images/figma-libraries-400.webp"
-             alt="Screenshot of Figma folder with design system libraries"
-             width="640"
-             height="387"
-             loading="lazy"/>
+        <img
+            srcset="images/figma-libraries-400.webp 400w, images/figma-libraries-600.webp 600w, images/figma-libraries-800.webp 800w,
+                images/figma-libraries-1000.webp 1000w, images/figma-libraries-1600.webp 1600w, images/figma-libraries-2000.webp 2000w,
+                images/figma-libraries-2560.webp 2560w"
+            sizes="100vw"
+            src="images/figma-libraries-400.webp"
+            alt="Screenshot of Figma folder with design system libraries"
+            width="640"
+            height="387"
+            loading="lazy"/>
         <figcaption>
             Design system folder in Figma, February&nbsp;2021
         </figcaption>
@@ -139,120 +127,100 @@
     <ul>
         <li>
             I split up the monoliths of UI kits into individual libraries grouped by
-            function (Buttons, Inputs etc.)
+                        function (Buttons, Inputs etc.)
         </li>
         <li>
-            Since designers were typically working on a feature for all our platforms the
-            per-platform library separation didn't make much sense, per-platform variations
-            were kept inside these functional groups
+            Since designers were typically working on a feature for all our platforms the per-platform library separation didn't
+            make much sense, per-platform variations were kept inside these functional groups
         </li>
         <li>
-            Basic principles of semantic versioning were applied with changelog provided via
-            Figma's version history and on Confluence (was deprecated later in favor of
-            dedicated intranet-site for the design system)
+            Basic principles of semantic versioning were applied with changelog provided via Figma's version history and on
+            Confluence (was deprecated later in favor of dedicated intranet-site for the design system)
         </li>
         <li>
             Basic guidelines for components were written down and put inside the libraries
-            and description fields
+                        and description fields
         </li>
     </ul>
     <p>
-        By December it felt to me that it was in a good enough state to provide value to
-        other designers, so I started onboarding the team members to Figma. I organized a
-        couple of small workshops to showcase Figma's features and share some time-saving
-        hints as well as showcase what I've built up to this point. In January 2019 the
-        product design team switched over to Figma.
+        By December it felt to me that it was in a good enough state to provide value to other designers, so I started
+        onboarding the team members to Figma. I organized a couple of small workshops to showcase Figma's features and share
+        some time-saving hints as well as showcase what I've built up to this point. In January 2019 the product design team
+        switched over to Figma.
     </p>
     <h2>Bootstrapping system&nbsp;foundations</h2>
     <p>
-        At the time the product org in Babbel was expanding rapidly with new additional
-        teams being created. These teams were empowered to deliver features independently
-        from the rest of the company by having all the disciplines inside them and having a
-        decision power over their tech stack.
+        At the time the product org in Babbel was expanding rapidly with new additional teams being created. These teams were
+        empowered to deliver features independently from the rest of the company by having all the disciplines inside them and
+        having a decision power over their tech stack.
     </p>
     <p>
-        Most of the new teams were working with web technology, but an old SASS library was
-        hard to fit into a greenfield projects. And of course for projects with mobile
-        native code it was of little use. In December 2018 a few engineers from different
-        agile teams decided to build a more modern foundation for the design system. I
-        joined the project as a volunteer from the product design team. The new library was
-        built using
-        <a href="https://github.com/amzn/style-dictionary">Amazon's Style Dictionary</a>. It
-        is a node package that transforms JSON style definitions into a variety of formats
-        that could be consumed by all our teams.
+        Most of the new teams were working with web technology, but an old SASS library was hard to fit into a greenfield
+        projects. And of course for projects with mobile native code it was of little use. In December 2018 a few engineers from
+        different agile teams decided to build a more modern foundation for the design system. I joined the project as a
+        volunteer from the product design team. The new library was built using
+        <a href="https://github.com/amzn/style-dictionary">Amazon's Style Dictionary</a>. It is a node package that transforms
+            JSON style definitions into a variety of formats that could be consumed by all our teams.
     </p>
     <p>
-        First initial releases were all about extracting the values out of the SASS library
-        and doing testing on how well the output could be consumed in existing codebases.
-        Eventually the SASS library that is still used in some legacy project started to use
-        Design Tokens as a dependency making it the source of truth for all the foundational
-        values (colors, typography etc.)
+        First initial releases were all about extracting the values out of the SASS library and doing testing on how well the
+        output could be consumed in existing codebases. Eventually the SASS library that is still used in some legacy project
+        started to use Design Tokens as a dependency making it the source of truth for all the foundational values (colors,
+        typography etc.)
     </p>
     <p>
-        Meanwhile I started adding more functionality on top of it that coincided with
-        design system refinements that were going on at the time. Throughout 2019 I
-        collaborated with designers from product design team and from brand design team on
-        refining our color palette. The existing one had contrast accessibility issues and
-        was equally cumbersome to use in marketing and product. We worked in two small
-        workgroups (1 product design + 1 brand designer). First, which I was a member of,
-        looked at broad usage of color in the whole journey, its application in marketing
-        and in product UI. Second was mostly looking at application of the palette in
-        illustration and was also working on illustrations guidelines. By the end of summer
-        2019 we had a new refined color palette that both brand and product design were
-        happy with.
+        Meanwhile I started adding more functionality on top of it that coincided with design system refinements that were going
+        on at the time. Throughout 2019 I collaborated with designers from product design team and from brand design team on
+        refining our color palette. The existing one had contrast accessibility issues and was equally cumbersome to use in
+        marketing and product. We worked in two small workgroups (1 product design + 1 brand designer). First, which I was a
+        member of, looked at broad usage of color in the whole journey, its application in marketing and in product UI. Second
+        was mostly looking at application of the palette in illustration and was also working on illustrations guidelines. By
+        the end of summer 2019 we had a new refined color palette that both brand and product design were happy with.
     </p>
     <figure class="full">
         <div class="gallery">
-            <img srcset="images/full-palette-400.webp 400w,
-                         images/full-palette-600.webp 600w,
-                         images/full-palette-800.webp 800w,
-                         images/full-palette-1200.webp 1200w,
-                         images/full-palette-1600.webp 1600w,
-                         images/full-palette-1920.webp 1920w"
-                 sizes="(min-width: 1600px): 800px,
-                        (min-width: 1320px) 50vw,
-                        100vw"
-                 src="images/full-palette-400.webp"
-                 alt="Full palette produced in the initial iteration"
-                 width="48"
-                 height="35"
-                 loading="lazy"/>
-            <img srcset="images/accessibility-tables-400.webp 400w,
-                         images/accessibility-tables-600.webp 600w,
-                         images/accessibility-tables-800.webp 800w,
-                         images/accessibility-tables-1200.webp 1200w,
-                         images/accessibility-tables-1600.webp 1600w,
-                         images/accessibility-tables-2816.webp 2816w"
-                 sizes="(min-width: 1600px): 800px,
-                        (min-width: 1320px) 50vw,
-                        100vw"
-                 src="images/accessibility-tables-400.webp"
-                 alt="Accessibility checks on the old palette, most combinations failing"
-                 width="1408"
-                 height="791"
-                 loading="lazy"/>
-            <img srcset="images/palettes-400.webp 400w,
-                         images/palettes-600.webp 600w,
-                         images/palettes-800.webp 800w,
-                         images/palettes-1200.webp 1200w,
-                         images/palettes-1600.webp 1600w,
-                         images/palettes-2650.webp 2650w"
-                 sizes="(min-width: 1600px): 800px,
-                        (min-width: 1320px) 50vw,
-                        100vw"
-                 src="images/palettes-400.webp"
-                 alt="Screenshot of color scales and orange tweaking experiments"
-                 width="2650"
-                 height="1867"
-                 loading="lazy"/>
+            <img
+                srcset="images/full-palette-400.webp 400w, images/full-palette-600.webp 600w, images/full-palette-800.webp 800w,
+                    images/full-palette-1200.webp 1200w, images/full-palette-1600.webp 1600w, images/full-palette-1920.webp 1920w"
+                sizes="(min-width: 1600px): 800px,
+                                            (min-width: 1320px) 50vw,
+                                            100vw"
+                src="images/full-palette-400.webp"
+                alt="Full palette produced in the initial iteration"
+                width="48"
+                height="35"
+                loading="lazy"/>
+            <img
+                srcset="images/accessibility-tables-400.webp 400w, images/accessibility-tables-600.webp 600w,
+                    images/accessibility-tables-800.webp 800w, images/accessibility-tables-1200.webp 1200w,
+                    images/accessibility-tables-1600.webp 1600w, images/accessibility-tables-2816.webp 2816w"
+                sizes="(min-width: 1600px): 800px,
+                                            (min-width: 1320px) 50vw,
+                                            100vw"
+                src="images/accessibility-tables-400.webp"
+                alt="Accessibility checks on the old palette, most combinations failing"
+                width="1408"
+                height="791"
+                loading="lazy"/>
+            <img
+                srcset="images/palettes-400.webp 400w, images/palettes-600.webp 600w, images/palettes-800.webp 800w,
+                    images/palettes-1200.webp 1200w, images/palettes-1600.webp 1600w, images/palettes-2650.webp 2650w"
+                sizes="(min-width: 1600px): 800px,
+                                            (min-width: 1320px) 50vw,
+                                            100vw"
+                src="images/palettes-400.webp"
+                alt="Screenshot of color scales and orange tweaking experiments"
+                width="2650"
+                height="1867"
+                loading="lazy"/>
         </div>
         <figcaption>
             Artifacts of new color palette work, Spring–Summer&nbsp;2019
         </figcaption>
     </figure>
     <p>
-        To help with transitioning to this new palette I've added a set of semantic tokens
-        that simply referenced the base raw values.
+        To help with transitioning to this new palette I've added a set of semantic tokens that simply referenced the base raw
+        values.
     </p>
     <pre>
         <!-- djlint:off -->
@@ -263,124 +231,106 @@
     }
 }<!-- djlint:on --></pre>
     <p>
-        When switching from one palette to another sometimes you can just replace old colors
-        with new ones, but often there's no direct match between old and new colors and
-        palette size can be quite different too. What's more, the application of color may
-        change. Nonetheless the rules of how you apply color in product UI currently can be
-        expressed with this semantic naming and referencing, so it could help you with the
-        transition when either the underlying raw values or the rules change.
+        When switching from one palette to another sometimes you can just replace old colors with new ones, but often there's no
+        direct match between old and new colors and palette size can be quite different too. What's more, the application of
+        color may change. Nonetheless the rules of how you apply color in product UI currently can be expressed with this
+        semantic naming and referencing, so it could help you with the transition when either the underlying raw values or the
+        rules change.
     </p>
     <figure class="full">
         <div class="gallery">
-            <img srcset="images/color-guidelines-orange-400.webp 400w,
-                         images/color-guidelines-orange-600.webp 600w,
-                         images/color-guidelines-orange-800.webp 800w,
-                         images/color-guidelines-orange-1200.webp 1200w,
-                         images/color-guidelines-orange-1600.webp 1600w,
-                         images/color-guidelines-orange-2200.webp 2200w"
-                 sizes="(min-width: 1600px): 800px,
-                        (min-width: 1320px) 50vw,
-                        100vw"
-                 src="images/color-guidelines-orange-400.webp"
-                 alt="Screenshot of guidelines on Blaze Orange, brand color"
-                 width="11"
-                 height="8"
-                 loading="lazy"/>
-            <img srcset="images/color-guidelines-stone-400.webp 400w,
-                         images/color-guidelines-stone-600.webp 600w,
-                         images/color-guidelines-stone-800.webp 800w,
-                         images/color-guidelines-stone-1200.webp 1200w,
-                         images/color-guidelines-stone-1600.webp 1600w,
-                         images/color-guidelines-stone-2200.webp 2200w"
-                 sizes="(min-width: 1600px): 800px,
-                        (min-width: 1320px) 50vw,
-                        100vw"
-                 src="images/color-guidelines-stone-400.webp"
-                 alt="Screenshot of guidelines on Stone, dark content color"
-                 width="11"
-                 height="8"
-                 loading="lazy"/>
+            <img
+                srcset="images/color-guidelines-orange-400.webp 400w, images/color-guidelines-orange-600.webp 600w,
+                    images/color-guidelines-orange-800.webp 800w, images/color-guidelines-orange-1200.webp 1200w,
+                    images/color-guidelines-orange-1600.webp 1600w, images/color-guidelines-orange-2200.webp 2200w"
+                sizes="(min-width: 1600px): 800px,
+                                            (min-width: 1320px) 50vw,
+                                            100vw"
+                src="images/color-guidelines-orange-400.webp"
+                alt="Screenshot of guidelines on Blaze Orange, brand color"
+                width="11"
+                height="8"
+                loading="lazy"/>
+            <img
+                srcset="images/color-guidelines-stone-400.webp 400w, images/color-guidelines-stone-600.webp 600w,
+                    images/color-guidelines-stone-800.webp 800w, images/color-guidelines-stone-1200.webp 1200w,
+                    images/color-guidelines-stone-1600.webp 1600w, images/color-guidelines-stone-2200.webp 2200w"
+                sizes="(min-width: 1600px): 800px,
+                                            (min-width: 1320px) 50vw,
+                                            100vw"
+                src="images/color-guidelines-stone-400.webp"
+                alt="Screenshot of guidelines on Stone, dark content color"
+                width="11"
+                height="8"
+                loading="lazy"/>
         </div>
         <figcaption>
             Fragment of new color palette guidelines, September&nbsp;2019
         </figcaption>
     </figure>
     <p>
-        In designers' tooling solution was way less elegant and amounted to having a
-        separate Figma library where values were copied between base palette and semantic
-        styles using a naive plugin that simply read description fields looking for a name
-        reference and then copied the style value.
+        In designers' tooling solution was way less elegant and amounted to having a separate Figma library where values were
+        copied between base palette and semantic styles using a naive plugin that simply read description fields looking for a
+        name reference and then copied the style value.
     </p>
     <h2>Aligning design and development</h2>
     <p>
-        To help agile teams that were building new features based on prototypes that were
-        made by designers in Figma I ran a few onboarding sessions for developers on
-        inspecting the files and navigating around. I also made an MVP version of the
-        documentation in the Form of a multi-page Figma document with guidelines and
-        specifications.
+        To help agile teams that were building new features based on prototypes that were made by designers in Figma I ran a few
+        onboarding sessions for developers on inspecting the files and navigating around. I also made an MVP version of the
+        documentation in the Form of a multi-page Figma document with guidelines and specifications.
     </p>
     <figure class="full">
         <div class="gallery">
-            <img srcset="images/popup-anatomy-400.webp 400w,
-                         images/popup-anatomy-600.webp 600w,
-                         images/popup-anatomy-800.webp 800w,
-                         images/popup-anatomy-1200.webp 1200w,
-                         images/popup-anatomy-1600.webp 1600w,
-                         images/popup-anatomy-2400.webp 2400w"
-                 sizes="(min-width: 1600px): 800px,
-                        (min-width: 1320px) 50vw,
-                        100vw"
-                 src="images/popup-anatomy-400.webp"
-                 alt="Anatomy of a popup window"
-                 width="15"
-                 height="8"
-                 loading="lazy"/>
-            <img srcset="images/button-size-400.webp 400w,
-                         images/button-size-600.webp 600w,
-                         images/button-size-800.webp 800w,
-                         images/button-size-1200.webp 1200w,
-                         images/button-size-1600.webp 1600w,
-                         images/button-size-2400.webp 2400w"
-                 sizes="(min-width: 1600px): 800px,
-                        (min-width: 1320px) 50vw,
-                        100vw"
-                 src="images/button-size-400.webp"
-                 alt="Button size guidelines"
-                 width="30"
-                 height="17"
-                 loading="lazy"/>
+            <img
+                srcset="images/popup-anatomy-400.webp 400w, images/popup-anatomy-600.webp 600w, images/popup-anatomy-800.webp 800w,
+                    images/popup-anatomy-1200.webp 1200w, images/popup-anatomy-1600.webp 1600w, images/popup-anatomy-2400.webp 2400w"
+                sizes="(min-width: 1600px): 800px,
+                                            (min-width: 1320px) 50vw,
+                                            100vw"
+                src="images/popup-anatomy-400.webp"
+                alt="Anatomy of a popup window"
+                width="15"
+                height="8"
+                loading="lazy"/>
+            <img
+                srcset="images/button-size-400.webp 400w, images/button-size-600.webp 600w, images/button-size-800.webp 800w,
+                    images/button-size-1200.webp 1200w, images/button-size-1600.webp 1600w, images/button-size-2400.webp 2400w"
+                sizes="(min-width: 1600px): 800px,
+                                            (min-width: 1320px) 50vw,
+                                            100vw"
+                src="images/button-size-400.webp"
+                alt="Button size guidelines"
+                width="30"
+                height="17"
+                loading="lazy"/>
         </div>
         <figcaption>
             Guidelines' fragments, July&nbsp;2019
         </figcaption>
     </figure>
     <p>
-        Throughout 2019 I advocated to the product at design leadership for bringing in
-        dedicated development resource to this project that I was pushing along. It's not
-        that we didn't have the expertise in-house, but more of a question of priority.
-        Having a dedicated maintainer for the design systems enables independent teams to
-        contribute to it more efficiently. In my work as a keeper of Figma libraries I stuck
-        to a very simple and open contribution process that encouraged everyone to
-        contribute. Inevitably due to the domain expertise and them being primary users of
-        Figma libraries, product designers amounted to the bulk of new solutions and
-        refinements.
+        Throughout 2019 I advocated to the product at design leadership for bringing in dedicated development resource to this
+        project that I was pushing along. It's not that we didn't have the expertise in-house, but more of a question of
+        priority. Having a dedicated maintainer for the design systems enables independent teams to contribute to it more
+        efficiently. In my work as a keeper of Figma libraries I stuck to a very simple and open contribution process that
+        encouraged everyone to contribute. Inevitably due to the domain expertise and them being primary users of Figma
+        libraries, product designers amounted to the bulk of new solutions and refinements.
     </p>
     <p>
-        Nonetheless Figma tooling was growing among brand designers, instructional designers
-        and various other disciplines. At the time of writing this among all the Figma users
-        at Babbel it averages to a couple thousand inserts (new instances created) each
-        week.
+        Nonetheless Figma tooling was growing among brand designers, instructional designers and various other disciplines. At
+        the time of writing this among all the Figma users at Babbel it averages to a couple thousand inserts (new instances
+        created) each week.
     </p>
     <figure class="full">
-        <div class="video clamped"
-             style="--width: 502px;
-                    --aspect-ratio: 251 / 231">
-            <video preload="metadata"
-                   autoplay
-                   loop
-                   muted
-                   playsinline
-                   poster="./video/button-poster.webp">
+        <div class="video clamped" style="--width: 502px;
+                                    --aspect-ratio: 251 / 231">
+            <video
+                preload="metadata"
+                autoplay="autoplay"
+                loop="loop"
+                muted="muted"
+                playsinline="playsinline"
+                poster="./video/button-poster.webp">
                 <source src="./video/button.mp4" type="video/mp4"/>
             </video>
         </div>
@@ -389,135 +339,111 @@
         </figcaption>
     </figure>
     <p>
-        On the code side of things and in actual product though we had patchwork systems of
-        components scattered in hundreds of repositories. I collaborated with teams on
-        shipping small refinements in their libraries. While there was no shortage of
+        On the code side of things and in actual product though we had patchwork systems of components scattered in hundreds of
+        repositories. I collaborated with teams on shipping small refinements in their libraries. While there was no shortage of
         exciting and interesting projects it was not the most efficient way of doing it.
     </p>
     <p>
-        Design system project needed real engineering resource and my skills and available
-        time were not sufficient. In October 2019 the budget for this role inside product
-        design team was approved, we started the hiring process. On March 1st 2020 a design
-        systems engineer joined the team.
+        Design system project needed real engineering resource and my skills and available time were not sufficient. In October
+        2019 the budget for this role inside product design team was approved, we started the hiring process. On March 1st 2020
+        a design systems engineer joined the team.
     </p>
     <h2>Building an MVP component library</h2>
     <p>
-        Over the course of 2020 we've built a small React UI kit written in Typescript. The
-        choice of technology was mostly driven by the number of teams and projects that
-        could use it and the team's experience being primarily with web tech stack.
+        Over the course of 2020 we've built a small React UI kit written in Typescript. The choice of technology was mostly
+        driven by the number of teams and projects that could use it and the team's experience being primarily with web tech
+        stack.
     </p>
     <p>
         Conventionally our library uses
-        <a href="https://github.com/storybookjs/storybook">Storybook</a> which we used to
-        bootstrap a documentation intranet portal.
+        <a href="https://github.com/storybookjs/storybook">Storybook</a>
+        which we used to
+                bootstrap a documentation intranet portal.
     </p>
     <figure class="full">
         <div class="gallery">
-            <img srcset="images/storybook-space-400.webp 400w,
-                         images/storybook-space-600.webp 600w,
-                         images/storybook-space-800.webp 800w,
-                         images/storybook-space-1200.webp 1200w,
-                         images/storybook-space-1600.webp 1600w,
-                         images/storybook-space-2560.webp 2560w"
-                 sizes="(min-width: 1600px): 800px,
-                        (min-width: 1320px) 50vw,
-                        100vw"
-                 src="images/storybook-space-400.webp"
-                 alt="Space scale in Storybook"
-                 width="1280"
-                 height="713"
-                 loading="lazy"/>
-            <img srcset="images/storybook-button-400.webp 400w,
-                         images/storybook-button-600.webp 600w,
-                         images/storybook-button-800.webp 800w,
-                         images/storybook-button-1200.webp 1200w,
-                         images/storybook-button-1600.webp 1600w,
-                         images/storybook-button-2560.webp 2560w"
-                 sizes="(min-width: 1600px): 800px,
-                        (min-width: 1320px) 50vw,
-                        100vw"
-                 src="images/storybook-button-400.webp"
-                 alt="Button page in Storybook"
-                 width="1280"
-                 height="713"
-                 loading="lazy"/>
+            <img
+                srcset="images/storybook-space-400.webp 400w, images/storybook-space-600.webp 600w, images/storybook-space-800.webp 800w,
+                    images/storybook-space-1200.webp 1200w, images/storybook-space-1600.webp 1600w, images/storybook-space-2560.webp 2560w"
+                sizes="(min-width: 1600px): 800px,
+                                            (min-width: 1320px) 50vw,
+                                            100vw"
+                src="images/storybook-space-400.webp"
+                alt="Space scale in Storybook"
+                width="1280"
+                height="713"
+                loading="lazy"/>
+            <img
+                srcset="images/storybook-button-400.webp 400w, images/storybook-button-600.webp 600w, images/storybook-button-800.webp
+                    800w, images/storybook-button-1200.webp 1200w, images/storybook-button-1600.webp 1600w, images/storybook-button-2560.webp
+                    2560w"
+                sizes="(min-width: 1600px): 800px,
+                                            (min-width: 1320px) 50vw,
+                                            100vw"
+                src="images/storybook-button-400.webp"
+                alt="Button page in Storybook"
+                width="1280"
+                height="713"
+                loading="lazy"/>
         </div>
         <figcaption>
             Storybook, April&nbsp;2021
         </figcaption>
     </figure>
     <p>
-        The library, of course, uses tokens as its base and we've building our kit while
-        closely collaborating with the agile teams to be sure that whatever pieces we ship,
-        it can be used since day one. Nonetheless we've put a great effort into making sure
-        we got the foundations right and that those would support future design changes with
-        minimal effort.
+        The library, of course, uses tokens as its base and we've building our kit while closely collaborating with the agile
+        teams to be sure that whatever pieces we ship, it can be used since day one. Nonetheless we've put a great effort into
+        making sure we got the foundations right and that those would support future design changes with minimal effort.
     </p>
     <p>
-        We started with foundational layout and text components. At the time Figma just
-        shipped Auto Layout which reassured us we're on the right path to making designers
-        and developers reason about this foundations from similar points of view.
+        We started with foundational layout and text components. At the time Figma just shipped Auto Layout which reassured us
+        we're on the right path to making designers and developers reason about this foundations from similar points of view.
     </p>
     <p>
-        Then we moved over to basic components such as buttons, inputs, icons etc. We've
-        introduced small refinements along the way such as adding focus styling and making
-        sure that screen readers would have a title to read even if visually the button has
-        only an icon (and we show it in the tooltip as additional scaffolding too).
+        Then we moved over to basic components such as buttons, inputs, icons etc. We've introduced small refinements along the
+        way such as adding focus styling and making sure that screen readers would have a title to read even if visually the
+        button has only an icon (and we show it in the tooltip as additional scaffolding too).
     </p>
     <figure class="full">
-        <img srcset="images/dynamic-layout-400.webp 400w,
-                     images/dynamic-layout-600.webp 600w,
-                     images/dynamic-layout-800.webp 800w,
-                     images/dynamic-layout-1000.webp 1000w,
-                     images/dynamic-layout-1600.webp 1600w,
-                     images/dynamic-layout-2000.webp 2000w,
-                     images/dynamic-layout-2560.webp 2560w"
-             sizes="100vw"
-             src="images/dynamic-layout-400.webp"
-             alt="Dynamic layout documentation in Storybook"
-             width="1280"
-             height="713"
-             loading="lazy"/>
+        <img
+            srcset="images/dynamic-layout-400.webp 400w, images/dynamic-layout-600.webp 600w, images/dynamic-layout-800.webp 800w,
+                images/dynamic-layout-1000.webp 1000w, images/dynamic-layout-1600.webp 1600w, images/dynamic-layout-2000.webp 2000w,
+                images/dynamic-layout-2560.webp 2560w"
+            sizes="100vw"
+            src="images/dynamic-layout-400.webp"
+            alt="Dynamic layout documentation in Storybook"
+            width="1280"
+            height="713"
+            loading="lazy"/>
         <figcaption>
             Dynamic layout documentation, February&nbsp;2021
         </figcaption>
     </figure>
-    <p>
-        We're far from completeness if such a thing is even possible for a design system,
-        but our code powers some production systems and is going to power more of them in
-        the future.
-    </p>
     <h2>Embracing the imperfection</h2>
     <p>
-        Development of the design system is coordinated with a very informal Kanban board
-        and through constant communication. We talk with our users and anybody who's willing
-        to contribute through a variety of channels: a literal Slack channel, pull requests
-        on our main repository, a monthly conference call and countless private messages,
-        emails and calls. Most important architectural and technical decisions are captured
-        as decision documents with dates, reasoning, objections and considerations included.
+        Development of the design system is coordinated with a very informal Kanban board and through constant communication. We
+        talk with our users and anybody who's willing to contribute through a variety of channels: a literal Slack channel, pull
+        requests on our main repository, a monthly conference call and countless private messages, emails and calls. Most
+        important architectural and technical decisions are captured as decision documents with dates, reasoning, objections and
+        considerations included.
     </p>
     <figure class="full">
-        <img srcset="images/notion-400.webp 400w,
-                     images/notion-600.webp 600w,
-                     images/notion-800.webp 800w,
-                     images/notion-1000.webp 1000w,
-                     images/notion-1600.webp 1600w,
-                     images/notion-2560.webp 2560w,
-                     images/notion-3200.webp 3200w"
-             sizes="100vw"
-             src="images/notion-400.webp"
-             alt="Kanban board of the project in Notion"
-             width="80"
-             height="49"
-             loading="lazy"/>
+        <img
+            srcset="images/notion-400.webp 400w, images/notion-600.webp 600w, images/notion-800.webp 800w, images/notion-1000.webp
+                1000w, images/notion-1600.webp 1600w, images/notion-2560.webp 2560w, images/notion-3200.webp 3200w"
+            sizes="100vw"
+            src="images/notion-400.webp"
+            alt="Kanban board of the project in Notion"
+            width="80"
+            height="49"
+            loading="lazy"/>
         <figcaption>
             Design system board, April&nbsp;2021
         </figcaption>
     </figure>
     <p>
-        Dealing with problems, inconsistencies, imperfections one by one we're building it
-        bigger and bigger and more useful on each turn, all the while more and more
-        engineers, designers and stakeholders are embracing it as the shared medium
+        Dealing with problems, inconsistencies, imperfections one by one we're building it bigger and bigger and more useful on
+        each turn, all the while more and more engineers, designers and stakeholders are embracing it as the shared medium
         collectively controlled by all the different disciplines together.
     </p>
 {% endblock %}
