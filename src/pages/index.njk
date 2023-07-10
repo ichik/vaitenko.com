@@ -77,10 +77,13 @@
     </noscript>
 {% endblock %}
 {% block content %}
-    <article class="clip intro" style="--shape: 4% 3%, 85% 11%, 100% 72%, 24% 100%, 0 73%; --aspect-ratio: 5 / 4">
+    <article class="clip intro"
+             style="--shape: 4% 3%, 85% 11%, 100% 72%, 24% 100%, 0 73%;
+                    --aspect-ratio: 5 / 4">
         <section class="inner">
             <h1>
-                Portfolio of <br/>
+                Portfolio of
+                <br />
                 <em>Vadim&nbsp;Vaitenko</em>
             </h1>
             <div class="intro-text">
@@ -102,62 +105,69 @@
             </ul>
         </section>
     </article>
-    <article
-        class="clip photo"
-        style="--shape: 54% 4%, 71% 22%, 66% 48%, 92% 68%, 100% 96%, 3% 90%, 10% 70%, 34% 51%, 29% 33%, 32% 14%; --aspect-ratio:
-            1">
+    <article class="clip photo"
+             style="--shape: 54% 4%, 71% 22%, 66% 48%, 92% 68%, 100% 96%, 3% 90%, 10% 70%, 34% 51%, 29% 33%, 32% 14%;
+                    --aspect-ratio: 1">
         <div class="placeholder">
-            <img
-                srcset="images/photo-400.webp 400w, images/photo-600.webp 600w, images/photo-800.webp 800w, images/photo-1000.webp 1000w"
-                sizes="(min-width: 1320px) 33vw, (min-width: 800px) 50vw, 100vw"
-                src="images/photo-400.webp"
-                alt="Photo of Vadim Vaitenko"
-                width="1"
-                height="1"
-                onload="this.parentNode.classList.add('loaded');"
-                loading="eager"/>
+            <img srcset="images/photo-400.webp 400w,
+                         images/photo-600.webp 600w,
+                         images/photo-800.webp 800w,
+                         images/photo-1000.webp 1000w"
+                 sizes="(min-width: 1320px) 33vw,
+                        (min-width: 800px) 50vw,
+                        100vw"
+                 src="images/photo-400.webp"
+                 alt="Photo of Vadim Vaitenko"
+                 width="1"
+                 height="1"
+                 onload="this.parentNode.classList.add('loaded');"
+                 loading="eager" />
         </div>
     </article>
-    <a
-        href="./babbel/"
-        class="clip babbel"
-        style="--shape: 26% 1%, 93% 10%, 100% 76%, 24% 88%, 6% 78%, 0 10%; aspect-ratio: 3 / 4">
+    <a href="./babbel/"
+       class="clip babbel"
+       style="--shape: 26% 1%, 93% 10%, 100% 76%, 24% 88%, 6% 78%, 0 10%;
+              aspect-ratio: 3 / 4">
         <section class="inner">
             <h2>Design Systems</h2>
             <p>for Babbel, 2019–2021</p>
             <div class="placeholder">
-                <img
-                    srcset="images/babbel-400.webp 400w, images/babbel-600.webp 600w, images/babbel-800.webp 800w, images/babbel-1000.webp
-                        1000w"
-                    sizes="(min-width: 1320px) 33vw, (min-width: 800px) 50vw, 100vw"
-                    src="images/babbel-400.webp"
-                    alt="Various variants of TextField component of Babbel's Design System"
-                    width="10"
-                    height="7"
-                    onload="this.parentNode.classList.add('loaded');"
-                    loading="lazy"/>
+                <img srcset="images/babbel-400.webp 400w,
+                             images/babbel-600.webp 600w,
+                             images/babbel-800.webp 800w,
+                             images/babbel-1000.webp 1000w"
+                     sizes="(min-width: 1320px) 33vw,
+                            (min-width: 800px) 50vw,
+                            100vw"
+                     src="images/babbel-400.webp"
+                     alt="Various variants of TextField component of Babbel's Design System"
+                     width="10"
+                     height="7"
+                     onload="this.parentNode.classList.add('loaded');"
+                     loading="lazy" />
             </div>
         </section>
     </a>
-    <a
-        href="./sqncbrk/"
-        class="clip sqncbrk twoforone"
-        style="--shape: 34% 0, 89% 11%, 98% 88%, 9% 78%, 2% 8%; --aspect-ratio: 4 / 3">
+    <a href="./sqncbrk/"
+       class="clip sqncbrk twoforone"
+       style="--shape: 34% 0, 89% 11%, 98% 88%, 9% 78%, 2% 8%;
+              --aspect-ratio: 4 / 3">
         <section class="inner">
             <h2>SqncBrk Rebirth</h2>
             <p>personal project, 2018–2019</p>
             <div class="placeholder">
-                <img
-                    src="images/sqncbrk.png"
-                    alt="SqncBrk's key graphic: floating in the air writing in pixel-art style"
-                    width="1060"
-                    height="284"
-                    onload="this.parentNode.classList.add('loaded');"
-                    loading="lazy"/>
+                <img src="images/sqncbrk.png"
+                     alt="SqncBrk's key graphic: floating in the air writing in pixel-art style"
+                     width="1060"
+                     height="284"
+                     onload="this.parentNode.classList.add('loaded');"
+                     loading="lazy" />
             </div>
         </section>
     </a>
-    <div class="clip preply" style="--shape: 7% 0, 92% 11%, 100% 66%, 12% 83%, 0 42%; --aspect-ratio: 1">
+    <div class="clip preply"
+         style="--shape: 7% 0, 92% 11%, 100% 66%, 12% 83%, 0 42%;
+                --aspect-ratio: 1">
         <section class="inner">
             <h2>Design Systems</h2>
             <div>
@@ -167,170 +177,193 @@
                 </p>
             </div>
             <div class="placeholder">
-                <img
-                    src="images/preply.webp"
-                    alt="Screenshot of foundations section of Preply's design system websites"
-                    width="717"
-                    height="185"
-                    onload="this.parentNode.classList.add('loaded');"
-                    loading="lazy"/>
+                <img src="images/preply.webp"
+                     alt="Screenshot of foundations section of Preply's design system websites"
+                     width="717"
+                     height="185"
+                     onload="this.parentNode.classList.add('loaded');"
+                     loading="lazy" />
             </div>
         </section>
     </div>
-    <a
-        href="./moneymap/"
-        class="clip moneymap twoforone"
-        style="--shape: 31% 0, 82% 10%, 89% 68%, 9% 60%, 1% 9%; --aspect-ratio: 4 / 3">
+    <a href="./moneymap/"
+       class="clip moneymap twoforone"
+       style="--shape: 31% 0, 82% 10%, 89% 68%, 9% 60%, 1% 9%;
+              --aspect-ratio: 4 / 3">
         <section class="inner">
             <h2>Mobile Vertical</h2>
             <p>for MoneyMap, 2017</p>
             <div class="placeholder">
-                <img
-                    srcset="images/moneymap-400.webp 400w, images/moneymap-600.webp 600w, images/moneymap-800.webp 800w,
-                        images/moneymap-1000.webp 1000w, images/moneymap-1580.webp 1580w"
-                    sizes="(min-width: 1320px) 66vw, 100vw"
-                    src="images/moneymap-400.webp"
-                    alt="Screenshot of a phone selection card in MoneyMap's mobile contract switching journey"
-                    width="1580"
-                    height="641"
-                    onload="this.parentNode.classList.add('loaded');"
-                    loading="lazy"/>
+                <img srcset="images/moneymap-400.webp 400w,
+                             images/moneymap-600.webp 600w,
+                             images/moneymap-800.webp 800w,
+                             images/moneymap-1000.webp 1000w,
+                             images/moneymap-1580.webp 1580w"
+                     sizes="(min-width: 1320px) 66vw,
+                            100vw"
+                     src="images/moneymap-400.webp"
+                     alt="Screenshot of a phone selection card in MoneyMap's mobile contract switching journey"
+                     width="1580"
+                     height="641"
+                     onload="this.parentNode.classList.add('loaded');"
+                     loading="lazy" />
             </div>
         </section>
     </a>
-    <a
-        href="./babbel-activity/"
-        class="clip babbel-activity"
-        style="--shape: 7% 0, 90% 11%, 98% 59%, 18% 83%, 0 42%; --aspect-ratio: 1">
+    <a href="./babbel-activity/"
+       class="clip babbel-activity"
+       style="--shape: 7% 0, 90% 11%, 98% 59%, 18% 83%, 0 42%;
+              --aspect-ratio: 1">
         <section class="inner">
             <h2>Your Activity</h2>
             <p>for Babbel, 2018</p>
             <div class="placeholder">
-                <img
-                    srcset="images/babbel-activity-400.webp 400w, images/babbel-activity-600.webp 600w, images/babbel-activity-800.webp 800w,
-                        images/babbel-activity-1000.webp 1000w"
-                    sizes="(min-width: 1320px) 66vw, (min-width: 800px) 50vw, 100vw"
-                    src="images/babbel-activity-400.webp"
-                    alt="Screenshot of a week overview widget with learner's activity (lessons and reviews)"
-                    width="80"
-                    height="49"
-                    onload="this.parentNode.classList.add('loaded');"
-                    loading="lazy"/>
+                <img srcset="images/babbel-activity-400.webp 400w,
+                             images/babbel-activity-600.webp 600w,
+                             images/babbel-activity-800.webp 800w,
+                             images/babbel-activity-1000.webp 1000w"
+                     sizes="(min-width: 1320px) 66vw,
+                            (min-width: 800px) 50vw,
+                            100vw"
+                     src="images/babbel-activity-400.webp"
+                     alt="Screenshot of a week overview widget with learner's activity (lessons and reviews)"
+                     width="80"
+                     height="49"
+                     onload="this.parentNode.classList.add('loaded');"
+                     loading="lazy" />
             </div>
         </section>
     </a>
-    <a
-        href="./zenmate/"
-        class="clip zenmate"
-        style="--shape: 8% 6%, 75% 0, 100% 61%, 82% 100%, 10% 91%, 0 14%; --aspect-ratio: 3 / 4">
+    <a href="./zenmate/"
+       class="clip zenmate"
+       style="--shape: 8% 6%, 75% 0, 100% 61%, 82% 100%, 10% 91%, 0 14%;
+              --aspect-ratio: 3 / 4">
         <section class="inner">
             <h2>Project Adele</h2>
             <p>for ZenMate, 2016</p>
             <div class="placeholder">
-                <img
-                    srcset="images/zenmate-400.webp 400w, images/zenmate-600.webp 600w, images/zenmate-800.webp 800w,
-                        images/zenmate-1000.webp 1000w"
-                    sizes="(min-width: 1320px) 66vw, (min-width: 800px) 50vw, 100vw"
-                    src="images/zenmate-400.webp"
-                    alt="Key detail of refreshed ZenMate's UI: circular button with company's logo. The circular “ripples” coming out of it"
-                    width="1"
-                    height="1"
-                    onload="this.parentNode.classList.add('loaded');"
-                    loading="lazy"/>
+                <img srcset="images/zenmate-400.webp 400w,
+                             images/zenmate-600.webp 600w,
+                             images/zenmate-800.webp 800w,
+                             images/zenmate-1000.webp 1000w"
+                     sizes="(min-width: 1320px) 66vw,
+                            (min-width: 800px) 50vw,
+                            100vw"
+                     src="images/zenmate-400.webp"
+                     alt="Key detail of refreshed ZenMate's UI: circular button with company's logo. The circular “ripples” coming out of it"
+                     width="1"
+                     height="1"
+                     onload="this.parentNode.classList.add('loaded');"
+                     loading="lazy" />
             </div>
         </section>
     </a>
-    <a
-        href="./zenmate-early/"
-        class="clip zenmate-early"
-        style="--shape: 0 1%, 90% 8%, 100% 69%, 50% 82%, 10% 69%; --aspect-ratio: 3 / 5">
+    <a href="./zenmate-early/"
+       class="clip zenmate-early"
+       style="--shape: 0 1%, 90% 8%, 100% 69%, 50% 82%, 10% 69%;
+              --aspect-ratio: 3 / 5">
         <section class="inner">
             <h2>Early Prototype</h2>
             <p>for ZenMate, 2015</p>
             <div class="placeholder">
-                <img
-                    srcset="images/zenmate-early-400.webp 400w, images/zenmate-early-600.webp 600w, images/zenmate-early-800.webp 800w,
-                        images/zenmate-early-1000.webp 1000w"
-                    sizes="(min-width: 1320px) 66vw, (min-width: 800px) 50vw, 100vw"
-                    src="images/zenmate-early-400.webp"
-                    alt="Simple visual solution of ZenMate's browser extension: a popup with a focus on “turn on” switch"
-                    width="1"
-                    height="1"
-                    onload="this.parentNode.classList.add('loaded');"
-                    loading="lazy"/>
+                <img srcset="images/zenmate-early-400.webp 400w,
+                             images/zenmate-early-600.webp 600w,
+                             images/zenmate-early-800.webp 800w,
+                             images/zenmate-early-1000.webp 1000w"
+                     sizes="(min-width: 1320px) 66vw,
+                            (min-width: 800px) 50vw,
+                            100vw"
+                     src="images/zenmate-early-400.webp"
+                     alt="Simple visual solution of ZenMate's browser extension: a popup with a focus on “turn on” switch"
+                     width="1"
+                     height="1"
+                     onload="this.parentNode.classList.add('loaded');"
+                     loading="lazy" />
             </div>
         </section>
     </a>
-    <a href="./avito/" class="clip avito" style="--shape: 50% 0, 96% 52%, 77% 100%, 15% 95%, 1% 8%; --aspect-ratio: 1">
+    <a href="./avito/"
+       class="clip avito"
+       style="--shape: 50% 0, 96% 52%, 77% 100%, 15% 95%, 1% 8%;
+              --aspect-ratio: 1">
         <section class="inner">
             <h2>Help Bot</h2>
             <p>for Avito, 2015</p>
             <div class="placeholder" style="max-width: 75%; padding-left: 10%;">
-                <img
-                    src="images/avito.svg"
-                    alt="Friendly cartoon robot avatar of Avito's help bot"
-                    width="16"
-                    height="15"
-                    onload="this.parentNode.classList.add('loaded');"
-                    loading="lazy"/>
+                <img src="images/avito.svg"
+                     alt="Friendly cartoon robot avatar of Avito's help bot"
+                     width="16"
+                     height="15"
+                     onload="this.parentNode.classList.add('loaded');"
+                     loading="lazy" />
             </div>
         </section>
     </a>
-    <a href="./wow/" class="clip wow" style="--shape: 89% 0, 5% 10%, 0 81%, 81% 86%, 100% 54%; --aspect-ratio: 4 / 3">
+    <a href="./wow/"
+       class="clip wow"
+       style="--shape: 89% 0, 5% 10%, 0 81%, 81% 86%, 100% 54%;
+              --aspect-ratio: 4 / 3">
         <section class="inner">
             <h2>Addons</h2>
             <p>for World of Warcraft, 2010–2011</p>
             <div class="placeholder">
-                <img
-                    srcset="images/wow-400.webp 400w, images/wow-600.webp 600w, images/wow-800.webp 800w, images/wow-996.webp 996w"
-                    sizes="(min-width: 1320px) 66vw, (min-width: 800px) 50vw, 100vw"
-                    src="images/wow-400.webp"
-                    alt="Various states of Wandelust, minimap addon for World of Warcraft"
-                    width="39"
-                    height="25"
-                    onload="this.parentNode.classList.add('loaded');"
-                    loading="lazy"/>
+                <img srcset="images/wow-400.webp 400w,
+                             images/wow-600.webp 600w,
+                             images/wow-800.webp 800w,
+                             images/wow-996.webp 996w"
+                     sizes="(min-width: 1320px) 66vw,
+                            (min-width: 800px) 50vw,
+                            100vw"
+                     src="images/wow-400.webp"
+                     alt="Various states of Wandelust, minimap addon for World of Warcraft"
+                     width="39"
+                     height="25"
+                     onload="this.parentNode.classList.add('loaded');"
+                     loading="lazy" />
             </div>
         </section>
     </a>
-    <a
-        href="./avito-gallery/"
-        class="clip avito-gallery"
-        style="--shape: 34% 2%, 100% 23%, 94% 88%, 7% 84%, 2% 13%; --aspect-ratio: 3 / 2">
+    <a href="./avito-gallery/"
+       class="clip avito-gallery"
+       style="--shape: 34% 2%, 100% 23%, 94% 88%, 7% 84%, 2% 13%;
+              --aspect-ratio: 3 / 2">
         <section class="inner">
             <h2>Photo Gallery</h2>
             <p>for Avito, 2014–2015</p>
             <div class="placeholder">
-                <img
-                    srcset="images/avito-gallery-400.webp 400w, images/avito-gallery-624.webp 624w"
-                    sizes="(min-width: 1320px) 66vw, (min-width: 800px) 50vw, 100vw"
-                    src="images/avito-gallery-400.webp"
-                    alt="Fragment of new Avito's image gallery: a strip of miniature previews"
-                    width="39"
-                    height="25"
-                    onload="this.parentNode.classList.add('loaded');"
-                    loading="lazy"/>
+                <img srcset="images/avito-gallery-400.webp 400w,
+                             images/avito-gallery-624.webp 624w"
+                     sizes="(min-width: 1320px) 66vw,
+                            (min-width: 800px) 50vw,
+                            100vw"
+                     src="images/avito-gallery-400.webp"
+                     alt="Fragment of new Avito's image gallery: a strip of miniature previews"
+                     width="39"
+                     height="25"
+                     onload="this.parentNode.classList.add('loaded');"
+                     loading="lazy" />
             </div>
         </section>
     </a>
-    <a
-        href="./remove-all-guides/"
-        class="clip poof"
-        style="--shape: 66% 8%, 83% 68%, 13% 95%, 0 51%, 7% 1%; --aspect-ratio: 1">
+    <a href="./remove-all-guides/"
+       class="clip poof"
+       style="--shape: 66% 8%, 83% 68%, 13% 95%, 0 51%, 7% 1%;
+              --aspect-ratio: 1">
         <section class="inner">
             <h2>
-                Remove <br/> All Guides
+                Remove
+                <br />
+                All Guides
             </h2>
             <p>plugin for Sketch, 2014</p>
             <div class="placeholder">
-                <img
-                    src="images/poof.webp"
-                    alt="Cartoon picture of a “poof” cloud"
-                    width="1"
-                    height="1"
-                    style="max-width: 160px"
-                    onload="this.parentNode.classList.add('loaded');"
-                    loading="lazy"/>
+                <img src="images/poof.webp"
+                     alt="Cartoon picture of a “poof” cloud"
+                     width="1"
+                     height="1"
+                     style="max-width: 160px"
+                     onload="this.parentNode.classList.add('loaded');"
+                     loading="lazy" />
             </div>
         </section>
     </a>

@@ -1,7 +1,7 @@
 {% extends "case.njk" %}
-{% set title = 'Mobile Vertical for Moneymap' %}
-{% set slug = 'moneymap' %}
-{% set description = 'Setting up a new vertical and user flows for Moneymap' %}
+{% set title = "Mobile Vertical for Moneymap" %}
+{% set slug = "moneymap" %}
+{% set description = "Setting up a new vertical and user flows for Moneymap" %}
 {% block colors %}
     <style type="text/css">
             :root {
@@ -79,199 +79,184 @@
 {% endblock %}
 {% block content %}
     <p>
-        <em >MoneyMap was digital finance web-app with focus on contract switching and
-            management. I worked at MoneyMap as UI/UX designer in 2016–2018.</em
-            >
-        </p>
-        <p>
-            After launching an MVP version of contract management tool in early 2017 MoneyMap
-            discovered its first growth pains. The customer flow and offered service were nice
-            and easy to use and company got quite a few satisfied first customers, but there was
-            nothing for them to do after they switched their energy contracts. With only gas and
-            electricity contracts MoneyMap's best bet was these satisfied customers returning in
-            a year to use the service once again.
-        </p>
-        <div class="mm-wrapper" aria-hidden="true">
-            <div class="card">
-                <div class="doors">
-                    <div class="frontslider"></div>
-                    <div class="backslider"></div>
-                </div>
+        <em>MoneyMap was digital finance web-app with focus on contract switching and
+        management. I worked at MoneyMap as UI/UX designer in 2016–2018.</em>
+    </p>
+    <p>
+        After launching an MVP version of contract management tool in early 2017 MoneyMap
+        discovered its first growth pains. The customer flow and offered service were nice
+        and easy to use and company got quite a few satisfied first customers, but there was
+        nothing for them to do after they switched their energy contracts. With only gas and
+        electricity contracts MoneyMap's best bet was these satisfied customers returning in
+        a year to use the service once again.
+    </p>
+    <div class="mm-wrapper" aria-hidden="true">
+        <div class="card">
+            <div class="doors">
+                <div class="frontslider"></div>
+                <div class="backslider"></div>
             </div>
         </div>
-        <p>
-            Of course there were already plans for more verticals to come. One of the most
-            demanded and financially lucrative contract type were mobile phone contracts. The
-            agreement with external party supplying MoneyMap with contract and deal data came
-            through and the work on mobile vertical has started.
-        </p>
-        <figure class="full">
-            <img srcset="images/phoneselectionpage-400.webp 400w,
-                         images/phoneselectionpage-600.webp 600w,
-                         images/phoneselectionpage-1024.webp 1024w"
-                 sizes="(min-width: 1024px) 1024px,
-                        100vw"
-                 src="images/phoneselectionpage-400.webp"
-                 alt="Three vertical featured cards on top; Horizontal cards underneath with filters on the left"
-                 width="512"
-                 height="791"
-                 class="clamped"
-                 style="--width: 1024px"
-                 loading="lazy"/>
-            <figcaption>
-                Phone selection page
-            </figcaption>
-        </figure>
-        <p>
-            User flow for energy tariffs was quite straightforward from start to finish. The
-            essence of it was just a basic choice scenario: “check out offers → select one”.
-        </p>
-        <figure class="full">
-            <div class="video clamped"
-                 style="--width: 1024px;
-                        --aspect-ratio: 170 / 107">
-                <video preload="metadata"
-                       autoplay
-                       loop
-                       muted
-                       playsinline
-                       poster="./video/energyjourney.webp">
-                    <source src="./video/energyjourney.mp4" type="video/mp4" />
-                </video>
-            </div>
-            <figcaption>
-                User flow high fidelity prototype for energy tariffs user journey
-            </figcaption>
-        </figure>
-        <p>
-            Telco space proved to be much more challenging. The linear user flow transformed
-            into a pathway with branching: contracts with mobile phone and without one, going
-            back and forth and picking up the best deal possible.
-        </p>
-        <figure class="full">
-            <img srcset="images/mobilechoice-400.webp 400w,
-                         images/mobilechoice-600.webp 600w,
-                         images/mobilechoice-1000.webp 1000w,
-                         images/mobilechoice-1600.webp 1600w,
-                         images/mobilechoice-2048.webp 2048w"
-                 sizes="100vw"
-                 src="images/mobilechoice-400.webp"
-                 alt="Dialog offering options for tariffs with and without mobile phone"
-                 width="512"
-                 height="273"
-                 loading="lazy"/>
-            <figcaption>
-                Mobile contract type selection modal
-            </figcaption>
-        </figure>
-        <p>
-            A great deal of effort went into finding best possible way to display all possible
-            details for mobile phone models and tariffs.
-        </p>
-        <figure class="full">
-            <img srcset="images/phonedetails-400.webp 400w,
-                         images/phonedetails-600.webp 600w,
-                         images/phonedetails-1000.webp 1000w,
-                         images/phonedetails-1600.webp 1600w,
-                         images/phonedetails-2048.webp 2048w"
-                 sizes="100vw"
-                 src="images/phonedetails-400.webp"
-                 alt="List of technical information about mobile phone in two columns"
-                 width="512"
-                 height="384"
-                 loading="lazy"/>
-            <figcaption>
-                Mobile phone technical characteristics
-            </figcaption>
-        </figure>
-        <p>
-            Due to the large volume of offers additional filters had to be implemented. We've
-            spent quite some time exploring possible guidance and helpful hints for the users.
-        </p>
-        <figure class="full">
-            <img srcset="images/filters-400.webp 400w,
-                         images/filters-600.webp 600w,
-                         images/filters-1000.webp 1000w,
-                         images/filters-1600.webp 1600w,
-                         images/filters-2016.webp 2016w"
-                 sizes="100vw"
-                 src="images/filters-400.webp"
-                 alt="Multiple-choice filters for tariff options"
-                 width="504"
-                 height="395"
-                 loading="lazy"/>
-            <figcaption>
-                Tariff filters
-            </figcaption>
-        </figure>
-        <p>
-            Of course, there were also more trivial, but still very fun to work on stuff, such
-            as an empty state for when your filtering produced no results.
-        </p>
-        <figure class="full">
-            <img srcset="images/empty-400.webp 400w,
-                         images/empty-689.webp 600w"
-                 sizes="(min-width: 689px) 689px,
-                        100vw"
-                 src="images/empty-400.webp"
-                 alt="Illustration of crying mobile phone"
-                 width="689"
-                 height="667"
-                 class="clamped"
-                 style="--width: 689px"
-                 loading="lazy"/>
-            <figcaption>
-                Empty state
-            </figcaption>
-        </figure>
-        <p>
-            The deeper into the woods we were getting the more potential gotchas for the users
-            we were uncovering. A good example of such an edge case was the fact that not all
-            memory capacity options were available in all colors. I spent some time exploring
-            possible solutions to this problem…
-        </p>
-        <figure class="full">
-            <img srcset="images/impossible-400.webp 400w,
-                         images/impossible-600.webp 600w,
-                         images/impossible-1000.webp 1000w,
-                         images/impossible-1600.webp 1600w,
-                         images/impossible-2000.webp 2000w,
-                         images/impossible-3291.webp 3291w"
-                 sizes="100vw"
-                 src="images/impossible-400.webp"
-                 alt="Different UI patterns communicating that certain colors are not available for certain memory capacity options"
-                 width="3291"
-                 height="1668"
-                 loading="lazy"/>
-            <figcaption>
-                Explorations of various solutions for communicating incompatibility of different
-                options to the user
-            </figcaption>
-        </figure>
-        <p>
-            In the end we settled on the most simple one and the easiest to implement without
-            compromising the principle of being as helpful to the user as possible.
-        </p>
-        <figure class="full">
-            <img srcset="images/simplefinal-400.webp 400w,
-                         images/simplefinal-600.webp 600w,
-                         images/simplefinal-1000.webp 1000w,
-                         images/simplefinal-1660.webp 1660w"
-                 sizes="(min-width: 800px) 800px,
-                        100vw"
-                 src="images/simplefinal-400.webp"
-                 alt="Using a tiny cross icon and native system tooltip to communicate availability info"
-                 width="83"
-                 height="20"
-                 class="clamped"
-                 style="--width: 800px"
-                 loading="lazy"/>
-            <figcaption>
-                Solution using subtle icons and native system tooltips
-            </figcaption>
-        </figure>
-        <p>
-            We launched the vertical in Summer 2017 and started providing delightful experience
-            of switching mobile contracts for our customers.
-        </p>
-    {% endblock %}
+    </div>
+    <p>
+        Of course there were already plans for more verticals to come. One of the most
+        demanded and financially lucrative contract type were mobile phone contracts. The
+        agreement with external party supplying MoneyMap with contract and deal data came
+        through and the work on mobile vertical has started.
+    </p>
+    <figure class="full">
+        <img srcset="images/phoneselectionpage-400.webp 400w,
+                     images/phoneselectionpage-600.webp 600w,
+                     images/phoneselectionpage-1024.webp 1024w"
+             sizes="(min-width: 1024px) 1024px,
+                    100vw"
+             src="images/phoneselectionpage-400.webp"
+             alt="Three vertical featured cards on top; Horizontal cards underneath with filters on the left"
+             width="512"
+             height="791"
+             class="clamped"
+             style="--width: 1024px"
+             loading="lazy" />
+        <figcaption>Phone selection page</figcaption>
+    </figure>
+    <p>
+        User flow for energy tariffs was quite straightforward from start to finish. The
+        essence of it was just a basic choice scenario: “check out offers → select one”.
+    </p>
+    <figure class="full">
+        <div class="video clamped"
+             style="--width: 1024px;
+                    --aspect-ratio: 170 / 107">
+            <video preload="metadata"
+                   autoplay
+                   loop
+                   muted
+                   playsinline
+                   poster="./video/energyjourney.webp">
+                <source src="./video/energyjourney.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <figcaption>User flow high fidelity prototype for energy tariffs user journey</figcaption>
+    </figure>
+    <p>
+        Telco space proved to be much more challenging. The linear user flow transformed
+        into a pathway with branching: contracts with mobile phone and without one, going
+        back and forth and picking up the best deal possible.
+    </p>
+    <figure class="full">
+        <img srcset="images/mobilechoice-400.webp 400w,
+                     images/mobilechoice-600.webp 600w,
+                     images/mobilechoice-1000.webp 1000w,
+                     images/mobilechoice-1600.webp 1600w,
+                     images/mobilechoice-2048.webp 2048w"
+             sizes="100vw"
+             src="images/mobilechoice-400.webp"
+             alt="Dialog offering options for tariffs with and without mobile phone"
+             width="512"
+             height="273"
+             loading="lazy" />
+        <figcaption>Mobile contract type selection modal</figcaption>
+    </figure>
+    <p>
+        A great deal of effort went into finding best possible way to display all possible
+        details for mobile phone models and tariffs.
+    </p>
+    <figure class="full">
+        <img srcset="images/phonedetails-400.webp 400w,
+                     images/phonedetails-600.webp 600w,
+                     images/phonedetails-1000.webp 1000w,
+                     images/phonedetails-1600.webp 1600w,
+                     images/phonedetails-2048.webp 2048w"
+             sizes="100vw"
+             src="images/phonedetails-400.webp"
+             alt="List of technical information about mobile phone in two columns"
+             width="512"
+             height="384"
+             loading="lazy" />
+        <figcaption>Mobile phone technical characteristics</figcaption>
+    </figure>
+    <p>
+        Due to the large volume of offers additional filters had to be implemented. We've
+        spent quite some time exploring possible guidance and helpful hints for the users.
+    </p>
+    <figure class="full">
+        <img srcset="images/filters-400.webp 400w,
+                     images/filters-600.webp 600w,
+                     images/filters-1000.webp 1000w,
+                     images/filters-1600.webp 1600w,
+                     images/filters-2016.webp 2016w"
+             sizes="100vw"
+             src="images/filters-400.webp"
+             alt="Multiple-choice filters for tariff options"
+             width="504"
+             height="395"
+             loading="lazy" />
+        <figcaption>Tariff filters</figcaption>
+    </figure>
+    <p>
+        Of course, there were also more trivial, but still very fun to work on stuff, such
+        as an empty state for when your filtering produced no results.
+    </p>
+    <figure class="full">
+        <img srcset="images/empty-400.webp 400w,
+                     images/empty-689.webp 600w"
+             sizes="(min-width: 689px) 689px,
+                    100vw"
+             src="images/empty-400.webp"
+             alt="Illustration of crying mobile phone"
+             width="689"
+             height="667"
+             class="clamped"
+             style="--width: 689px"
+             loading="lazy" />
+        <figcaption>Empty state</figcaption>
+    </figure>
+    <p>
+        The deeper into the woods we were getting the more potential gotchas for the users
+        we were uncovering. A good example of such an edge case was the fact that not all
+        memory capacity options were available in all colors. I spent some time exploring
+        possible solutions to this problem…
+    </p>
+    <figure class="full">
+        <img srcset="images/impossible-400.webp 400w,
+                     images/impossible-600.webp 600w,
+                     images/impossible-1000.webp 1000w,
+                     images/impossible-1600.webp 1600w,
+                     images/impossible-2000.webp 2000w,
+                     images/impossible-3291.webp 3291w"
+             sizes="100vw"
+             src="images/impossible-400.webp"
+             alt="Different UI patterns communicating that certain colors are not available for certain memory capacity options"
+             width="3291"
+             height="1668"
+             loading="lazy" />
+        <figcaption>
+            Explorations of various solutions for communicating incompatibility of different
+            options to the user
+        </figcaption>
+    </figure>
+    <p>
+        In the end we settled on the most simple one and the easiest to implement without
+        compromising the principle of being as helpful to the user as possible.
+    </p>
+    <figure class="full">
+        <img srcset="images/simplefinal-400.webp 400w,
+                     images/simplefinal-600.webp 600w,
+                     images/simplefinal-1000.webp 1000w,
+                     images/simplefinal-1660.webp 1660w"
+             sizes="(min-width: 800px) 800px,
+                    100vw"
+             src="images/simplefinal-400.webp"
+             alt="Using a tiny cross icon and native system tooltip to communicate availability info"
+             width="83"
+             height="20"
+             class="clamped"
+             style="--width: 800px"
+             loading="lazy" />
+        <figcaption>Solution using subtle icons and native system tooltips</figcaption>
+    </figure>
+    <p>
+        We launched the vertical in Summer 2017 and started providing delightful experience
+        of switching mobile contracts for our customers.
+    </p>
+{% endblock %}

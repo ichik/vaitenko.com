@@ -1,7 +1,7 @@
 {% extends "case.njk" %}
-{% set title = 'SqncBrk Rebirth' %}
-{% set slug = 'sqncbrk' %}
-{% set description = 'A latest redesign of SqncBrk, personal project dedicated to the games of metroidvania genre' %}
+{% set title = "SqncBrk Rebirth" %}
+{% set slug = "sqncbrk" %}
+{% set description = "A latest redesign of SqncBrk, personal project dedicated to the games of metroidvania genre" %}
 {% block colors %}
     <style type="text/css">
             :root {
@@ -39,10 +39,8 @@
              alt="Screenshot of SqcnBrk homepage"
              width="703"
              height="498"
-             loading="eager"/>
-        <figcaption>
-            Screenshot of SqncBrk homepage
-        </figcaption>
+             loading="eager" />
+        <figcaption>Screenshot of SqncBrk homepage</figcaption>
     </figure>
     <p>
         By late 2018 I hade a small list of UX issues, architectural issues and just general
@@ -61,9 +59,7 @@
                 <source src="./video/newLogo.mp4" type="video/mp4" />
             </video>
         </div>
-        <figcaption>
-            New logo hover animation
-        </figcaption>
+        <figcaption>New logo hover animation</figcaption>
     </figure>
     <p>
         New tone was set by blocky Alternate Gothic Pro that was used to typeset the logo
@@ -81,9 +77,7 @@
                 <source src="./video/loadmore.mp4" type="video/mp4" />
             </video>
         </div>
-        <figcaption>
-            “Load more” button hover animation
-        </figcaption>
+        <figcaption>“Load more” button hover animation</figcaption>
     </figure>
     <p>
         Same visual style continues throghout the whole site motif: i.e. the styling for
@@ -101,10 +95,8 @@
              alt="Pixelated low-quality loading state on the left. Fully loaded, high quality image on the right"
              width="75"
              height="46"
-             loading="lazy"/>
-        <figcaption>
-            Screenshots of loading progress on mobile viewport
-        </figcaption>
+             loading="lazy" />
+        <figcaption>Screenshots of loading progress on mobile viewport</figcaption>
     </figure>
     <p>
         The general layout of the page was refined and re-done with CSS grid. The
@@ -127,7 +119,7 @@
                  alt="Screenshot of upper portion of the article about Firewatch on large viewport. Two-column layout, wide crop of cover image"
                  width="2499"
                  height="1992"
-                 loading="lazy"/>
+                 loading="lazy" />
             <img srcset="images/FirewatchMobile-400.webp 400w,
                          images/FirewatchMobile-600.webp 600w,
                          images/FirewatchMobile-800.webp 800w,
@@ -140,19 +132,16 @@
                  width="282"
                  height="609"
                  class="mobile"
-                 loading="lazy"/>
+                 loading="lazy" />
         </div>
-        <figcaption>
-            Comparison of HD and mobile layouts
-        </figcaption>
+        <figcaption>Comparison of HD and mobile layouts</figcaption>
     </figure>
     <p>
         One of the best things to come out of this redesign was finally getting rid of
         <a href="https://en.wikipedia.org/wiki/Hamburger_button">hamburger menu</a> which
         was there for the first two versions of SqncBrk. I always disliked it for all its UX
         shortcomings, but couldn't quite figure out how else to provide top-level links to
-        two most important articles on the website (<a href="https://sqncbrk.com/about/">About</a
-        >
+        two most important articles on the website (<a href="https://sqncbrk.com/about/">About</a>
         and <a href="https://sqncbrk.com/metroidvanias/">On Metroidvanias</a>). The solution
         was simply letting go of the idea of their importance and realizing that the key
         interaction in that menu was search which now was a key action. Links to the two
@@ -171,9 +160,7 @@
                 <source src="./video/search.mp4" type="video/mp4" />
             </video>
         </div>
-        <figcaption>
-            Search animation
-        </figcaption>
+        <figcaption>Search animation</figcaption>
     </figure>
     <p>
         Search results page was revamped to follow suit. Another minor accessibility fix
@@ -192,10 +179,8 @@
              alt="Search results page with two-column output with previews"
              width="1214"
              height="635"
-             loading="lazy"/>
-        <figcaption>
-            Screenshot of search results page
-        </figcaption>
+             loading="lazy" />
+        <figcaption>Screenshot of search results page</figcaption>
     </figure>
     <p>
         The last piece of eye candy was all new “slide-in” footer. It utilized the same grid
@@ -214,28 +199,25 @@
                 <source src="./video/footer.webm" type="video/webm" />
             </video>
         </div>
-        <figcaption>
-            Footer animation
-        </figcaption>
+        <figcaption>Footer animation</figcaption>
     </figure>
     <p>
         Performance of the site was also vastly improved with this rewrite. While it was
         good previosly, there were still a few things to improve. This time having more
         knowledge about optimization techniques and component-based CSS model I managed to
         achieve a
-        <a href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fsqncbrk.com&tab=mobile">perfect score</a
-            >
-            in Google's Pagespeed Insights. Fast loading time was a win for my readers as much
-            as it was a reason to be proud of my developers' prowess.
-        </p>
-        <img srcset="images/score-400.webp 400w,
-                     images/score-600.webp 600w,
-                     images/score-850.webp 850w"
-             sizes="(min-width: 700px): 700px,
-                    100vw"
-             src="images/score-400.webp"
-             alt="100/100 speed score of sqncbrk.com"
-             width="425"
-             height="263"
-             loading="lazy"/>
-    {% endblock %}
+        <a href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fsqncbrk.com&tab=mobile">perfect score</a>
+        in Google's Pagespeed Insights. Fast loading time was a win for my readers as much
+        as it was a reason to be proud of my developers' prowess.
+    </p>
+    <img srcset="images/score-400.webp 400w,
+                 images/score-600.webp 600w,
+                 images/score-850.webp 850w"
+         sizes="(min-width: 700px): 700px,
+                100vw"
+         src="images/score-400.webp"
+         alt="100/100 speed score of sqncbrk.com"
+         width="425"
+         height="263"
+         loading="lazy" />
+{% endblock %}
