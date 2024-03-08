@@ -21,5 +21,6 @@
     "scripts": {
         "build": "gulp",
         "dev": "gulp dev"
-    }
+    },
+    "packageManager": "yarn@4.1.1"
 }
