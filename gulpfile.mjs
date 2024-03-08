@@ -50,6 +50,10 @@ const paths = {
         src: `${dirs.entry}/pages/**/zenmateswitch/*.+(png|html)`,
         dest: `${dirs.output}`,
     },
+    headers: {
+        src: `${dirs.entry}/_headers`,
+        dest: `${dirs.output}`,
+    }
 };
 
 const pluginConfig = {
@@ -94,6 +98,15 @@ const publicAssets = () =>
     src(paths.public.src, { since: lastRun('publicAssets') })
         .pipe(plumber(pluginConfig.plumber))
         .pipe(dest(paths.public.dest));
+
+// -----------------------------------------------------------------------------
+// Headers.
+// -----------------------------------------------------------------------------
+
+const headers = () =>
+    src(paths.headers.src, { since: lastRun('headers') })
+        .pipe(plumber(pluginConfig.plumber))
+        .pipe(dest(paths.headers.dest));
 
 // -----------------------------------------------------------------------------
 // Pages.
@@ -146,7 +159,7 @@ const videos = () =>
         .pipe(dest(paths.videos.dest));
 
 // -----------------------------------------------------------------------------
-// Video assets.
+// Prototypes.
 // -----------------------------------------------------------------------------
 
 const prototypes = () =>
@@ -193,6 +206,7 @@ const watchSource = () => {
 
 task(clean);
 task(publicAssets);
+task(headers);
 task(pages);
 task(styles);
 task(fonts);
@@ -201,7 +215,7 @@ task(videos);
 task(prototypes);
 task(
     'build',
-    parallel('publicAssets', 'pages', 'styles', 'fonts', 'images', 'videos', 'prototypes'),
+    parallel('publicAssets', 'headers', 'pages', 'styles', 'fonts', 'images', 'videos', 'prototypes'),
 );
 task('default', series('clean', 'build'));
 
