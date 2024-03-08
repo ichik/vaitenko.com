@@ -1,6 +1,6 @@
 footer.clip {
     --shape: 4% 27%, 80% 10%, 100% 30%, 96% 100%, 0 100%;
-    max-width: 52ch;
+    max-width: 64ch;
     float: right;
     display: flex;
     flex-direction: column;
