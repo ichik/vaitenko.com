@@ -53,6 +53,10 @@ const paths = {
     headers: {
         src: `${dirs.entry}/_headers`,
         dest: `${dirs.output}`,
+    },
+    redirects: {
+        src: `${dirs.entry}/_redirects`,
+        dest: `${dirs.output}`,
     }
 };
 
@@ -107,6 +111,16 @@ const headers = () =>
     src(paths.headers.src, { since: lastRun('headers') })
         .pipe(plumber(pluginConfig.plumber))
         .pipe(dest(paths.headers.dest));
+
+// -----------------------------------------------------------------------------
+// Redirects.
+// -----------------------------------------------------------------------------
+
+const redirects = () =>
+    src(paths.redirects.src, { since: lastRun('redirects') })
+        .pipe(plumber(pluginConfig.plumber))
+        .pipe(dest(paths.redirects.dest));
+
 
 // -----------------------------------------------------------------------------
 // Pages.
@@ -207,6 +221,7 @@ const watchSource = () => {
 task(clean);
 task(publicAssets);
 task(headers);
+task(redirects);
 task(pages);
 task(styles);
 task(fonts);
@@ -215,7 +230,7 @@ task(videos);
 task(prototypes);
 task(
     'build',
-    parallel('publicAssets', 'headers', 'pages', 'styles', 'fonts', 'images', 'videos', 'prototypes'),
+    parallel('publicAssets', 'headers', 'redirects', 'pages', 'styles', 'fonts', 'images', 'videos', 'prototypes'),
 );
 task('default', series('clean', 'build'));
 
