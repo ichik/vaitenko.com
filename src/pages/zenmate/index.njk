@@ -3,200 +3,247 @@
 {% set slug = "zenmate" %}
 {% set description = "A big redesign project of ZenMate apps" %}
 {% block colors %}
-    <style type="text/css">
-            :root {
-                --bg: #128cca;
-                --fg: #e5f6ff;
-                --card-bg: #04212f;
-                --link: #ff8800;
-                --link-underline: #ffab4c;
-                --link-hover: #ffffff;
-                --link-hover-underline: #d7d7d7;
-            }
-    </style>
+<style type='text/css'>
+    :root {
+        --bg: #128cca;
+        --fg: #e5f6ff;
+        --card-bg: #04212f;
+        --link: #ff8800;
+        --link-underline: #ffab4c;
+        --link-hover: #ffffff;
+        --link-hover-underline: #d7d7d7;
+    }
+</style>
 {% endblock %}
 {% block content %}
-    <figure class="full">
-        <img srcset="images/icon-400.webp 400w,
-                     images/icon-512.webp 512w"
-             sizes="(min-width: 512px) 512px,
-                    100vw"
-             src="images/icon-400.webp"
-             alt="A shield symbol inside a circle"
-             width="512"
-             height="512"
-             class="clamped"
-             style="--width: 512px"
-             loading="eager" />
-    </figure>
-    <p>
-        In 2016 I helped <a href="https://zenmate.com">ZenMate</a>, a cybersecurity company
-        from Berlin to redesign their VPN client. Internally project was dubbed “Adele”.
-        ZenMate had apps on all the major platforms (Windows, Mac, Android, iOS and browser
-        extensions), but they for the most part looked nothing alike.
-    </p>
-    <p>
-        The goal was to unify all the apps in a single style, so that the service can be
-        positioned as a universal solution that protects all your devices. I worked in a
-        team with Jan Martin (art-director) and Peter Krämer (second designer). Primarily I
-        authored the design system and layouts for Android.
-    </p>
-    <h2>UI Kit</h2>
-    <figure class="full">
-        <div class="gallery">
-            <img srcset="images/components-400.webp 400w,
-                         images/components-600.webp 600w,
-                         images/components-900.webp 900w"
-                 sizes="(min-width: 1600px): 800px,
-                        (min-width: 1320px) 50vw,
-                        100vw"
-                 src="images/components-400.webp"
-                 alt="Components, buttons, lists, icons, main app circular button with a shield symbol in it"
-                 width="3"
-                 height="7"
-                 loading="lazy" />
-            <img srcset="images/subcomponents-400.webp 400w,
-                         images/subcomponents-600.webp 600w,
-                         images/subcomponents-900.webp 900w"
-                 sizes="(min-width: 1600px): 800px,
-                        (min-width: 1320px) 50vw,
-                        100vw"
-                 src="images/subcomponents-400.webp"
-                 alt="Shapes, icons and parts of more complicated UI"
-                 width="5"
-                 height="6"
-                 loading="lazy" />
-        </div>
-        <figcaption>Components and subcomponents of “Adele” UI kit</figcaption>
-    </figure>
-    <h2>Screens</h2>
-    <figure class="full">
-        <img srcset="images/home-400.webp 400w,
-                     images/home-600.webp 600w,
-                     images/home-800.webp 800w,
-                     images/home-1000.webp 1000w,
-                     images/home-1448.webp 1448w"
-             sizes="100vw"
-             src="images/home-400.webp"
-             alt="Home screen in disconnect, connecting, and connected states"
-             width="574"
-             height="1297"
-             class="clamped"
-             style="--width: 774px"
-             loading="lazy" />
-        <figcaption>Home screen with the key interaction</figcaption>
-    </figure>
-    <p>
-        Animation for establishing connection was
-        <a href="./zenmateswitch/" target="_blank">prototyped in HTML</a> in an effort to
-        speed up the development hand-off process. It turned out to be a complete success,
-        since deriving values from CSS animation was much easier than relying on recording
-        of animation and trying to make sense of easing curves that I used in the prototype.
-    </p>
-    <figure class="full">
-        <div class="video clamped" style="--width: 300px; --aspect-ratio: 268/477">
-            <video preload="metadata"
-                   autoplay
-                   loop
-                   muted
-                   playsinline
-                   poster="./video/connection.webp">
-                <source src="./video/connection.mp4" type="video/mp4" />
-            </video>
-        </div>
-        <figcaption>Recording of connection animation prototype</figcaption>
-    </figure>
-    <figure class="full">
-        <div class="gallery">
-            <img srcset="images/country-400.webp 400w,
-                         images/country-600.webp 600w,
-                         images/country-1000.webp 1000w,
-                         images/country-1448.webp 1448w"
-                 sizes="(min-width: 1600px): 800px,
-                        (min-width: 1320px) 50vw,
-                        100vw"
-                 src="images/country-400.webp"
-                 alt="Country selection screen with the list of countries, search field and a sticky header section"
-                 width="724"
-                 height="1297"
-                 loading="lazy" />
-            <img srcset="images/subscreens-400.webp 400w,
-                         images/subscreens-600.webp 600w,
-                         images/subscreens-1000.webp 1000w,
-                         images/subscreens-1448.webp 1448w"
-                 sizes="(min-width: 1600px): 800px,
-                        (min-width: 1320px) 50vw,
-                        100vw"
-                 src="images/subscreens-400.webp"
-                 alt="Settings, stats, profile, and notifications screens"
-                 width="181"
-                 height="486"
-                 loading="lazy" />
-        </div>
-        <figcaption>Country selection screen and various other sub-screens</figcaption>
-    </figure>
-    <p>
-        Transition from homescreen to subscreens was prototyped in Principle. The rising
-        “wave” animation accentuated the selected tab instead of opting out for universal
-        animation for each screen.
-    </p>
-    <figure class="full">
-        <div class="video clamped" style="--width: 300px; --aspect-ratio: 9/16">
-            <video preload="metadata"
-                   autoplay
-                   loop
-                   muted
-                   playsinline
-                   poster="./video/screenreveal.webp">
-                <source src="./video/screenreveal.mp4" type="video/mp4" />
-            </video>
-        </div>
-        <figcaption>Menu slide-out animation</figcaption>
-    </figure>
-    <p>
-        Tablets got special layout with subscreen content always present when you use the
-        app.
-    </p>
-    <figure class="full">
-        <img srcset="images/tablet-400.webp 400w,
-                     images/tablet-600.webp 600w,
-                     images/tablet-800.webp 800w,
-                     images/tablet-1000.webp 1000w,
-                     images/tablet-1600.webp 1600w,
-                     images/tablet-2000.webp 2000w,
-                     images/tablet-2560.webp 2560w"
-             sizes="(min-width: 1280px) 1280px,
-                    100vw"
-             src="images/tablet-400.webp"
-             alt="Tablet layout with a screen separated in halves, connection on the left, sub-screens on the right"
-             width="8"
-             height="5"
-             class="clamped"
-             styles="--width 1280px"
-             loading="lazy" />
-        <figcaption>Tablet layout</figcaption>
-    </figure>
-    <p>
-        New design was met warmly by users and received praise in store reviews and in
-        online discussions.
-    </p>
-    <figure class="full">
-        <img srcset="images/photo-400.webp 400w,
-                     images/photo-600.webp 600w,
-                     images/photo-800.webp 800w,
-                     images/photo-1000.webp 1000w,
-                     images/photo-1600.webp 1600w,
-                     images/photo-2000.webp 2000w,
-                     images/photo-2448.webp 2448w"
-             sizes="(min-width: 600px) 600px,
-                    100vw"
-             src="images/photo-400.webp"
-             alt="Photo of a previously showed UI presented on a mobile phone lying askew"
-             width="153"
-             height="204"
-             class="clamped"
-             styles="--width 600px"
-             loading="lazy" />
-        <figcaption>Test build of the application running on a mobile phone</figcaption>
-    </figure>
+<figure class='full'>
+    <img
+        srcset='
+            images/icon-400.webp 400w,
+            images/icon-512.webp 512w
+        '
+        sizes='
+            (min-width: 512px) 512px,
+            100vw
+        '
+        src='images/icon-400.webp'
+        alt='A shield symbol inside a circle'
+        width='512'
+        height='512'
+        class='clamped'
+        style='--width: 512px'
+        loading='eager'
+    >
+</figure>
+<p>
+    In 2016 I helped <a href='https://zenmate.com'>ZenMate</a>, a cybersecurity company from Berlin
+    to redesign their VPN client. Internally project was dubbed “Adele”. ZenMate had apps on all the
+    major platforms (Windows, Mac, Android, iOS and browser extensions), but they for the most part
+    looked nothing alike.
+</p>
+<p>
+    The goal was to unify all the apps in a single style, so that the service can be positioned as a
+    universal solution that protects all your devices. I worked in a team with Jan Martin
+    (art-director) and Peter Krämer (second designer). Primarily I authored the design system and
+    layouts for Android.
+</p>
+<h2>UI Kit</h2>
+<figure class='full'>
+    <div class='gallery'>
+        <img
+            srcset='
+                images/components-400.webp 400w,
+                images/components-600.webp 600w,
+                images/components-900.webp 900w
+            '
+            sizes='
+                (min-width: 1600px): 800px,
+                (min-width: 1320px) 50vw,
+                100vw
+            '
+            src='images/components-400.webp'
+            alt='Components, buttons, lists, icons, main app circular button with a shield symbol in it'
+            width='3'
+            height='7'
+            loading='lazy'
+        >
+        <img
+            srcset='
+                images/subcomponents-400.webp 400w,
+                images/subcomponents-600.webp 600w,
+                images/subcomponents-900.webp 900w
+            '
+            sizes='
+                (min-width: 1600px): 800px,
+                (min-width: 1320px) 50vw,
+                100vw
+            '
+            src='images/subcomponents-400.webp'
+            alt='Shapes, icons and parts of more complicated UI'
+            width='5'
+            height='6'
+            loading='lazy'
+        >
+    </div>
+    <figcaption>Components and subcomponents of “Adele” UI kit</figcaption>
+</figure>
+<h2>Screens</h2>
+<figure class='full'>
+    <img
+        srcset='
+            images/home-400.webp 400w,
+            images/home-600.webp 600w,
+            images/home-800.webp 800w,
+            images/home-1000.webp 1000w,
+            images/home-1448.webp 1448w
+        '
+        sizes='100vw'
+        src='images/home-400.webp'
+        alt='Home screen in disconnect, connecting, and connected states'
+        width='574'
+        height='1297'
+        class='clamped'
+        style='--width: 774px'
+        loading='lazy'
+    >
+    <figcaption>Home screen with the key interaction</figcaption>
+</figure>
+<p>
+    Animation for establishing connection was
+    <a href='./zenmateswitch/' target='_blank'>prototyped in HTML</a> in an effort to speed up the
+    development hand-off process. It turned out to be a complete success, since deriving values from
+    CSS animation was much easier than relying on recording of animation and trying to make sense of
+    easing curves that I used in the prototype.
+</p>
+<figure class='full'>
+    <div class='video clamped' style='--width: 300px; --aspect-ratio: 268/477'>
+        <video
+            preload='metadata'
+            autoplay
+            loop
+            muted
+            playsinline
+            poster='./video/connection.webp'
+        >
+            <source src='./video/connection.mp4' type='video/mp4'>
+        </video>
+    </div>
+    <figcaption>Recording of connection animation prototype</figcaption>
+</figure>
+<figure class='full'>
+    <div class='gallery'>
+        <img
+            srcset='
+                images/country-400.webp 400w,
+                images/country-600.webp 600w,
+                images/country-1000.webp 1000w,
+                images/country-1448.webp 1448w
+            '
+            sizes='
+                (min-width: 1600px): 800px,
+                (min-width: 1320px) 50vw,
+                100vw
+            '
+            src='images/country-400.webp'
+            alt='Country selection screen with the list of countries, search field and a sticky header section'
+            width='724'
+            height='1297'
+            loading='lazy'
+        >
+        <img
+            srcset='
+                images/subscreens-400.webp 400w,
+                images/subscreens-600.webp 600w,
+                images/subscreens-1000.webp 1000w,
+                images/subscreens-1448.webp 1448w
+            '
+            sizes='
+                (min-width: 1600px): 800px,
+                (min-width: 1320px) 50vw,
+                100vw
+            '
+            src='images/subscreens-400.webp'
+            alt='Settings, stats, profile, and notifications screens'
+            width='181'
+            height='486'
+            loading='lazy'
+        >
+    </div>
+    <figcaption>Country selection screen and various other sub-screens</figcaption>
+</figure>
+<p>
+    Transition from homescreen to subscreens was prototyped in Principle. The rising “wave”
+    animation accentuated the selected tab instead of opting out for universal animation for each
+    screen.
+</p>
+<figure class='full'>
+    <div class='video clamped' style='--width: 300px; --aspect-ratio: 9/16'>
+        <video
+            preload='metadata'
+            autoplay
+            loop
+            muted
+            playsinline
+            poster='./video/screenreveal.webp'
+        >
+            <source src='./video/screenreveal.mp4' type='video/mp4'>
+        </video>
+    </div>
+    <figcaption>Menu slide-out animation</figcaption>
+</figure>
+<p>Tablets got special layout with subscreen content always present when you use the app.</p>
+<figure class='full'>
+    <img
+        srcset='
+            images/tablet-400.webp 400w,
+            images/tablet-600.webp 600w,
+            images/tablet-800.webp 800w,
+            images/tablet-1000.webp 1000w,
+            images/tablet-1600.webp 1600w,
+            images/tablet-2000.webp 2000w,
+            images/tablet-2560.webp 2560w
+        '
+        sizes='
+            (min-width: 1280px) 1280px,
+            100vw
+        '
+        src='images/tablet-400.webp'
+        alt='Tablet layout with a screen separated in halves, connection on the left, sub-screens on the right'
+        width='8'
+        height='5'
+        class='clamped'
+        styles='--width 1280px'
+        loading='lazy'
+    >
+    <figcaption>Tablet layout</figcaption>
+</figure>
+<p>
+    New design was met warmly by users and received praise in store reviews and in online
+    discussions.
+</p>
+<figure class='full'>
+    <img
+        srcset='
+            images/photo-400.webp 400w,
+            images/photo-600.webp 600w,
+            images/photo-800.webp 800w,
+            images/photo-1000.webp 1000w,
+            images/photo-1600.webp 1600w,
+            images/photo-2000.webp 2000w,
+            images/photo-2448.webp 2448w
+        '
+        sizes='
+            (min-width: 600px) 600px,
+            100vw
+        '
+        src='images/photo-400.webp'
+        alt='Photo of a previously showed UI presented on a mobile phone lying askew'
+        width='153'
+        height='204'
+        class='clamped'
+        styles='--width 600px'
+        loading='lazy'
+    >
+    <figcaption>Test build of the application running on a mobile phone</figcaption>
+</figure>
 {% endblock %}

@@ -3,5 +3,14 @@
     "printWidth": 100,
     "singleQuote": true,
     "tabWidth": 4,
-    "arrowParens": "avoid"
+    "arrowParens": "avoid",
+    "plugins": ["@shopify/prettier-plugin-liquid"],
+    "overrides": [
+        {
+            "files": "*.njk",
+            "options": {
+                "parser": "liquid-html"
+            }
+        }
+    ]
 }

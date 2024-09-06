@@ -1,33 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang='en'>
     <head>
         {% block head %}
-            <meta charset="UTF-8" />
-            <meta name="description"
-                  content="Portfolio of Vadim Vaitenko. Select case studies" />
-            <meta name="viewport"
-                  content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no" />
-            <title>Portfolio of Vadim Vaitenko</title>
-            <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-            <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-            <link rel="manifest" href="/manifest.webmanifest" />
-            <meta property="og:title" content="Portfolio of Vadim Vaitenko">
-            <meta property="og:description"
-                  content="Portfolio of Vadim Vaitenko. Design systems; product and UX design; prototyping and development. Select case studies">
-            <meta name="image"
-                  property="og:image"
-                  content="https://vaitenko.com/images/og.jpg">
-            <meta name="twitter:card" content="summary_large_image">
-            <meta name="author" content="Vadim Vaitenko">
-            <link rel="preload" as="style" type="text/css" href="style/style.css" />
-            <link rel="preload" href="/fonts/petrona.woff2" as="font" type="font/woff2" />
-            <link rel="stylesheet" href="style/style.css" />
-            {% block placeholders %}{% endblock %}
+        <meta charset='UTF-8'>
+        <meta
+            name='description'
+            content='Portfolio of Vadim Vaitenko. Select case studies'
+        >
+        <meta
+            name='viewport'
+            content='width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no'
+        >
+        <title>Portfolio of Vadim Vaitenko</title>
+        <link rel='icon' href='favicon.svg' type='image/svg+xml'>
+        <link rel='apple-touch-icon' href='/apple-touch-icon.png'>
+        <link rel='manifest' href='/manifest.webmanifest'>
+        <meta property='og:title' content='Portfolio of Vadim Vaitenko'>
+        <meta
+            property='og:description'
+            content='Portfolio of Vadim Vaitenko. Design systems; product and UX design; prototyping and development. Select case studies'
+        >
+        <meta
+            name='image'
+            property='og:image'
+            content='https://vaitenko.com/images/og.jpg'
+        >
+        <meta name='twitter:card' content='summary_large_image'>
+        <meta name='author' content='Vadim Vaitenko'>
+        <link rel='preload' as='style' type='text/css' href='style/style.css'>
+        <link rel='preload' href='/fonts/petrona.woff2' as='font' type='font/woff2'>
+        <link rel='stylesheet' href='style/style.css'>
+        {% block placeholders %}
+        {% endblock %}
         {% endblock %}
     </head>
     <body>
-        <main class="index-grid">
-            {% block content %}{% endblock %}
+        <main class='index-grid'>
+            {% block content -%}
+            {%- endblock %}
         </main>
         {% set home = true %}
         {% include 'partials/footer.njk' %}

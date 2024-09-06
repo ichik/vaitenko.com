@@ -3,61 +3,70 @@
 {% set slug = "avito" %}
 {% set description = "A little friendly bot avatar for Avito" %}
 {% block colors %}
-    <style type="text/css">
-            :root {
-                --bg: #fff;
-                --fg: #1c2705;
-                --card-bg: #97cf26;
-                --link: #330d00;
-                --link-underline: #8e2f10;
-                --link-hover: #7c1336;
-                --link-hover-underline: #a31f4b;
-            }
-    </style>
+<style type='text/css'>
+    :root {
+        --bg: #fff;
+        --fg: #1c2705;
+        --card-bg: #97cf26;
+        --link: #330d00;
+        --link-underline: #8e2f10;
+        --link-hover: #7c1336;
+        --link-hover-underline: #a31f4b;
+    }
+</style>
 {% endblock %}
 {% block content %}
-    <img src="./images/robots.gif"
-         alt="Sequence of robot cartoon robot avatars for help bot"
-         width="4"
-         height="3"
-         loading="eager" />
-    <p>
-        A little project that I've worked on in <a href="https://avito.ru">Avito</a> in
-        2015. It was designed for a first line of user support. The user can receive some
-        answers on how the service works, file a complaint or request a chat with the live
-        operator.
-    </p>
-    <figure class="full">
-        <img srcset="images/in-page-400.webp 400w,
-                     images/in-page-600.webp 600w,
-                     images/in-page-1000.webp 1000w,
-                     images/in-page-1600.webp 1600w,
-                     images/in-page-2852.webp 2852w"
-             sizes="100vw"
-             src="images/in-page-400.webp"
-             alt="Two screenshots: chat is collapsed into a vertical bar on the left, expanded into a small corner UI on the right"
-             width="713"
-             height="295"
-             loading="lazy" />
-        <figcaption>Screenshot of help bot UI in page context</figcaption>
-    </figure>
-    <p>
-        The user flow is pretty straightfoward. A few forms and help articles are shown upon
-        request (either by clicking a link in chat or entering the key word manually). If
-        the form doesn't help a live operator chat can be requested.
-    </p>
-    <figure class="full">
-        <img srcset="images/flowchart-400.webp 400w,
-                     images/flowchart-600.webp 600w,
-                     images/flowchart-1000.webp 1000w,
-                     images/flowchart-1600.webp 1600w,
-                     images/flowchart-2755.webp 2755w"
-             sizes="100vw"
-             src="images/flowchart-400.webp"
-             alt="Flowchart of user journey with the bot showing automatic answers and switching to human operator"
-             width="551"
-             height="255"
-             loading="lazy" />
-        <figcaption>Full user flow</figcaption>
-    </figure>
+<img
+    src='./images/robots.gif'
+    alt='Sequence of robot cartoon robot avatars for help bot'
+    width='4'
+    height='3'
+    loading='eager'
+>
+<p>
+    A little project that I've worked on in <a href='https://avito.ru'>Avito</a> in 2015. It was
+    designed for a first line of user support. The user can receive some answers on how the service
+    works, file a complaint or request a chat with the live operator.
+</p>
+<figure class='full'>
+    <img
+        srcset='
+            images/in-page-400.webp 400w,
+            images/in-page-600.webp 600w,
+            images/in-page-1000.webp 1000w,
+            images/in-page-1600.webp 1600w,
+            images/in-page-2852.webp 2852w
+        '
+        sizes='100vw'
+        src='images/in-page-400.webp'
+        alt='Two screenshots: chat is collapsed into a vertical bar on the left, expanded into a small corner UI on the right'
+        width='713'
+        height='295'
+        loading='lazy'
+    >
+    <figcaption>Screenshot of help bot UI in page context</figcaption>
+</figure>
+<p>
+    The user flow is pretty straightfoward. A few forms and help articles are shown upon request
+    (either by clicking a link in chat or entering the key word manually). If the form doesn't help
+    a live operator chat can be requested.
+</p>
+<figure class='full'>
+    <img
+        srcset='
+            images/flowchart-400.webp 400w,
+            images/flowchart-600.webp 600w,
+            images/flowchart-1000.webp 1000w,
+            images/flowchart-1600.webp 1600w,
+            images/flowchart-2755.webp 2755w
+        '
+        sizes='100vw'
+        src='images/flowchart-400.webp'
+        alt='Flowchart of user journey with the bot showing automatic answers and switching to human operator'
+        width='551'
+        height='255'
+        loading='lazy'
+    >
+    <figcaption>Full user flow</figcaption>
+</figure>
 {% endblock %}

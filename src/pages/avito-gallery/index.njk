@@ -3,66 +3,64 @@
 {% set slug = "avito-gallery" %}
 {% set description = "Mobile gallery prototype for for Avito" %}
 {% block colors %}
-    <style type="text/css">
-            :root {
-                --bg: #fff;
-                --card-bg: #3bb7ff;
-                --link: #0a291c;
-                --link-underline: #2c825e;
-                --link-hover: #5c0a25;
-                --link-hover-underline: #a31f4b;
-            }
-            @media (min-width: 388px) {
-                .case-grid figure .prototype {
-                    background: #fff url('./video/iphone-wireframe.webp') 0 0 / 384px 804px
-                        no-repeat;
-                    padding: 120px 30px 116px 34px;
-                    margin: 40px auto 60px auto;
-                    width: auto;
-                }
-            }
-    </style>
+<style type='text/css'>
+    :root {
+        --bg: #fff;
+        --card-bg: #3bb7ff;
+        --link: #0a291c;
+        --link-underline: #2c825e;
+        --link-hover: #5c0a25;
+        --link-hover-underline: #a31f4b;
+    }
+    @media (min-width: 388px) {
+        .case-grid figure .prototype {
+            background: #fff url('./video/iphone-wireframe.webp') 0 0 / 384px 804px no-repeat;
+            padding: 120px 30px 116px 34px;
+            margin: 40px auto 60px auto;
+            width: auto;
+        }
+    }
+</style>
 {% endblock %}
 {% block content %}
-    <p>
-        In 2014–2015 <a href="https://avito.ru">Avito</a>'s mobile website went through a
-        series of transformations and significantly ramped up its feature offering. One of
-        the things that I worked on was reworked image gallery on a classified ad page.
-    </p>
-    <p>
-        The gallery had two screen modes: in-page and fullscreen, the user could transition
-        between them at any time. In fullscreen mode the user could manipulate the zoom by
-        either pinching or double tapping a picture. The pagination indicator from the
-        in-page mode transformed into a thumbnail strip. The strip could be used to preview
-        the images and navigate between them.
-    </p>
-    <figure class="full">
-        <div class="video prototype" style="--width: 320px; --aspect-ratio: 40/71">
-            <video preload="auto"
-                   autoplay
-                   loop
-                   muted
-                   playsinline
-                   poster="./video/gallery.webp">
-                <source src="./video/screencap.mp4" type="video/mp4" />
-                <source src="./video/screencap.webm" type="video/webm" />
-            </video>
-        </div>
-        <figcaption>
-            Full playthrough of gallery prototype showing different types of interaction and
-            transitions
-        </figcaption>
-    </figure>
-    <p>
-        I used <a href="https://pixate.com">Pixate</a> for prototyping all the interactions
-        and animations. Its advanced object dependencies control was ideal to get all the
-        small things right, such as taking into account thumbnail strip position on a
-        transition to a new image. If the strip was previously scrolled and the new position
-        is out of screen bounds, the strip will automatically scroll so the new image's
-        thumbnail will be visible.
-    </p>
-    <p>
-        In 2015 Pixate got acquired by Google and was subsequently closed in 2016 making
-        <a href="https://pixt.io/pc684d694be44">the prototype</a> unavailable.
-    </p>
+<p>
+    In 2014–2015 <a href='https://avito.ru'>Avito</a>'s mobile website went through a series of
+    transformations and significantly ramped up its feature offering. One of the things that I
+    worked on was reworked image gallery on a classified ad page.
+</p>
+<p>
+    The gallery had two screen modes: in-page and fullscreen, the user could transition between them
+    at any time. In fullscreen mode the user could manipulate the zoom by either pinching or double
+    tapping a picture. The pagination indicator from the in-page mode transformed into a thumbnail
+    strip. The strip could be used to preview the images and navigate between them.
+</p>
+<figure class='full'>
+    <div class='video prototype' style='--width: 320px; --aspect-ratio: 40/71'>
+        <video
+            preload='auto'
+            autoplay
+            loop
+            muted
+            playsinline
+            poster='./video/gallery.webp'
+        >
+            <source src='./video/screencap.mp4' type='video/mp4'>
+            <source src='./video/screencap.webm' type='video/webm'>
+        </video>
+    </div>
+    <figcaption>
+        Full playthrough of gallery prototype showing different types of interaction and transitions
+    </figcaption>
+</figure>
+<p>
+    I used <a href='https://pixate.com'>Pixate</a> for prototyping all the interactions and
+    animations. Its advanced object dependencies control was ideal to get all the small things
+    right, such as taking into account thumbnail strip position on a transition to a new image. If
+    the strip was previously scrolled and the new position is out of screen bounds, the strip will
+    automatically scroll so the new image's thumbnail will be visible.
+</p>
+<p>
+    In 2015 Pixate got acquired by Google and was subsequently closed in 2016 making
+    <a href='https://pixt.io/pc684d694be44'>the prototype</a> unavailable.
+</p>
 {% endblock %}

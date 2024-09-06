@@ -1,0 +1,1142 @@
+{% extends "case.njk" %}
+{% set title = "Design Systems for Preply" %}
+{% set slug = "preply" %}
+{% set description = "Design systems for Preply, language learning marketplace" %}
+{% block colors %}
+<style type='text/css'>
+    :root {
+        --bg: #0b0d12;
+        --fg: #fafafa;
+        --card-bg: #001a37;
+        --link: #ff3c9e;
+        --link-underline: #ff98c8;
+        --link-hover: #ff6fb3;
+        --link-hover-underline: #fadbea;
+    }
+</style>
+{% endblock %}
+{% block content %}
+
+<p>
+    <em>
+        I joined
+        <a href='https://www.preply.com'>Preply</a>, a language-learning company, in November 2021.
+        Ten people design org in a company of a few hundred was looking for someone to take care of
+        their design system. Together with a senior front-end engineer (and later with one
+        additional junior engineer) we spent the next twelve months doing spring-cleaning, and
+        putting together solid foundation for future development.
+    </em>
+</p>
+
+<figure class='full'>
+    <img
+        srcset='
+            images/colorWorkIntro-400.webp 400w,
+            images/colorWorkIntro-600.webp 600w,
+            images/colorWorkIntro-800.webp 800w,
+            images/colorWorkIntro-1000.webp 1000w,
+            images/colorWorkIntro-1600.webp 1600w,
+            images/colorWorkIntro-1720.webp 1720w
+        '
+        sizes='100vw'
+        class='clamped'
+        src='images/colorWorkIntro-400.webp'
+        alt='Working on updated brand color ramps, November-December 2021'
+        style='--width:860px'
+        width='860'
+        height='299'
+        loading='eager'
+    >
+    <figcaption>
+        Working on the updated brand color ramps in <a href='https://colorbox.io'>Colorbox</a>,
+        November-December 2021
+    </figcaption>
+</figure>
+
+<p>
+    By the time I joined Preply, they'd had a few years’ worth of accumulated design debt captured
+    in the form of a few Figma libraries, accompanied by inconsistent and oftentimes outdated
+    guidelines. Tooling for developers also was in a substantually neglected state. As a newly
+    established team, we had to move quickly. We needed to lay the foundation and start building
+    useful tooling on top.
+</p>
+
+<h2>Introducing new components rapidly</h2>
+<p>
+    Throughout my time at Preply, I was primarily focused on elevating the design team's experience
+    with the design system, via building better components that used the best practices. My other
+    main concern was closing the gap between engineering and designers by making sure that all the
+    components and tools that the design system team worked on was immediately available and easily
+    usable in the existing codebase.
+</p>
+
+<figure class='full'>
+    <div class='video clamped' style='--width: 2000px; --aspect-ratio: 2000/1392'>
+        <video
+            preload='metadata'
+            autoplay
+            loop
+            muted
+            playsinline
+            poster='./video/introducingNewButton.jpg'
+        >
+            <source src='./video/introducingNewButton.mp4' type='video/mp4'>
+        </video>
+    </div>
+    <figcaption>Introducing a new button component (demo for designers), January 2022</figcaption>
+</figure>
+
+<p>
+    Each of the basic components went through the rebuild process. We increased ease of use,
+    introduced new functionality and increased the alignment of code and Figma components.
+</p>
+
+<figure class='full'>
+    <div class='gallery horizontal'>
+        <img
+            srcset='
+                images/figmaButton-400.webp 400w,
+                images/figmaButton-600.webp 600w,
+                images/figmaButton-800.webp 800w,
+                images/figmaButton-1000.webp 1000w,
+                images/figmaButton-1430.webp 1430w
+            '
+            sizes='
+                (min-width: 1600px): 800px,
+                (min-width: 1320px) 50vw,
+                100vw
+            '
+            class='clamped'
+            src='images/figmaButton-400.webp'
+            alt='New button in Figma'
+            style='--width:715px'
+            width='715'
+            height='533'
+            loading='lazy'
+        >
+        <img
+            srcset='
+                images/storybookButton-400.webp 400w,
+                images/storybookButton-600.webp 600w,
+                images/storybookButton-800.webp 800w,
+                images/storybookButton-1000.webp 1000w,
+                images/storybookButton-1600.webp 1600w,
+                images/storybookButton-2000.webp 2000w
+            '
+            sizes='
+                (min-width: 1600px): 800px,
+                (min-width: 1320px) 50vw,
+                100vw
+            '
+            class='clamped'
+            src='images/storybookButton-400.webp'
+            alt='New button in Storybook'
+            style='--width:500px'
+            width='500'
+            height='557'
+            loading='lazy'
+        >
+    </div>
+    <figcaption>
+        First version of the new button component in Figma and Storybook, January 2022
+    </figcaption>
+</figure>
+
+<p>
+    The work included creation of a complex multi-variant structures occasionally to make sure that
+    designers are not left guessing about how certain states and combinations of props look like.
+    Neither the engineers were left behind with everything that designers had access to being
+    available in code. Components were modular both in Figma and in code, this allowed consumers to
+    compose them easily and with confidence.
+</p>
+
+<figure class='full'>
+    <img
+        srcset='
+            images/textfield-400.webp 400w,
+            images/textfield-600.webp 600w,
+            images/textfield-800.webp 800w,
+            images/textfield-1000.webp 1000w,
+            images/textfield-1600.webp 1600w,
+            images/textfield-2000.webp 2000w,
+            images/textfield-2560.webp 2560w,
+            images/textfield-3200.webp 3200w
+        '
+        sizes='100vw'
+        class='clamped'
+        src='images/textfield-400.webp'
+        alt='Textfield component, March–April 2022'
+        style='--width:1600px'
+        width='1600'
+        height='593'
+        loading='lazy'
+    >
+    <figcaption>Textfield component, March–April 2022</figcaption>
+</figure>
+
+<p>
+    We always made sure that these new complex components would be built to last and include many
+    quality-of-life features, in order to enable rapid and rich prototyping, as well as new UI
+    creation.
+</p>
+
+<figure class='full'>
+    <div class='gallery horizontal'>
+        <div class='video clamped' style='--width: 410px; --aspect-ratio: 410/221'>
+            <video
+                preload='metadata'
+                autoplay
+                loop
+                muted
+                playsinline
+                poster='./video/textfieldCustomization.jpg'
+            >
+                <source src='./video/textfieldCustomization.mp4' type='video/mp4'>
+            </video>
+        </div>
+        <div class='video clamped' style='--width: 210px; --aspect-ratio: 210/105'>
+            <video
+                preload='metadata'
+                autoplay
+                loop
+                muted
+                playsinline
+                poster='./video/textfieldInteractivity.jpg'
+            >
+                <source src='./video/textfieldInteractivity.mp4' type='video/mp4'>
+            </video>
+        </div>
+    </div>
+    <figcaption>Textfield component interactivity and customization, April 2022</figcaption>
+</figure>
+
+<p>
+    That, however, did not mean that the development cycles were long. On the contrary; the large
+    and complex projects were delivered quickly and efficiently, and the small and urgent were
+    immediately attended to and completed on the same day. When the Russian invasion of Ukraine
+    started in February of 2022, we've rolled out a new logo with the Ukrainian flag colors and the
+    accompanying website favicon in a matter of hours. As Preply is a company with Ukrainian roots,
+    showing support and solidarity was a matter of utmost urgency and importance.
+</p>
+
+<figure class='full'>
+    <img
+        srcset='
+            images/logoComponent-400.webp 400w,
+            images/logoComponent-600.webp 600w,
+            images/logoComponent-800.webp 800w,
+            images/logoComponent-1000.webp 1000w,
+            images/logoComponent-1600.webp 1600w,
+            images/logoComponent-2000.webp 2000w,
+            images/logoComponent-2560.webp 2560w,
+            images/logoComponent-3200.webp 3200w
+        '
+        sizes='100vw'
+        class='clamped'
+        src='images/logoComponent-400.webp'
+        alt='Updated logo component, February 2022'
+        style='--width:1600px'
+        width='1600'
+        height='465'
+        loading='lazy'
+    >
+    <figcaption>Updated logo component, February 2022</figcaption>
+</figure>
+
+<h2>Supporting and guiding product teams</h2>
+<p>
+    Of course, even producing the best components in the world would not be worth much if those
+    components did not gain traction in the product. The only way to achieve adoption organically
+    was embracing the mindset of a service team that is always there to support the product teams in
+    any possible way, be it through adding features or components that they need, amending
+    functionality that they have encountered problems with, or guiding them through the changes and
+    new features.
+</p>
+
+<figure class='full'>
+    <div class='gallery horizontal'>
+        <img
+            srcset='
+                images/dragToReplace-400.webp 400w,
+                images/dragToReplace-600.webp 600w,
+                images/dragToReplace-800.webp 800w,
+                images/dragToReplace-1000.webp 1000w,
+                images/dragToReplace-1160.webp 1160w
+            '
+            sizes='
+                (min-width: 1600px): 800px,
+                (min-width: 1320px) 50vw,
+                100vw
+            '
+            class='clamped'
+            src='images/dragToReplace-400.webp'
+            alt='Fragment of docs on drag-to-replace usage flow for icons'
+            style='--width:580px'
+            width='580'
+            height='596'
+            loading='lazy'
+        >
+        <img
+            srcset='
+                images/dragToReplaceInPropertyPane-400.webp 400w,
+                images/dragToReplaceInPropertyPane-470.webp 470w
+            '
+            sizes='
+                (min-width: 1600px): 250px,
+                (min-width: 1320px) 15vw,
+                70vw
+            '
+            class='clamped'
+            src='images/dragToReplaceInPropertyPane-400.webp'
+            alt="Reminder about drag-to-replace in Figma's property pane"
+            style='--width:235px'
+            width='235'
+            height='315'
+            loading='lazy'
+        >
+    </div>
+    <figcaption>
+        Introducing designers to drag-to-replace flow of icon usage in Figma, February 2022
+    </figcaption>
+</figure>
+
+<p>
+    In lots of cases this meant not just providing guidance about the technical stuff regarding new
+    functionality that folks may have been yet unfamiliar with, but also clearly communicating
+    common universal design rules that can be applied everywhere. The approach we took was to add a
+    short Do and Don't sections intermingled with the rest of the documentation related to a
+    specific pattern, component or concept.
+</p>
+
+<figure class='full'>
+    <div class='gallery horizontal'>
+        <img
+            srcset='
+                images/mobileLayoutGuidance-400.webp 400w,
+                images/mobileLayoutGuidance-600.webp 600w,
+                images/mobileLayoutGuidance-800.webp 800w,
+                images/mobileLayoutGuidance-1000.webp 1000w,
+                images/mobileLayoutGuidance-1600.webp 1600w,
+                images/mobileLayoutGuidance-2000.webp 2000w
+            '
+            sizes='
+                (min-width: 1600px): 780px,
+                (min-width: 1320px) 45vw,
+                100vw
+            '
+            class='clamped'
+            src='images/mobileLayoutGuidance-400.webp'
+            alt='Guidance on best practices of mobile responsive layouts'
+            style='--width:720px'
+            width='800'
+            height='508'
+            loading='lazy'
+        >
+        <img
+            srcset='
+                images/buttonLabelGuidance-400.webp 400w,
+                images/buttonLabelGuidance-600.webp 600w,
+                images/buttonLabelGuidance-800.webp 800w,
+                images/buttonLabelGuidance-1000.webp 1000w,
+                images/buttonLabelGuidance-1600.webp 1600w,
+                images/buttonLabelGuidance-2000.webp 2000w
+            '
+            sizes='
+                (min-width: 1600px): 780px,
+                (min-width: 1320px) 45vw,
+                100vw
+            '
+            class='clamped'
+            src='images/buttonLabelGuidance-400.webp'
+            alt='Guidance on best practices for button text labels'
+            style='--width:720px'
+            width='800'
+            height='381'
+            loading='lazy'
+        >
+    </div>
+    <figcaption>
+        Excerpts of Do's and Don't's from Design System's documentation internal website,
+        March–September 2022
+    </figcaption>
+</figure>
+
+<p>
+    Still, guidelines attached to a separate documentation website can never replace just-in-time
+    assistance, so I made sure to offer the same amount of support right where people were actually
+    using components that we were providing: in the comment field on top of the property pane of
+    Figma components and in the tooltips of components in the assets tab.
+</p>
+
+<figure class='full'>
+    <div class='gallery horizontal'>
+        <img
+            srcset='
+                images/figmaDeprecationNotice-400.webp 400w,
+                images/figmaDeprecationNotice-600.webp 600w,
+                images/figmaDeprecationNotice-800.webp 800w,
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/figmaDeprecationNotice-400.webp'
+            alt='Figma deprecation notice for old component'
+            style='--width:400px'
+            width='400'
+            height='273'
+            loading='lazy'
+        >
+        <img
+            srcset='
+                images/figmaGuidelines-400.webp 400w,
+                images/figmaGuidelines-600.webp 600w,
+                images/figmaGuidelines-710.webp 710w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/figmaGuidelines-400.webp'
+            alt='Figma guidance for the IconButton component'
+            style='--width:355px'
+            width='355'
+            height='334'
+            loading='lazy'
+        >
+        <img
+            srcset='
+                images/figmaColorGuidance-400.webp 400w,
+                images/figmaColorGuidance-518.webp 518w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/figmaColorGuidance-400.webp'
+            alt='Figma guidance combining colors from new palette'
+            style='--width:259px'
+            width='259'
+            height='464'
+            loading='lazy'
+        >
+    </div>
+    <figcaption>Just-in-time guidance in Figma, January–July 2022</figcaption>
+</figure>
+
+<p>
+    New updates were communicated clearly through multiple channels: Slack updates in a dedicated
+    channel, detailed changelogs in the respective mediums, regular townhall meetings etc.
+</p>
+
+<figure class='full'>
+    <div class='gallery horizontal'>
+        <img
+            srcset='
+                images/firstStorybookVersion-400.webp 400w,
+                images/firstStorybookVersion-600.webp 600w,
+                images/firstStorybookVersion-800.webp 800w,
+                images/firstStorybookVersion-1000.webp 1000w,
+                images/firstStorybookVersion-1600.webp 1600w,
+                images/firstStorybookVersion-1000.webp 1000w,
+                images/firstStorybookVersion-2462.webp 2462w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/firstStorybookVersion-400.webp'
+            alt='The very first version of DS Storybook, December 2021'
+            style='--width:1231px'
+            width='1231'
+            height='929'
+            loading='lazy'
+        >
+        <img
+            srcset='
+                images/changelogInFigma-400.webp 400w,
+                images/changelogInFigma-600.webp 600w,
+                images/changelogInFigma-800.webp 800w,
+                images/changelogInFigma-930.webp 930w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/figmaGuidelines-400.webp'
+            alt='Figma changelog example, January 2022'
+            style='--width:465px'
+            width='465'
+            height='263'
+            loading='lazy'
+        >
+        <img
+            srcset='
+                images/townhallAgenda-400.webp 400w,
+                images/townhallAgenda-600.webp 600w,
+                images/townhallAgenda-800.webp 800w,
+                images/townhallAgenda-1000.webp 1000w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/townhallAgenda-400.webp'
+            alt='Agenda of the first townhall meeting, February 2022'
+            style='--width:500px'
+            width='500'
+            height='214'
+            loading='lazy'
+        >
+    </div>
+    <figcaption>
+        The very first version of DS Storybook; Figma changelog; Agenda of the first townhall
+        meeting, December–February 2021–2022
+    </figcaption>
+</figure>
+
+<p>
+    The process of contribution was kept simple, with the design system team being responsible for
+    majority of the activities. The turnaround from the proposal to the implementation was kept
+    short, never exceeding a couple of weeks. In most cases, just under three days. At the same
+    time, folks were always invited to review and approve all the work-in-progress so that we
+    wouldn't miss anything.
+</p>
+
+<figure class='full'>
+    <div class='gallery horizontal'>
+        <img
+            srcset='
+                images/figmaPrReview-400.webp 400w,
+                images/figmaPrReview-600.webp 600w,
+                images/figmaPrReview-800.webp 800w,
+                images/figmaPrReview-1000.webp 1000w,
+                images/figmaPrReview-1600.webp 1600w,
+                images/figmaPrReview-2000.webp 2000w,
+                images/figmaPrReview-2560.webp 2560w,
+                images/figmaPrReview-3200.webp 3200w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/figmaPrReview-400.webp'
+            alt='PR review of Figma library update, February 2022'
+            style='--width:960px'
+            width='960'
+            height='689'
+            loading='lazy'
+        >
+        <img
+            srcset='
+                images/contributionFlowchart-400.webp 400w,
+                images/contributionFlowchart-600.webp 600w,
+                images/contributionFlowchart-800.webp 800w,
+                images/contributionFlowchart-1000.webp 1000w,
+                images/contributionFlowchart-1600.webp 1600w,
+                images/contributionFlowchart-2000.webp 2000w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/contributionFlowchart-400.webp'
+            alt='Contribution flowchart, January 2022'
+            style='--width:500px'
+            width='500'
+            height='535'
+            loading='lazy'
+        >
+    </div>
+    <figcaption>
+        PR review of Figma library update; Contribution flowchart, January–February 2022
+    </figcaption>
+</figure>
+
+<h2>Color</h2>
+<p>
+    The old color palettes of Preply were riddled with numerous issues, such as lack of accessible
+    combinations, low amount of appealing combinations, the classic “too many gray shades” issue,
+    and lack of consistency with numerical naming of the steps in the color ramps. My personal pet
+    peeve: Preply's brand color was named “blue” despite being distinctly cyan and despite the
+    palette containing another blue color that was named “violet”.
+</p>
+
+<figure class='full'>
+    <div class='gallery horizontal'>
+        <img
+            srcset='
+                images/currentPalette-400.webp 400w,
+                images/currentPalette-464.webp 464w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/currentPalette-400.webp'
+            alt='Old color palette'
+            style='--width:232px'
+            width='232'
+            height='425'
+            loading='lazy'
+        >
+        <img
+            srcset='
+                images/currentPaletteInHuetone-400.webp 400w,
+                images/currentPaletteInHuetone-600.webp 600w,
+                images/currentPaletteInHuetone-800.webp 800w,
+                images/currentPaletteInHuetone-1000.webp 1000w,
+                images/currentPaletteInHuetone-1244.webp 1244w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/currentPaletteInHuetone-400.webp'
+            alt='Old color palette'
+            style='--width:622px'
+            width='311'
+            height='206'
+            loading='lazy'
+        >
+    </div>
+    <figcaption>Old color palette</figcaption>
+</figure>
+
+<p>
+    For the updated color palettes, evolutionary development was chosen instead of pursuing a
+    radical departure from the previous hues. New color ramps very produced using
+    <a href='https://colorbox.io'>ColorBox</a>. After that I did the final fine-tuning in
+    <a href='https://huetone.ardov.me'>HueTone</a>: colors were normalized to have clear
+    accessibility combination guidance according to their names, and match overall lightness and
+    saturation.
+</p>
+
+<p>
+    A few different in character approaches for color generation rules were tried out and presented
+    to the design team for evaluation.
+</p>
+
+<figure class='full'>
+    <div class='video clamped' style='--width: 1672px; --aspect-ratio: 1672/1117'>
+        <video
+            preload='metadata'
+            autoplay
+            loop
+            muted
+            playsinline
+            poster='./video/colorComparison.jpg'
+        >
+            <source src='./video/colorComparison.mp4' type='video/mp4'>
+        </video>
+    </div>
+    <figcaption>
+        Comparing slightly different new color palettes in context of Preply's UI, February–March
+        2022
+    </figcaption>
+</figure>
+
+<p>
+    One of the hardest scales to normalize, unsuprisingly, was the yellow one. I had to try many
+    different approaches to make sure that it has a sufficient contrast, while staying recognizable
+    and having an appealing look.
+</p>
+
+<figure class='full'>
+    <img
+        srcset='
+            images/yellow-400.webp 400w,
+            images/yellow-600.webp 600w,
+            images/yellow-800.webp 800w,
+            images/yellow-1000.webp 1000w,
+            images/yellow-1600.webp 1600w,
+            images/yellow-2000.webp 2000w,
+            images/yellow-2560.webp 2560w,
+            images/yellow-3200.webp 3200w
+        '
+        sizes='100vw'
+        class='clamped'
+        src='images/yellow-400.webp'
+        alt='Yellow scale options, February 2022'
+        width='1600'
+        height='671'
+        loading='lazy'
+    >
+    <figcaption>Yellow scale options, February 2022</figcaption>
+</figure>
+
+<p>
+    After all the due dilligence and getting the buy-in and approval of the product design team I
+    assembled the new palette.
+</p>
+
+<figure class='full'>
+    <img
+        srcset='
+            images/newPalette-400.webp 400w,
+            images/newPalette-600.webp 600w,
+            images/newPalette-800.webp 800w,
+            images/newPalette-1000.webp 1000w,
+            images/newPalette-1600.webp 1600w,
+            images/newPalette-2000.webp 2000w,
+            images/newPalette-2560.webp 2560w,
+            images/newPalette-3200.webp 3200w
+        '
+        sizes='100vw'
+        class='clamped'
+        src='images/newPalette-400.webp'
+        alt='New color palette, March–April 2022'
+        style='--width:1600px'
+        width='1845'
+        height='469'
+        loading='lazy'
+    >
+    <figcaption>New color palette, March–April 2022</figcaption>
+</figure>
+
+<p>
+    On a last-minute request from the brand team a few more adjustments were made and one more
+    additional color was added. Preply now had a future-proofed set of colors that we were able to
+    combine confidently getting combinations with a good contrast. And they were also more catchy
+    and appealing than the previous color palette.
+</p>
+
+<figure class='full'>
+    <img
+        srcset='
+            images/newPaletteExtended-400.webp 400w,
+            images/newPaletteExtended-600.webp 600w,
+            images/newPaletteExtended-800.webp 800w,
+            images/newPaletteExtended-1000.webp 1000w,
+            images/newPaletteExtended-1600.webp 1600w,
+            images/newPaletteExtended-2000.webp 2000w,
+            images/newPaletteExtended-2560.webp 2560w,
+            images/newPaletteExtended-3200.webp 3200w
+        '
+        sizes='100vw'
+        class='clamped'
+        src='images/newPaletteExtended-400.webp'
+        alt='Extended new color palette, May 2022'
+        style='--width:1600px'
+        width='1600'
+        height='373'
+        loading='lazy'
+    >
+    <figcaption>Extended new color palette, May 2022</figcaption>
+</figure>
+
+<p>
+    For the rollout, a set of deprecation messages was added to the old styles, and extensive
+    evangelizing with many comparisons was presented to internal teams.
+</p>
+
+<figure class='full'>
+    <div class='gallery horizontal'>
+        <img
+            srcset='
+                images/deprecationGuidelines-400.webp 400w,
+                images/deprecationGuidelines-496.webp 496w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/deprecationGuidelines-400.webp'
+            alt='Deprecation guidelines in Figma'
+            style='--width:248px'
+            width='248'
+            height='378'
+            loading='lazy'
+        >
+        <img
+            srcset='
+                images/paletteComparisonWithButtons-400.webp 400w,
+                images/paletteComparisonWithButtons-600.webp 600w,
+                images/paletteComparisonWithButtons-800.webp 800w,
+                images/paletteComparisonWithButtons-1000.webp 1000w,
+                images/paletteComparisonWithButtons-1600.webp 1600w,
+                images/paletteComparisonWithButtons-2000.webp 2000w,
+                images/paletteComparisonWithButtons-2560.webp 2560w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/paletteComparisonWithButtons-400.webp'
+            alt='Comparison of old and new colors applied to the Button component'
+            style='--width:1280px'
+            width='1280'
+            height='481'
+            loading='lazy'
+        >
+    </div>
+    <figcaption>
+        Deprecation guidelines in Figma; Comparison of old and new colors applied to the Button
+        component
+    </figcaption>
+</figure>
+
+<h2>Typography</h2>
+<figure class='full'>
+    <img
+        srcset='
+            images/typographyPalette-400.webp 400w,
+            images/typographyPalette-600.webp 600w,
+            images/typographyPalette-800.webp 800w,
+            images/typographyPalette-1000.webp 1000w,
+            images/typographyPalette-1600.webp 1600w,
+            images/typographyPalette-2000.webp 2000w,
+            images/typographyPalette-2560.webp 2560w,
+            images/typographyPalette-3200.webp 3200w
+        '
+        sizes='100vw'
+        class='clamped'
+        src='images/typographyPalette-400.webp'
+        alt='Typography testing samples, June-August 2021'
+        width='1600'
+        height='846'
+        loading='lazy'
+    >
+    <figcaption>Typography testing samples, June-August 2022</figcaption>
+</figure>
+
+<p>
+    Prior to 2021, Preply was using a mix of
+    <a href='https://github.com/googlefonts/roboto'>Roboto</a> and
+    <a href='https://en.wikipedia.org/wiki/Arial'>Arial</a> as brand typefaces, but this was about
+    to change with the brand uplift project being underway. Initially,
+    <a href='https://github.com/itfoundry/Poppins'>Poppins</a> was selected as a new brand typeface.
+    This choice by the brand team was not viable for a language-learning company due to a very
+    limited language support. After informing all stakeholders of the downsides of such a choice and
+    getting buy-in for finding a better alternative, the ultimate choice was made for
+    <a href='https://rsms.me/inter/'>Inter</a>, a popular neutral geometric grotesque that could
+    with some Opentype features look quite close to the the style of Poppins.
+</p>
+
+<figure class='full'>
+    <div class='gallery horizontal'>
+        <img
+            srcset='
+                images/newTypefaceProposal-400.webp 400w,
+                images/newTypefaceProposal-600.webp 600w,
+                images/newTypefaceProposal-800.webp 800w,
+                images/newTypefaceProposal-1000.webp 1000w,
+                images/newTypefaceProposal-1600.webp 1600w,
+                images/newTypefaceProposal-2000.webp 2000w,
+                images/newTypefaceProposal-2560.webp 2560w,
+                images/newTypefaceProposal-3200.webp 3200w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/newTypefaceProposal-400.webp'
+            alt='New typeface proposal, June–August 2022'
+            style='--width:1600px'
+            width='1600'
+            height='3331'
+            loading='lazy'
+        >
+    </div>
+    <figcaption>New typeface proposal, June–August 2022</figcaption>
+</figure>
+
+<p>
+    After a new typeface choice was approved, the technical questions of rolling it out needed a
+    solution too. Previously Preply relied on Google Fonts. Self-hosting font binaries is a superior
+    choice (and the only appropriate one in case you want to use Inter with certain Opentype
+    features, that are stripped from the version that is hosted by Google). To get the buy-in for
+    this technical change, I did extensive benchmarking, so that the engineering team could get
+    behind this decision too.
+</p>
+
+<figure class='full'>
+    <div class='gallery horizontal'>
+        <img
+            srcset='
+                images/fontBenchmarking-400.webp 400w,
+                images/fontBenchmarking-600.webp 600w,
+                images/fontBenchmarking-800.webp 800w,
+                images/fontBenchmarking-1000.webp 1000w,
+                images/fontBenchmarking-1600.webp 1600w,
+                images/fontBenchmarking-2000.webp 2000w,
+                images/fontBenchmarking-2560.webp 2560w,
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/fontBenchmarking-400.webp'
+            alt='Benchmarking Google Fonts speed vs. self-hosting option, August 2022'
+            style='--width:800px'
+            width='800'
+            height='450'
+            loading='lazy'
+        >
+        <img
+            srcset='
+                images/fontsExplanationDocument-400.webp 400w,
+                images/fontsExplanationDocument-600.webp 600w,
+                images/fontsExplanationDocument-800.webp 800w,
+                images/fontsExplanationDocument-1000.webp 1000w,
+                images/fontsExplanationDocument-1600.webp 1600w,
+                images/fontsExplanationDocument-1792.webp 1792w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/fontsExplanationDocument-400.webp'
+            alt='Explanation document regarding self-hosting, August 2022'
+            style='--width:512px'
+            width='512'
+            height='509'
+            loading='lazy'
+        >
+    </div>
+    <figcaption>Evaluating Google Fonts vs. self-hosting font binaries, August 2022</figcaption>
+</figure>
+
+<p>
+    With self-hosting receiving a green light from engineering, special customized Inter binaries
+    were produced. The relevant Opentype flags were turned on directly in the binary files, and
+    files were split by unicode-range to optimize loading speeds. The fallback font (Arial), that
+    would be shown for a brief period of time while our binaries were still downloading, was
+    adjusted and fine-tuned with CSS to cause a minimal amount of reflow in the layout once loading
+    was finished.
+</p>
+
+<figure class='full'>
+    <div class='gallery horizontal'>
+        <img
+            srcset='
+                images/fontFallback-400.webp 400w,
+                images/fontFallback-600.webp 600w,
+                images/fontFallback-800.webp 800w,
+                images/fontFallback-1000.webp 1000w,
+                images/fontFallback-1257.webp 1257w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/fontFallback-400.webp'
+            alt='Fine-tuning Arial fallback, September 2022'
+            style='--width:629px'
+            width='629'
+            height='607'
+            loading='lazy'
+        >
+        <img
+            srcset='
+                images/subsettingFonts-400.webp 400w,
+                images/subsettingFonts-600.webp 600w,
+                images/subsettingFonts-800.webp 800w,
+                images/subsettingFonts-1000.webp 1000w,
+                images/subsettingFonts-1600.webp 1600w,
+                images/subsettingFonts-2000.webp 2000w,
+                images/subsettingFonts-2160.webp 2160w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/subsettingFonts-400.webp'
+            alt='Subsetting font binaries, September 2022'
+            style='--width:720px'
+            width='720'
+            height='37'
+            loading='lazy'
+        >
+    </div>
+    <figcaption>Fine-tuning Arial fallback and subsetting font binaries, September 2022</figcaption>
+</figure>
+
+<p>
+    With all of preparation and technical work out of the way the new brand typeface was
+    soft-launched, increasing legibility, improving performance, and establishing a new consistent
+    brand feeling.
+</p>
+
+<figure class='full'>
+    <div class='gallery horizontal'>
+        <img
+            srcset='
+                images/fontAnnouncement-400.webp 400w,
+                images/fontAnnouncement-600.webp 600w,
+                images/fontAnnouncement-800.webp 800w,
+                images/fontAnnouncement-1000.webp 1000w,
+                images/fontAnnouncement-1222.webp 1222w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/fontAnnouncement-400.webp'
+            alt='Internal announcement promo picture, October 2022'
+            style='--width:470px'
+            width='470'
+            height='314'
+            loading='lazy'
+        >
+        <img
+            srcset='
+                images/fontGuidelines-400.webp 400w,
+                images/fontGuidelines-600.webp 600w,
+                images/fontGuidelines-800.webp 800w,
+                images/fontGuidelines-1000.webp 1000w,
+                images/fontGuidelines-1600.webp 1600w,
+                images/fontGuidelines-2000.webp 2000w,
+                images/fontGuidelines-2560.webp 2560w,
+                images/fontGuidelines-3200.webp 3200w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/fontGuidelines-400.webp'
+            alt='Instructions for producing additional font variants, October 2022'
+            style='--width:1067px'
+            width='1067'
+            height='525'
+            loading='lazy'
+        >
+    </div>
+    <figcaption>
+        Internal announcement promo picture and instructions for producing additional font variants,
+        October 2022
+    </figcaption>
+</figure>
+
+<h2>Taking charge of roadmaps</h2>
+<p>
+    With the project as multifaceted as design systems usually are, keeping key stakeholders is a
+    non-trivial task. One of the main difficulties that they typically have is common lack of
+    understanding just how interconnected everything in a design system is. To illustrate this point
+    and keep everyone updated on the current status and the future roadmap, I created a
+    <a href='https://miro.com'>Miro</a> board which we would then update regularly.
+</p>
+
+<figure class='full'>
+    <div class='gallery horizontal'>
+        <img
+            srcset='
+                images/roadmapQ2-400.webp 400w,
+                images/roadmapQ2-600.webp 600w,
+                images/roadmapQ2-800.webp 800w,
+                images/roadmapQ2-1000.webp 1000w,
+                images/roadmapQ2-1600.webp 1600w,
+                images/roadmapQ2-2000.webp 2000w,
+                images/roadmapQ2-2560.webp 2560w,
+                images/roadmapQ2-3200.webp 3200w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/roadmapQ2-400.webp'
+            alt="Design system's vidual roadmap, Q2"
+            style='--width:780px'
+            width='780'
+            height='499'
+            loading='lazy'
+        >
+        <img
+            srcset='
+                images/roadmapQ4-400.webp 400w,
+                images/roadmapQ4-600.webp 600w,
+                images/roadmapQ4-800.webp 800w,
+                images/roadmapQ4-1000.webp 1000w,
+                images/roadmapQ4-1600.webp 1600w,
+                images/roadmapQ4-2000.webp 2000w,
+                images/roadmapQ4-2560.webp 2560w,
+                images/roadmapQ4-3124.webp 3124w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/roadmapQ4-400.webp'
+            alt="Design system's vidual roadmap, Q2"
+            style='--width:762px'
+            width='762'
+            height='559'
+            loading='lazy'
+        >
+    </div>
+    <figcaption>Design system's visual roadmap, states in Q2 and Q4</figcaption>
+</figure>
+
+<p>
+    This provided a nice bird-eye view and a visual explanation of different UI patterns and their
+    connections to one another.
+</p>
+
+<h2>Obsessing over the smallest details</h2>
+<p>
+    For me personally, the most memorable moments are the small and obscure ones. Making sure that
+    the quality of an individual detail is the best possible, doesn't take too much time, but the
+    impact of such “polish” can be long-lasting.
+</p>
+
+<figure class='full'>
+    <div class='gallery horizontal'>
+        <img
+            srcset='
+                images/logo1-400.webp 400w,
+                images/logo1-600.webp 600w,
+                images/logo1-800.webp 800w,
+                images/logo1-1000.webp 1000w,
+                images/logo1-1600.webp 1600w,
+                images/logo1-2000.webp 2000w,
+                images/logo1-2560.webp 2560w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/logo1-400.webp'
+            alt='Fixing brand logo rendering, May 2022'
+            style='--width:800px'
+            width='800'
+            height='259'
+            loading='lazy'
+        >
+        <img
+            srcset='
+                images/logo2-400.webp 400w,
+                images/logo2-600.webp 600w,
+                images/logo2-800.webp 800w
+            '
+            sizes='100vw'
+            class='clamped'
+            src='images/logo2-400.webp'
+            alt='Fixing brand icon rendering, May 2022'
+            style='--width:400px'
+            width='400'
+            height='562'
+            loading='lazy'
+        >
+    </div>
+    <figcaption>Fixing brand assets rendering, May 2022</figcaption>
+</figure>
+
+<p>
+    Sometimes it's a matter of simply applying best practices and paying attention to details, but
+    occasionally this means figuring out novel technical solutions.
+</p>
+
+<figure class='full'>
+    <img
+        srcset='
+            images/avatar-400.webp 400w,
+            images/avatar-600.webp 600w,
+            images/avatar-800.webp 800w,
+            images/avatar-1000.webp 1000w,
+            images/avatar-1600.webp 1600w,
+            images/avatar-2000.webp 2000w
+        '
+        sizes='100vw'
+        class='clamped'
+        src='images/avatar-400.webp'
+        alt='Fixing in-browser rending of the default avatar SVG by doing a double wrapping, July 2022'
+        style='--width:1000px'
+        width='1000'
+        height='617'
+        loading='lazy'
+    >
+    <figcaption>
+        Fixing in-browser rending of the default avatar SVG by doing a double wrapping, July 2022
+    </figcaption>
+</figure>
+
+<p>
+    And sometimes it's simply a matter of re-doing the job, because you made a mistake before and
+    it's worth fixing that bug, no matter how rare it would occur.
+</p>
+
+<figure class='full'>
+    <img
+        srcset='
+            images/fontBug-400.webp 400w,
+            images/fontBug-600.webp 600w
+        '
+        sizes='100vw'
+        class='clamped'
+        src='images/fontBug-400.webp'
+        alt='Fixing the bug with Unicode-ranges for Spanish in font binaries, September 2022'
+        style='--width:300px'
+        width='300'
+        height='209'
+        loading='lazy'
+    >
+    <figcaption>
+        Fixing the bug with Unicode-ranges for Spanish in font binaries, September 2022
+    </figcaption>
+</figure>
+
+<p>
+    During my time at Preply a new functional design system was built and adopted. The chaos was
+    conquered, foundations were laid for future swift and painless large-scale design changes.
+    Design systems are a hard craft, but they don't have to take forever to build or paralyze
+    product feature development. Instead they can be a reliable helper that will make sure you won't
+    accumulate too much technical and design debt.
+</p>
+
+{% endblock %}

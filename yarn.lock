@@ -75,6 +75,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@shopify/liquid-html-parser@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "@shopify/liquid-html-parser@npm:2.0.3"
+  dependencies:
+    line-column: "npm:^1.0.2"
+    ohm-js: "npm:^16.3.0"
+  checksum: 10c0/f0ae910c7a659a3bf8709739bbf0e6969bd6bd98efdd0d439c5bf7b62629998b625cfa04717bd2afce20254cddfacec22fee63515824d44d99165b058dfe12a7
+  languageName: node
+  linkType: hard
+
+"@shopify/prettier-plugin-liquid@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "@shopify/prettier-plugin-liquid@npm:1.5.0"
+  dependencies:
+    "@shopify/liquid-html-parser": "npm:^2.0.3"
+    html-styles: "npm:^1.0.0"
+  peerDependencies:
+    prettier: ^2.0.0 || ^3.0.0
+  checksum: 10c0/34f943adaf865652e6e9af6692e6a1a9206e2278fd1118fd7dec6e709fa35effe07efc5bc6ff6dfe0ef16bbdf04cf3f42340e833fe0e42b673c7c53eae91ccca
+  languageName: node
+  linkType: hard
+
 "@socket.io/component-emitter@npm:~3.1.0":
   version: 3.1.0
   resolution: "@socket.io/component-emitter@npm:3.1.0"
@@ -2375,6 +2397,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"html-styles@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "html-styles@npm:1.0.0"
+  checksum: 10c0/50278b87732a33205c994908f083f615af1450d2436841fde9b6e7a7ad07f494d3731108d09e37ffef3512fe53b972447a0be20aaf3d2bd4ec2adc1633b11cb5
+  languageName: node
+  linkType: hard
+
 "http-cache-semantics@npm:^4.1.1":
   version: 4.1.1
   resolution: "http-cache-semantics@npm:4.1.1"
@@ -2901,7 +2930,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"isarray@npm:1.0.0, isarray@npm:~1.0.0":
+"isarray@npm:1.0.0, isarray@npm:^1.0.0, isarray@npm:~1.0.0":
   version: 1.0.0
   resolution: "isarray@npm:1.0.0"
   checksum: 10c0/18b5be6669be53425f0b84098732670ed4e727e3af33bc7f948aac01782110eb9a18b3b329c5323bcdd3acdaae547ee077d3951317e7f133bff7105264b3003d
@@ -3080,6 +3109,16 @@ __metadata:
   version: 1.1.5
   resolution: "limiter@npm:1.1.5"
   checksum: 10c0/ebe2b20a820d1f67b8e1724051246434c419b2da041a7e9cd943f6daf113b8d17a52a1bd88fb79be5b624c10283ecb737f50edb5c1c88c71f4cd367108c97300
+  languageName: node
+  linkType: hard
+
+"line-column@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "line-column@npm:1.0.2"
+  dependencies:
+    isarray: "npm:^1.0.0"
+    isobject: "npm:^2.0.0"
+  checksum: 10c0/75aa918a9791362a3369c7222689350dc6df5b040314525ba79c3682f1386e13a3ceddd6b2584b8cb5c3ab3a5b3c50c940a182772dbb6361303bf6ef65fc2d64
   languageName: node
   linkType: hard
 
@@ -3729,6 +3768,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ohm-js@npm:^16.3.0":
+  version: 16.6.0
+  resolution: "ohm-js@npm:16.6.0"
+  checksum: 10c0/43c475af5b0e8413440a616aac8c7064344d941aa039f8dc186cf7ec748582a291dcbc9f7235316bb108e99307b2b5358c7c8ead4db12190bd3aa0ef71c84bb6
+  languageName: node
+  linkType: hard
+
 "on-finished@npm:~2.3.0":
   version: 2.3.0
   resolution: "on-finished@npm:2.3.0"
@@ -4013,6 +4059,15 @@ __metadata:
   version: 0.1.1
   resolution: "posix-character-classes@npm:0.1.1"
   checksum: 10c0/cce88011548a973b4af58361cd8f5f7b5a6faff8eef0901565802f067bcabf82597e920d4c97c22068464be3cbc6447af589f6cc8a7d813ea7165be60a0395bc
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^3.3.2":
+  version: 3.3.2
+  resolution: "prettier@npm:3.3.2"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 10c0/39ed27d17f0238da6dd6571d63026566bd790d3d0edac57c285fbab525982060c8f1e01955fe38134ab10f0951a6076da37f015db8173c02f14bc7f0803a384c
   languageName: node
   linkType: hard
 
@@ -5367,6 +5422,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vaitenko.com@workspace:."
   dependencies:
+    "@shopify/prettier-plugin-liquid": "npm:^1.5.0"
     browser-sync: "npm:^2.27.11"
     del: "npm:^7.0.0"
     gulp: "npm:^4.0.2"
@@ -5376,6 +5432,7 @@ __metadata:
     gulp-notify: "npm:^4.0.0"
     gulp-nunjucks-render: "npm:^2.2.3"
     gulp-plumber: "npm:^1.2.1"
+    prettier: "npm:^3.3.2"
   languageName: unknown
   linkType: soft
 

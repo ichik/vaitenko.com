@@ -1,5 +1,6 @@
 {
     "devDependencies": {
+        "@shopify/prettier-plugin-liquid": "^1.5.0",
         "browser-sync": "^2.27.11",
         "del": "^7.0.0",
         "gulp": "^4.0.2",
@@ -8,7 +9,8 @@
         "gulp-htmlmin": "^5.0.1",
         "gulp-notify": "^4.0.0",
         "gulp-nunjucks-render": "^2.2.3",
-        "gulp-plumber": "^1.2.1"
+        "gulp-plumber": "^1.2.1",
+        "prettier": "^3.3.2"
     },
     "name": "vaitenko.com",
     "version": "1.0.2",

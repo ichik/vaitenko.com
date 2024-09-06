@@ -3,295 +3,366 @@
 {% set slug = "zenmate-early" %}
 {% set description = "Early redesign concept for browser extension of ZenMate" %}
 {% block colors %}
-    <style type="text/css">
-            :root {
-                --bg: #fff;
-                --fg: #171a1c;
-                --card-bg: #f5f5f5;
-            }
-            .clip {
-                filter: none;
-            }
-    </style>
+<style type='text/css'>
+    :root {
+        --bg: #fff;
+        --fg: #171a1c;
+        --card-bg: #f5f5f5;
+    }
+    .clip {
+        filter: none;
+    }
+</style>
 {% endblock %}
 {% block content %}
-    <p>
-        It's always interesting to take a look at behind-the-scenes work. Public rarely gets
-        to see those early concepts and sketches, but they form and shape future ideas and
-        solutions, define direction for future work and sometimes contain impactful
-        decisions that make their way to the final product.
-    </p>
-    <p>
-        Prior to working on a <a href="../zenmate/">redesign for ZenMate</a> in 2016, I
-        produced this quick 4 hours concept for them in late 2015. It was based on the
-        following brief:
-    </p>
-    <p>
-        <em>Having full freedom, how would you envision a new chrome extension for
-            <a href="https://zenmate.com">ZenMate</a>?! Imagine how you would display
-            meaningful information and how you can improve the current flow from
-        installation process up to first launch of the product.</em>
-    </p>
-    <h2>Quick view of the final results</h2>
-    <figure class="full">
-        <img srcset="images/final-400.webp 400w,
-                     images/final-600.webp 600w,
-                     images/final-825.webp 825w"
-             sizes="(min-width: 825px) 825px,
-                    100vw"
-             src="images/final-400.webp"
-             alt="Chrome extension with a big blue background and switch in the center. UI to change the country at the bottom"
-             width="33"
-             height="24"
-             class="clamped"
-             style="--width: 825px"
-             loading="eager" />
-        <figcaption>Chrome extension, enabled state</figcaption>
-    </figure>
-    <p>
-        This is the key screen for the extension that I've settled with. It's simplistic and
-        it solves the key task of the extension. “Users browse internet securely, privately
-        and without restrictions.” This is my understanding of the function which defines
-        the form. That's just my understanding, of course. I would've loved to get more
-        input, and have actually prepared the list of questions that I would've asked were
-        it my actual work task.
-    </p>
-    <figure class="full">
-        <img srcset="images/email-400.webp 400w,
-                     images/email-600.webp 600w,
-                     images/email-780.webp 780w"
-             sizes="(min-width: 780px) 780px,
-                    100vw"
-             src="images/email-400.webp"
-             alt="A list of questions clarifying the brief in email exchange"
-             width="39"
-             height="60"
-             class="clamped"
-             style="--width: 780px"
-             loading="lazy" />
-        <figcaption>A list of clarifying questions from email exchange</figcaption>
-    </figure>
-    <p>
-        Every one of those questions could've changed the concept. Having more info, knowing
-        restraints and overlooked advantages helps figuring out design solutions that would
-        work. So, let's start from the beginning then.
-    </p>
-    <h2>The Idea</h2>
-    <figure class="full">
-        <img srcset="images/vepol-400.webp 400w,
-                     images/vepol-530.webp 530w"
-             sizes="(min-width: 530px) 530px,
-                    100vw"
-             src="images/vepol-400.webp"
-             alt="A vepol diagram. Zenmate gives user acces to Internet that is secure and not restricted"
-             width="53"
-             height="33"
-             class="clamped"
-             style="--width: 530px"
-             loading="lazy" />
-        <figcaption>Simple vepol module of key value</figcaption>
-    </figure>
-    <p>
-        Above is a vepol of the core process. ZenMate helps users to browse internet
-        securely, privately and without restrictions. I start with some quick sketching for
-        the layout and user flow.
-    </p>
-    <figure class="full">
-        <img srcset="images/sketches-400.webp 400w,
-                     images/sketches-600.webp 600w,
-                     images/sketches-780.webp 780w"
-             sizes="(min-width: 780px) 780px,
-                    100vw"
-             src="images/sketches-400.webp"
-             alt="Sketches of UI on paper"
-             width="3"
-             height="2"
-             class="clamped"
-             style="--width: 780px"
-             loading="eager" />
-        <figcaption>Quick sketches</figcaption>
-    </figure>
-    <p>
-        There's two drop-offs in the flow tying the extension to the ZenMate services. User
-        gets access to free features right after the install process finishes. There's no
-        requirement for registering — anonimity and security. We won't ask for anything like
-        that before user tries to access the premium features. First we give him some value,
-        then we can get something in return. User feels safe and values the service.
-    </p>
-    <h2>The First Screen</h2>
-    <figure class="full">
-        <img srcset="images/final-400.webp 400w,
-                     images/final-600.webp 600w,
-                     images/final-825.webp 825w"
-             sizes="(min-width: 825px) 825px,
-                    100vw"
-             src="images/final-400.webp"
-             alt="Chrome extension with a big blue background and switch in the center. ui to change the country at the bottom"
-             width="33"
-             height="24"
-             class="clamped"
-             style="--width: 825px"
-             loading="lazy" />
-        <figcaption>Chrome extension, enabled state</figcaption>
-    </figure>
-    <p>
-        Yes, it's the same that you've seen before. Now with a little bit more context. I
-        decide to go with a full color background indicating the state of the connection. It
-        captures the user focus and declares the main purpose of the extension.
-    </p>
-    <p>
-        For its counterpart I shortly consider the option of using deep red — the usual
-        counterpart for blue.
-    </p>
-    <figure class="full">
-        <img srcset="images/disabledAlt-400.webp 400w,
-                     images/disabledAlt-600.webp 600w,
-                     images/disabledAlt-825.webp 825w"
-             sizes="(min-width: 825px) 825px,
-                    100vw"
-             src="images/disabledAlt-400.webp"
-             alt="Chrome extension with a big red background and switch turned off in the center"
-             width="33"
-             height="24"
-             class="clamped"
-             style="--width: 825px"
-             loading="lazy" />
-        <figcaption>Chrome extension, alternative disabled state</figcaption>
-    </figure>
-    <p>
-        Too annoying, bright, would make everyday use of the extension less pleasant for the
-        users that switch ZenMate on and off. Grey serves the same purpose of indicating off
-        state and wouldn't be so irritating.
-    </p>
-    <figure class="full">
-        <img srcset="images/disabled-400.webp 400w,
-                     images/disabled-600.webp 600w,
-                     images/disabled-825.webp 825w"
-             sizes="(min-width: 825px) 825px,
-                    100vw"
-             src="images/disabled-400.webp"
-             alt="Chrome extension with a big gray background and switch turned off in the center"
-             width="33"
-             height="24"
-             class="clamped"
-             style="--width: 825px"
-             loading="lazy" />
-        <figcaption>Chrome extension, actual disabled state</figcaption>
-    </figure>
-    <p>
-        And since the location change doesn't make much sense when ZenMate is off, the
-        colored background will cover it in this state. This state is actually the very
-        first that user would see after installing extension. So turning it on should be
-        something exciting, but not too overdone. A quick and meaningful transition.
-    </p>
-    <figure class="full">
-        <div class="video clamped" style="--width: 405px; --aspect-ratio: 405/540">
-            <video preload="metadata"
-                   autoplay
-                   loop
-                   muted
-                   playsinline
-                   poster="./video/transition.webp">
-                <source src="./video/transition.mp4" type="video/mp4" />
-            </video>
-        </div>
-        <figcaption>Transition animation between active and disabled states</figcaption>
-    </figure>
-    <h2>Location Selection Screen</h2>
-    <figure class="full">
-        <img srcset="images/countryList-400.webp 400w,
-                     images/countryList-600.webp 600w,
-                     images/countryList-825.webp 825w"
-             sizes="(min-width: 825px) 825px,
-                    100vw"
-             src="images/countryList-400.webp"
-             alt="List of available locations for VPN connection"
-             width="33"
-             height="24"
-             class="clamped"
-             style="--width: 825px"
-             loading="lazy" />
-        <figcaption>Location selection screen</figcaption>
-    </figure>
-    <p>
-        After the first few free options we offer some premium ones to the user. If the user
-        is interested we take him to premium subscription landing.
-    </p>
-    <figure class="full">
-        <img srcset="images/premiumOffer-400.webp 400w,
-                     images/premiumOffer-600.webp 600w,
-                     images/premiumOffer-800.webp 800w,
-                     images/premiumOffer-1000.webp 1000w,
-                     images/premiumOffer-1650.webp 1650w"
-             sizes="(min-width: 825px) 825px,
-                    100vw"
-             src="images/premiumOffer-400.webp"
-             alt="Premium service upselling screen"
-             width="33"
-             height="24"
-             class="clamped"
-             style="--width: 825px"
-             loading="lazy" />
-        <figcaption>Premium service upselling screen</figcaption>
-    </figure>
-    <h2>Settings Screen</h2>
-    <figure class="full">
-        <img srcset="images/settings-400.webp 400w,
-                     images/settings-600.webp 600w,
-                     images/settings-825.webp 825w"
-             sizes="(min-width: 825px) 825px,
-                    100vw"
-             src="images/settings-400.webp"
-             alt="Settings screen"
-             width="33"
-             height="24"
-             class="clamped"
-             style="--width: 825px"
-             loading="lazy" />
-        <figcaption>Settings screen</figcaption>
-    </figure>
-    <p>
-        Of course, the first time user actually sees this screen he wouldn't be logged in.
-        And he can have no account at all. And he may wish to have one, though it doesn't
-        really imply any value to him here.
-    </p>
-    <figure class="full">
-        <img srcset="images/loggedOut-400.webp 400w,
-                     images/loggedOut-600.webp 600w,
-                     images/loggedOut-825.webp 825w"
-             sizes="(min-width: 825px) 825px,
-                    100vw"
-             src="images/loggedOut-400.webp"
-             alt="Login screen"
-             width="33"
-             height="24"
-             class="clamped"
-             style="--width: 825px"
-             loading="lazy" />
-        <figcaption>Login screen</figcaption>
-    </figure>
-    <h2>User Flow Scheme</h2>
-    <figure class="full">
-        <img srcset="images/flow-400.webp 400w,
-                     images/flow-600.webp 600w,
-                     images/flow-800.webp 800w,
-                     images/flow-1000.webp 1000w,
-                     images/flow-1600.webp 1600w,
-                     images/flow-2000.webp 2000w,
-                     images/flow-3000.webp 3000w,
-                     images/flow-4945.webp 4945w"
-             sizes="100vw"
-             src="images/flow-400.webp"
-             alt="User flow diagram"
-             width="4945"
-             height="3871"
-             loading="lazy" />
-    </figure>
-    <h2>Final Thoughts</h2>
-    <p>
-        The projects are usually envisioned like a straight line between points A and B. The
-        truth is they are just planned so. This concept exists in a perfect world where it's
-        required to solve only one problem. And even though it is the core problem, there
-        are no doubt a lot of small ones that I didn't uncover.
-    </p>
+<p>
+    It's always interesting to take a look at behind-the-scenes work. Public rarely gets to see
+    those early concepts and sketches, but they form and shape future ideas and solutions, define
+    direction for future work and sometimes contain impactful decisions that make their way to the
+    final product.
+</p>
+<p>
+    Prior to working on a <a href='../zenmate/'>redesign for ZenMate</a> in 2016, I produced this
+    quick 4 hours concept for them in late 2015. It was based on the following brief:
+</p>
+<p>
+    <em
+        >Having full freedom, how would you envision a new chrome extension for
+        <a href='https://zenmate.com'>ZenMate</a>?! Imagine how you would display meaningful
+        information and how you can improve the current flow from installation process up to first
+        launch of the product.</em
+    >
+</p>
+<h2>Quick view of the final results</h2>
+<figure class='full'>
+    <img
+        srcset='
+            images/final-400.webp 400w,
+            images/final-600.webp 600w,
+            images/final-825.webp 825w
+        '
+        sizes='
+            (min-width: 825px) 825px,
+            100vw
+        '
+        src='images/final-400.webp'
+        alt='Chrome extension with a big blue background and switch in the center. UI to change the country at the bottom'
+        width='33'
+        height='24'
+        class='clamped'
+        style='--width: 825px'
+        loading='eager'
+    >
+    <figcaption>Chrome extension, enabled state</figcaption>
+</figure>
+<p>
+    This is the key screen for the extension that I've settled with. It's simplistic and it solves
+    the key task of the extension. “Users browse internet securely, privately and without
+    restrictions.” This is my understanding of the function which defines the form. That's just my
+    understanding, of course. I would've loved to get more input, and have actually prepared the
+    list of questions that I would've asked were it my actual work task.
+</p>
+<figure class='full'>
+    <img
+        srcset='
+            images/email-400.webp 400w,
+            images/email-600.webp 600w,
+            images/email-780.webp 780w
+        '
+        sizes='
+            (min-width: 780px) 780px,
+            100vw
+        '
+        src='images/email-400.webp'
+        alt='A list of questions clarifying the brief in email exchange'
+        width='39'
+        height='60'
+        class='clamped'
+        style='--width: 780px'
+        loading='lazy'
+    >
+    <figcaption>A list of clarifying questions from email exchange</figcaption>
+</figure>
+<p>
+    Every one of those questions could've changed the concept. Having more info, knowing restraints
+    and overlooked advantages helps figuring out design solutions that would work. So, let's start
+    from the beginning then.
+</p>
+<h2>The Idea</h2>
+<figure class='full'>
+    <img
+        srcset='
+            images/vepol-400.webp 400w,
+            images/vepol-530.webp 530w
+        '
+        sizes='
+            (min-width: 530px) 530px,
+            100vw
+        '
+        src='images/vepol-400.webp'
+        alt='A vepol diagram. Zenmate gives user acces to Internet that is secure and not restricted'
+        width='53'
+        height='33'
+        class='clamped'
+        style='--width: 530px'
+        loading='lazy'
+    >
+    <figcaption>Simple vepol module of key value</figcaption>
+</figure>
+<p>
+    Above is a vepol of the core process. ZenMate helps users to browse internet securely, privately
+    and without restrictions. I start with some quick sketching for the layout and user flow.
+</p>
+<figure class='full'>
+    <img
+        srcset='
+            images/sketches-400.webp 400w,
+            images/sketches-600.webp 600w,
+            images/sketches-780.webp 780w
+        '
+        sizes='
+            (min-width: 780px) 780px,
+            100vw
+        '
+        src='images/sketches-400.webp'
+        alt='Sketches of UI on paper'
+        width='3'
+        height='2'
+        class='clamped'
+        style='--width: 780px'
+        loading='eager'
+    >
+    <figcaption>Quick sketches</figcaption>
+</figure>
+<p>
+    There's two drop-offs in the flow tying the extension to the ZenMate services. User gets access
+    to free features right after the install process finishes. There's no requirement for
+    registering — anonimity and security. We won't ask for anything like that before user tries to
+    access the premium features. First we give him some value, then we can get something in return.
+    User feels safe and values the service.
+</p>
+<h2>The First Screen</h2>
+<figure class='full'>
+    <img
+        srcset='
+            images/final-400.webp 400w,
+            images/final-600.webp 600w,
+            images/final-825.webp 825w
+        '
+        sizes='
+            (min-width: 825px) 825px,
+            100vw
+        '
+        src='images/final-400.webp'
+        alt='Chrome extension with a big blue background and switch in the center. ui to change the country at the bottom'
+        width='33'
+        height='24'
+        class='clamped'
+        style='--width: 825px'
+        loading='lazy'
+    >
+    <figcaption>Chrome extension, enabled state</figcaption>
+</figure>
+<p>
+    Yes, it's the same that you've seen before. Now with a little bit more context. I decide to go
+    with a full color background indicating the state of the connection. It captures the user focus
+    and declares the main purpose of the extension.
+</p>
+<p>
+    For its counterpart I shortly consider the option of using deep red — the usual counterpart for
+    blue.
+</p>
+<figure class='full'>
+    <img
+        srcset='
+            images/disabledAlt-400.webp 400w,
+            images/disabledAlt-600.webp 600w,
+            images/disabledAlt-825.webp 825w
+        '
+        sizes='
+            (min-width: 825px) 825px,
+            100vw
+        '
+        src='images/disabledAlt-400.webp'
+        alt='Chrome extension with a big red background and switch turned off in the center'
+        width='33'
+        height='24'
+        class='clamped'
+        style='--width: 825px'
+        loading='lazy'
+    >
+    <figcaption>Chrome extension, alternative disabled state</figcaption>
+</figure>
+<p>
+    Too annoying, bright, would make everyday use of the extension less pleasant for the users that
+    switch ZenMate on and off. Grey serves the same purpose of indicating off state and wouldn't be
+    so irritating.
+</p>
+<figure class='full'>
+    <img
+        srcset='
+            images/disabled-400.webp 400w,
+            images/disabled-600.webp 600w,
+            images/disabled-825.webp 825w
+        '
+        sizes='
+            (min-width: 825px) 825px,
+            100vw
+        '
+        src='images/disabled-400.webp'
+        alt='Chrome extension with a big gray background and switch turned off in the center'
+        width='33'
+        height='24'
+        class='clamped'
+        style='--width: 825px'
+        loading='lazy'
+    >
+    <figcaption>Chrome extension, actual disabled state</figcaption>
+</figure>
+<p>
+    And since the location change doesn't make much sense when ZenMate is off, the colored
+    background will cover it in this state. This state is actually the very first that user would
+    see after installing extension. So turning it on should be something exciting, but not too
+    overdone. A quick and meaningful transition.
+</p>
+<figure class='full'>
+    <div class='video clamped' style='--width: 405px; --aspect-ratio: 405/540'>
+        <video
+            preload='metadata'
+            autoplay
+            loop
+            muted
+            playsinline
+            poster='./video/transition.webp'
+        >
+            <source src='./video/transition.mp4' type='video/mp4'>
+        </video>
+    </div>
+    <figcaption>Transition animation between active and disabled states</figcaption>
+</figure>
+<h2>Location Selection Screen</h2>
+<figure class='full'>
+    <img
+        srcset='
+            images/countryList-400.webp 400w,
+            images/countryList-600.webp 600w,
+            images/countryList-825.webp 825w
+        '
+        sizes='
+            (min-width: 825px) 825px,
+            100vw
+        '
+        src='images/countryList-400.webp'
+        alt='List of available locations for VPN connection'
+        width='33'
+        height='24'
+        class='clamped'
+        style='--width: 825px'
+        loading='lazy'
+    >
+    <figcaption>Location selection screen</figcaption>
+</figure>
+<p>
+    After the first few free options we offer some premium ones to the user. If the user is
+    interested we take him to premium subscription landing.
+</p>
+<figure class='full'>
+    <img
+        srcset='
+            images/premiumOffer-400.webp 400w,
+            images/premiumOffer-600.webp 600w,
+            images/premiumOffer-800.webp 800w,
+            images/premiumOffer-1000.webp 1000w,
+            images/premiumOffer-1650.webp 1650w
+        '
+        sizes='
+            (min-width: 825px) 825px,
+            100vw
+        '
+        src='images/premiumOffer-400.webp'
+        alt='Premium service upselling screen'
+        width='33'
+        height='24'
+        class='clamped'
+        style='--width: 825px'
+        loading='lazy'
+    >
+    <figcaption>Premium service upselling screen</figcaption>
+</figure>
+<h2>Settings Screen</h2>
+<figure class='full'>
+    <img
+        srcset='
+            images/settings-400.webp 400w,
+            images/settings-600.webp 600w,
+            images/settings-825.webp 825w
+        '
+        sizes='
+            (min-width: 825px) 825px,
+            100vw
+        '
+        src='images/settings-400.webp'
+        alt='Settings screen'
+        width='33'
+        height='24'
+        class='clamped'
+        style='--width: 825px'
+        loading='lazy'
+    >
+    <figcaption>Settings screen</figcaption>
+</figure>
+<p>
+    Of course, the first time user actually sees this screen he wouldn't be logged in. And he can
+    have no account at all. And he may wish to have one, though it doesn't really imply any value to
+    him here.
+</p>
+<figure class='full'>
+    <img
+        srcset='
+            images/loggedOut-400.webp 400w,
+            images/loggedOut-600.webp 600w,
+            images/loggedOut-825.webp 825w
+        '
+        sizes='
+            (min-width: 825px) 825px,
+            100vw
+        '
+        src='images/loggedOut-400.webp'
+        alt='Login screen'
+        width='33'
+        height='24'
+        class='clamped'
+        style='--width: 825px'
+        loading='lazy'
+    >
+    <figcaption>Login screen</figcaption>
+</figure>
+<h2>User Flow Scheme</h2>
+<figure class='full'>
+    <img
+        srcset='
+            images/flow-400.webp 400w,
+            images/flow-600.webp 600w,
+            images/flow-800.webp 800w,
+            images/flow-1000.webp 1000w,
+            images/flow-1600.webp 1600w,
+            images/flow-2000.webp 2000w,
+            images/flow-3000.webp 3000w,
+            images/flow-4945.webp 4945w
+        '
+        sizes='100vw'
+        src='images/flow-400.webp'
+        alt='User flow diagram'
+        width='4945'
+        height='3871'
+        loading='lazy'
+    >
+</figure>
+<h2>Final Thoughts</h2>
+<p>
+    The projects are usually envisioned like a straight line between points A and B. The truth is
+    they are just planned so. This concept exists in a perfect world where it's required to solve
+    only one problem. And even though it is the core problem, there are no doubt a lot of small ones
+    that I didn't uncover.
+</p>
 {% endblock %}

@@ -3,183 +3,211 @@
 {% set slug = "wow" %}
 {% set description = "Stories about select addons that I made for World of Warcraft" %}
 {% block colors %}
-    <style type="text/css">
-            :root {
-                --bg: #11110e;
-                --fg: #c2c2ff;
-                --card-bg: #1c1c17;
-                --link: #33bbff;
-                --link-underline: #66ccff;
-                --link-hover: #ff3347;
-                --link-hover-underline: #ff6675;
-            }
-    </style>
+<style type='text/css'>
+    :root {
+        --bg: #11110e;
+        --fg: #c2c2ff;
+        --card-bg: #1c1c17;
+        --link: #33bbff;
+        --link-underline: #66ccff;
+        --link-hover: #ff3347;
+        --link-hover-underline: #ff6675;
+    }
+</style>
 {% endblock %}
 {% block content %}
-    <p>
-        I've spent a fair amount of time playing World of Warcraft in the second half of the
-        first decade of 2000s. It was a game that revolutionized massive multiplayer
-        landscape. And it allowed to customize its UI with scripts written in
-        <a href="https://en.wikipedia.org/wiki/Lua_(programming_language">Lua language</a>.
-    </p>
-    <p>
-        The game exposed a bunch of methods and data in what I would call today an API. Back
-        then it was just something I explored. I wasn't an experienced developer and my
-        knowledge of UX design was more intuitive than practical or even theoretical. It was
-        a fascinating experience: to adjust game's interface to a specific needs of end-game
-        player.
-    </p>
-    <p>
-        I authored a few addons and shared some of them with other players through sites
-        such as
-        <a href="https://www.wowinterface.com/list.php?skinnerid=90053">WoWInterface</a> and
-        Curse Addons. I'd like to show a couple them as the earliest example of user
-        interface work I did.
-    </p>
-    <h2>Wanderlust</h2>
-    <p>
-        An addon for replacing standard WoW minimap. The default option can be quite busy
-        and can be quite hard to “read” at a glance. Wanderlust removed most of the
-        surrounding UI chrome and relied on very subtle indicators for conveying various
-        information to the player.
-    </p>
-    <figure class="full">
-        <img srcset="images/minimapvs-400.webp 400w,
-                     images/minimapvs-600.webp 600w"
-             sizes="(min-width: 600px) 600px,
-                    100vw"
-             src="images/minimapvs-400.webp"
-             alt="Decorated complex default minimap on the left, minimalistic Wanderlust on the right"
-             width="150"
-             height="97"
-             class="clamped"
-             style="--width: 600px"
-             loading="eager" />
-        <figcaption>Default WoW UI on the left, Wanderlust on the right</figcaption>
-    </figure>
-    <p>
-        One of the best examples of Wanderlust's design philosophy was this: whenever there
-        was a pending invitation to join a group the color of the clock would turn green.
-    </p>
-    <figure class="full">
-        <img srcset="images/minimapinvite-400.webp 400w,
-                     images/minimapinvite-600.webp 600w"
-             sizes="(min-width: 600px) 600px,
-                    100vw"
-             src="images/minimapinvite-400.webp"
-             alt="Minimalistic invitation status with changing clock text color"
-             width="150"
-             height="97"
-             class="clamped"
-             style="--width: 600px"
-             loading="lazy" />
-        <figcaption>Default state on the left, invitation pending on the right</figcaption>
-    </figure>
-    <p>
-        Other features of Wanderlust were square shape to show more of the map, text
-        indicators for dungeon difficulty and a bunch of mouse gestures to control zoom, set
-        timer, turning resource tracking on and off etc.
-    </p>
-    <figure class="full">
-        <img srcset="images/wanderlustfeatures-400.webp 400w,
-                     images/wanderlustfeatures-600.webp 600w"
-             sizes="(min-width: 600px) 600px,
-                    100vw"
-             src="images/wanderlustfeatures-400.webp"
-             alt="Overview of different features of Wanderlust"
-             width="150"
-             height="97"
-             class="clamped"
-             style="--width: 600px"
-             loading="lazy" />
-        <figcaption>
-            Dungeon difficulty indicator on the left, searching for party in the middle,
-            herbs tracking mode and new mail on the right
-        </figcaption>
-    </figure>
-    <h2>oUF_ichik</h2>
-    <p>
-        A total customization for unit frames which was written on top of
-        <a href="https://github.com/oUF-wow/oUF/">oUF framework</a>. oUF_ichik replaced all
-        of the default frames of the standard WoW UI: player, target, pet, group, raid group
-        etc.
-    </p>
-    <figure class="full">
-        <img srcset="images/oufichik-400.webp 400w,
-                     images/oufichik-600.webp 600w,
-                     images/oufichik-1000.webp 1000w,
-                     images/oufichik-1680.webp 1680w"
-             sizes="100vw"
-             src="images/oufichik-400.webp"
-             alt="Full raid view of oUF_ichik"
-             width="168"
-             height="105"
-             loading="lazy" />
-        <figcaption>Full raid view of oUF_ichik</figcaption>
-    </figure>
-    <p>
-        Default WoW interface placed player's and target's healthbars in the top-left corner
-        of a screen away from all the action making it quite difficult for me to monitor key
-        indicators in the midst of chaotic virtual battle.
-    </p>
-    <figure class="full">
-        <img srcset="images/defaultUI-400.webp 400w,
-                     images/defaultUI-600.webp 600w,
-                     images/defaultUI-1000.webp 1000w,
-                     images/defaultUI-1680.webp 1680w"
-             sizes="100vw"
-             src="images/defaultUI-400.webp"
-             alt="Default WoW UI, player's and target's healthbars are in the top-left corner"
-             width="168"
-             height="105"
-             loading="lazy" />
-        <figcaption>Default WoW UI</figcaption>
-    </figure>
-    <p>
-        oUF_ichik moved these critical frames closer to the center of the screen. Player's
-        frame was to the left of player's character. Target was directly below.
-    </p>
-    <figure class="full">
-        <img srcset="images/playerandtarget-400.webp 400w,
-                     images/playerandtarget-600.webp 600w,
-                     images/playerandtarget-1000.webp 1000w,
-                     images/playerandtarget-1680.webp 1680w"
-             sizes="100vw"
-             src="images/playerandtarget-400.webp"
-             alt="oUF_ichik: player and target's healthbars are in the center of the screen"
-             width="168"
-             height="105"
-             loading="lazy" />
-        <figcaption>oUF_ichik: player and target's healthbars</figcaption>
-    </figure>
-    <p>
-        Other changes to default UI included things such as more legible text data that was
-        not overlayed across the bars but rather was located underneath, specific highlights
-        to despellable debuffs in raid groups, indication of visibility with
-        semi-transparent mode for targets out of range and separated clearly visible cast
-        bars.
-    </p>
-    <figure class="full">
-        <img src="images/raid-255.webp"
-             alt="Raid frames in a compact square on the left"
-             width="255"
-             height="245"
-             class="clamped"
-             loading="lazy" />
-        <figcaption>Raid frames</figcaption>
-    </figure>
-    <p>
-        One more thing of notice were enlarged buffs and debuffs specific to PVP gameplay
-        that I started enjoying in late 2010. Having a grip on how long either of those was
-        going to last was a key to many victories on arena.
-    </p>
-    <figure class="full">
-        <img src="images/buff-341.webp"
-             alt="Important PVP statuses featured prominently with bigger size on party frames"
-             width="341"
-             height="95"
-             class="clamped"
-             loading="lazy" />
-        <figcaption>Important PVP statuses on party frames</figcaption>
-    </figure>
+<p>
+    I've spent a fair amount of time playing World of Warcraft in the second half of the first
+    decade of 2000s. It was a game that revolutionized massive multiplayer landscape. And it allowed
+    to customize its UI with scripts written in
+    <a href='https://en.wikipedia.org/wiki/Lua_(programming_language'>Lua language</a>.
+</p>
+<p>
+    The game exposed a bunch of methods and data in what I would call today an API. Back then it was
+    just something I explored. I wasn't an experienced developer and my knowledge of UX design was
+    more intuitive than practical or even theoretical. It was a fascinating experience: to adjust
+    game's interface to a specific needs of end-game player.
+</p>
+<p>
+    I authored a few addons and shared some of them with other players through sites such as
+    <a href='https://www.wowinterface.com/list.php?skinnerid=90053'>WoWInterface</a> and Curse
+    Addons. I'd like to show a couple them as the earliest example of user interface work I did.
+</p>
+<h2>Wanderlust</h2>
+<p>
+    An addon for replacing standard WoW minimap. The default option can be quite busy and can be
+    quite hard to “read” at a glance. Wanderlust removed most of the surrounding UI chrome and
+    relied on very subtle indicators for conveying various information to the player.
+</p>
+<figure class='full'>
+    <img
+        srcset='
+            images/minimapvs-400.webp 400w,
+            images/minimapvs-600.webp 600w
+        '
+        sizes='
+            (min-width: 600px) 600px,
+            100vw
+        '
+        src='images/minimapvs-400.webp'
+        alt='Decorated complex default minimap on the left, minimalistic Wanderlust on the right'
+        width='150'
+        height='97'
+        class='clamped'
+        style='--width: 600px'
+        loading='eager'
+    >
+    <figcaption>Default WoW UI on the left, Wanderlust on the right</figcaption>
+</figure>
+<p>
+    One of the best examples of Wanderlust's design philosophy was this: whenever there was a
+    pending invitation to join a group the color of the clock would turn green.
+</p>
+<figure class='full'>
+    <img
+        srcset='
+            images/minimapinvite-400.webp 400w,
+            images/minimapinvite-600.webp 600w
+        '
+        sizes='
+            (min-width: 600px) 600px,
+            100vw
+        '
+        src='images/minimapinvite-400.webp'
+        alt='Minimalistic invitation status with changing clock text color'
+        width='150'
+        height='97'
+        class='clamped'
+        style='--width: 600px'
+        loading='lazy'
+    >
+    <figcaption>Default state on the left, invitation pending on the right</figcaption>
+</figure>
+<p>
+    Other features of Wanderlust were square shape to show more of the map, text indicators for
+    dungeon difficulty and a bunch of mouse gestures to control zoom, set timer, turning resource
+    tracking on and off etc.
+</p>
+<figure class='full'>
+    <img
+        srcset='
+            images/wanderlustfeatures-400.webp 400w,
+            images/wanderlustfeatures-600.webp 600w
+        '
+        sizes='
+            (min-width: 600px) 600px,
+            100vw
+        '
+        src='images/wanderlustfeatures-400.webp'
+        alt='Overview of different features of Wanderlust'
+        width='150'
+        height='97'
+        class='clamped'
+        style='--width: 600px'
+        loading='lazy'
+    >
+    <figcaption>
+        Dungeon difficulty indicator on the left, searching for party in the middle, herbs tracking
+        mode and new mail on the right
+    </figcaption>
+</figure>
+<h2>oUF_ichik</h2>
+<p>
+    A total customization for unit frames which was written on top of
+    <a href='https://github.com/oUF-wow/oUF/'>oUF framework</a>. oUF_ichik replaced all of the
+    default frames of the standard WoW UI: player, target, pet, group, raid group etc.
+</p>
+<figure class='full'>
+    <img
+        srcset='
+            images/oufichik-400.webp 400w,
+            images/oufichik-600.webp 600w,
+            images/oufichik-1000.webp 1000w,
+            images/oufichik-1680.webp 1680w
+        '
+        sizes='100vw'
+        src='images/oufichik-400.webp'
+        alt='Full raid view of oUF_ichik'
+        width='168'
+        height='105'
+        loading='lazy'
+    >
+    <figcaption>Full raid view of oUF_ichik</figcaption>
+</figure>
+<p>
+    Default WoW interface placed player's and target's healthbars in the top-left corner of a screen
+    away from all the action making it quite difficult for me to monitor key indicators in the midst
+    of chaotic virtual battle.
+</p>
+<figure class='full'>
+    <img
+        srcset='
+            images/defaultUI-400.webp 400w,
+            images/defaultUI-600.webp 600w,
+            images/defaultUI-1000.webp 1000w,
+            images/defaultUI-1680.webp 1680w
+        '
+        sizes='100vw'
+        src='images/defaultUI-400.webp'
+        alt="Default WoW UI, player's and target's healthbars are in the top-left corner"
+        width='168'
+        height='105'
+        loading='lazy'
+    >
+    <figcaption>Default WoW UI</figcaption>
+</figure>
+<p>
+    oUF_ichik moved these critical frames closer to the center of the screen. Player's frame was to
+    the left of player's character. Target was directly below.
+</p>
+<figure class='full'>
+    <img
+        srcset='
+            images/playerandtarget-400.webp 400w,
+            images/playerandtarget-600.webp 600w,
+            images/playerandtarget-1000.webp 1000w,
+            images/playerandtarget-1680.webp 1680w
+        '
+        sizes='100vw'
+        src='images/playerandtarget-400.webp'
+        alt="oUF_ichik: player and target's healthbars are in the center of the screen"
+        width='168'
+        height='105'
+        loading='lazy'
+    >
+    <figcaption>oUF_ichik: player and target's healthbars</figcaption>
+</figure>
+<p>
+    Other changes to default UI included things such as more legible text data that was not
+    overlayed across the bars but rather was located underneath, specific highlights to despellable
+    debuffs in raid groups, indication of visibility with semi-transparent mode for targets out of
+    range and separated clearly visible cast bars.
+</p>
+<figure class='full'>
+    <img
+        src='images/raid-255.webp'
+        alt='Raid frames in a compact square on the left'
+        width='255'
+        height='245'
+        class='clamped'
+        loading='lazy'
+    >
+    <figcaption>Raid frames</figcaption>
+</figure>
+<p>
+    One more thing of notice were enlarged buffs and debuffs specific to PVP gameplay that I started
+    enjoying in late 2010. Having a grip on how long either of those was going to last was a key to
+    many victories on arena.
+</p>
+<figure class='full'>
+    <img
+        src='images/buff-341.webp'
+        alt='Important PVP statuses featured prominently with bigger size on party frames'
+        width='341'
+        height='95'
+        class='clamped'
+        loading='lazy'
+    >
+    <figcaption>Important PVP statuses on party frames</figcaption>
+</figure>
 {% endblock %}
