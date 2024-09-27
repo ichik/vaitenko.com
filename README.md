@@ -1,3 +1,3 @@
-In autumn of 2022 I found myself with the burning urge of a new portfolio. The [old one](https://github.com/ichik/ichik.xyz) has been stuck in limbo. Performing a major version upgrade was failing due to some arcane errors. Build times were enormous. Even though I could add a case or more to it and it was serviceable, I simply wanted to burn it all and start from scratch.
+In autumn of 2022 I found myself with the burning urge of a new portfolio. I wanted something much simpler than the [old one](https://github.com/ichik/ichik.xyz) that despite all the niceties of modern tooling turned out to be much of a hassle to maintain than I hoped. I simply wanted to burn it all and start from scratch, and so here it is, a dead simple Gulp script where most of the things were painstakingly crafted by hand.
 
 ![Homepage screenshot](screenshot.jpg)
