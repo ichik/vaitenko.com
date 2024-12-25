@@ -28,7 +28,13 @@
         <meta name='twitter:card' content='summary_large_image'>
         <meta name='author' content='Vadim Vaitenko'>
         <link rel='preload' as='style' type='text/css' href='style/style.css'>
-        <link rel='preload' href='/fonts/petrona.woff2' as='font' type='font/woff2'>
+        <link
+            rel='preload'
+            href='/fonts/petrona.woff2'
+            as='font'
+            type='font/woff2'
+            crossorigin='anonymous'
+        >
         <link rel='stylesheet' href='style/style.css'>
         {% block placeholders %}
         {% endblock %}
@@ -36,8 +42,8 @@
     </head>
     <body>
         <main class='index-grid'>
-            {% block content -%}
-            {%- endblock %}
+            {% block content %}
+            {% endblock %}
         </main>
         {% set home = true %}
         {% include 'partials/footer.njk' %}
