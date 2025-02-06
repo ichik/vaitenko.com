@@ -10,6 +10,7 @@ import htmlmin from 'gulp-htmlmin';
 import cssimport from 'gulp-cssimport';
 import cleanCSS from 'gulp-clean-css';
 import browserSync from 'browser-sync';
+import ts from 'gulp-typescript';
 
 //------------------------------------------------------------------------------
 // Configuration.
@@ -54,6 +55,10 @@ const paths = {
         src: `${dirs.entry}/_headers`,
         dest: `${dirs.output}`,
     },
+    scripts: {
+        src: `${dirs.entry}/pages/appsmith/main.ts`,
+        dest: `${dirs.output}`,
+    },
 };
 
 const pluginConfig = {
@@ -87,6 +92,11 @@ const pluginConfig = {
     browserSync: {
         port: 3000,
         server: { baseDir: `${dirs.output}` },
+    },
+    ts: {
+        noImplicitAny: true,
+        target: 'es6',
+        moduleResolution: 'node',
     },
 };
 
@@ -167,6 +177,16 @@ const prototypes = () =>
         .pipe(plumber(pluginConfig.plumber))
         .pipe(dest(paths.prototypes.dest));
 
+// -----------------------------------------------------------------------------
+// Scripts.
+// -----------------------------------------------------------------------------
+
+const scripts = () =>
+    src(paths.scripts.src, { since: lastRun('scripts') })
+        .pipe(plumber(pluginConfig.plumber))
+        .pipe(ts(pluginConfig.ts))
+        .pipe(dest(paths.prototypes.dest));
+
 //------------------------------------------------------------------------------
 // Clean.
 //------------------------------------------------------------------------------
@@ -213,9 +233,20 @@ task(fonts);
 task(images);
 task(videos);
 task(prototypes);
+task(scripts);
 task(
     'build',
-    parallel('publicAssets', 'headers', 'pages', 'styles', 'fonts', 'images', 'videos', 'prototypes'),
+    parallel(
+        'publicAssets',
+        'headers',
+        'pages',
+        'styles',
+        'fonts',
+        'images',
+        'videos',
+        'prototypes',
+        'scripts',
+    ),
 );
 task('default', series('clean', 'build'));
 
