@@ -30,6 +30,7 @@ h1,
 h2 {
     font-weight: 700;
     line-height: 95%;
+    text-wrap: balance;
 }
 
 h1 {
