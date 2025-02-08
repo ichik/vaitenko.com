@@ -34,6 +34,7 @@ const paths = {
     styles: {
         src: `${dirs.entry}/css/style.css`,
         dest: `${dirs.output}/style`,
+        watch: `${dirs.entry}/css/*`,
     },
     fonts: {
         src: `${dirs.entry}/fonts/**/*`,
@@ -214,7 +215,7 @@ const reload = done => {
 const watchSource = () => {
     watch(paths.public.src, series(publicAssets, reload));
     watch(paths.pages.src, series(pages, reload));
-    watch(paths.styles.src, series(styles, reload));
+    watch(paths.styles.watch, series(styles, reload));
     watch(paths.fonts.src, series(fonts, reload));
     watch(paths.images.src, series(images, reload));
     watch(paths.videos.src, series(videos, reload));
