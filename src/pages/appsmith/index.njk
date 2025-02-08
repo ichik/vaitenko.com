@@ -17,6 +17,23 @@
     .semi {
         color: #ed9436;
     }
+    .case-grid figure.demo {
+        flex-direction: row;
+    }
+    .demo * {
+        font-family: sans-serif;
+    }
+    .demo .slice {
+        max-width: 50%;
+        display: flex;
+        justify-content: center;
+        padding: var(--space-3xl) var(--space-l);
+    }
+    .demo Button {
+        background-color: hotpink;
+        max-width: 16ch;
+        border: none;
+    }
 </style>
 {% endblock %}
 {% block scripts %}
@@ -24,5 +41,14 @@
 <script src='https://colorjs.io/dist/color.global.min.js'></script>
 {% endblock %}
 {% block content %}
+
+<figure class='full demo'>
+    <div class='slice light'>
+        <Button>Do the Thing</Button>
+    </div>
+    <div class='slice dark'>
+        <Button>Do the Thing</Button>
+    </div>
+</figure>
 
 {% endblock %}
