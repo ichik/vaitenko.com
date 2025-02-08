@@ -219,6 +219,7 @@ const watchSource = () => {
     watch(paths.fonts.src, series(fonts, reload));
     watch(paths.images.src, series(images, reload));
     watch(paths.videos.src, series(videos, reload));
+    watch(paths.scripts.src, series(scripts, reload));
 };
 
 //------------------------------------------------------------------------------
