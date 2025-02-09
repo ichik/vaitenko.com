@@ -128,6 +128,7 @@ const pages = () => {
 // -----------------------------------------------------------------------------
 // Styles.
 // -----------------------------------------------------------------------------
+
 const styles = () => {
     return src(paths.styles.src, { since: lastRun('styles') })
         .pipe(plumber(pluginConfig.plumber))
