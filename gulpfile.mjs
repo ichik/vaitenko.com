@@ -10,7 +10,6 @@ import htmlmin from 'gulp-htmlmin';
 import cssimport from 'gulp-cssimport';
 import cleanCSS from 'gulp-clean-css';
 import browserSync from 'browser-sync';
-import ts from 'gulp-typescript';
 
 //------------------------------------------------------------------------------
 // Configuration.
@@ -57,7 +56,7 @@ const paths = {
         dest: `${dirs.output}`,
     },
     scripts: {
-        src: `${dirs.entry}/pages/appsmith/main.ts`,
+        src: `${dirs.entry}/pages/appsmith/main.js`,
         dest: `${dirs.output}`,
     },
 };
@@ -93,11 +92,6 @@ const pluginConfig = {
     browserSync: {
         port: 3000,
         server: { baseDir: `${dirs.output}` },
-    },
-    ts: {
-        noImplicitAny: true,
-        target: 'es6',
-        moduleResolution: 'node',
     },
 };
 
@@ -185,8 +179,7 @@ const prototypes = () =>
 const scripts = () =>
     src(paths.scripts.src, { since: lastRun('scripts') })
         .pipe(plumber(pluginConfig.plumber))
-        .pipe(ts(pluginConfig.ts))
-        .pipe(dest(paths.prototypes.dest));
+        .pipe(dest(paths.scripts.dest));
 
 //------------------------------------------------------------------------------
 // Clean.

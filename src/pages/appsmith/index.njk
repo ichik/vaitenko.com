@@ -37,11 +37,33 @@
 </style>
 {% endblock %}
 {% block scripts %}
-<script src='../main.js'></script>
 <script src='https://colorjs.io/dist/color.global.min.js'></script>
+<script src='../main.js'></script>
+<script>
+    function appendCssRules(tokens) {
+        const root = document.querySelector(':root');
+
+        Object.keys(tokens).forEach(tokenKey => {
+            const token = tokens[tokenKey];
+
+            Object.keys(token).forEach(key => {
+                root.style.setProperty(`--color-${tokenKey}`, token);
+            });
+        });
+    }
+
+    function handleClick() {
+        const inputElement = document.getElementById('myInput');
+        const inputValue = inputElement.value;
+        const theme = new LightModeTheme(inputValue).getColors();
+        appendCssRules(theme);
+    }
+</script>
 {% endblock %}
 {% block content %}
 
+<input type='text' id='myInput'>
+<button onclick='handleClick()'>Apply seed</button>
 <figure class='full demo'>
     <div class='slice light'>
         <Button>Do the Thing</Button>
