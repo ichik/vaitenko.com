@@ -56,7 +56,7 @@ const paths = {
         dest: `${dirs.output}`,
     },
     scripts: {
-        src: `${dirs.entry}/pages/appsmith/main.js`,
+        src: `${dirs.entry}/pages/color/main.js`,
         dest: `${dirs.output}`,
     },
 };
