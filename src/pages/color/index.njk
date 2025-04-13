@@ -7,15 +7,7 @@
     :root {
         --bg: #f2f2f2;
         --fg: #0c2e44;
-    }
-    .key {
-        color: #feaed0;
-    }
-    .value {
-        color: #aaffa9;
-    }
-    .semi {
-        color: #ed9436;
+        --radius-base: 0.25em;
     }
     .case-grid figure.demo {
         flex-direction: row;
@@ -39,12 +31,30 @@
     .slice button {
         max-width: 16ch;
         border: none;
+        border-radius: round(var(--radius-base), 1px);
+        padding: var(--space-3xs);
+    }
+    .slice.light button {
+        background-color: var(--color-light-bgAccent);
+    }
+    .slice.light button:hover {
+        background-color: var(--color-light-bgAccentHover);
+    }
+    .slice.light button:active {
+        background-color: var(--color-light-bgAccentActive);
     }
     .slice.dark button {
         background-color: var(--color-dark-bgAccent);
     }
+    .slice.dark button:hover {
+        background-color: var(--color-dark-bgAccentHover);
+    }
+    .slice.dark button:active {
+        background-color: var(--color-dark-bgAccentActive);
+    }
 </style>
 {% endblock %}
+
 {% block scripts %}
 <script src='https://colorjs.io/dist/color.global.min.js'></script>
 <script src='../main.js'></script>
@@ -63,9 +73,17 @@
         });
     }
 
-    function handleClick() {
-        const inputElement = document.getElementById('myInput');
-        const inputValue = inputElement.value;
+    // Debounce function to delay updates
+    function debounce(func, delay) {
+        let debounceTimer;
+        return function (...args) {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => func(...args), delay);
+        };
+    }
+
+    function handleInput(event) {
+        const inputValue = event.target.value;
         const lightTheme = new LightTheme(inputValue).getColors();
         const darkTheme = new DarkTheme(inputValue).getColors();
         appendCssRules(lightTheme, darkTheme);
@@ -73,19 +91,22 @@
 
     // Run on initial page load
     window.addEventListener('DOMContentLoaded', () => {
-        const defaultValue = '#000000';
+        const defaultValue = '#0080ff';
         const inputElement = document.getElementById('myInput');
         inputElement.value = defaultValue;
 
         const lightTheme = new LightTheme(defaultValue).getColors();
         const darkTheme = new DarkTheme(defaultValue).getColors();
         appendCssRules(lightTheme, darkTheme);
+
+        // Add input event listener with debounce
+        inputElement.addEventListener('input', debounce(handleInput, 300));
     });
 </script>
 {% endblock %}
+
 {% block content %}
 <input type='text' id='myInput'>
-<button onclick='handleClick()'>Apply seed</button>
 <figure class='full demo'>
     <div class='slice light'>
         <button>Do the Thing</button>
