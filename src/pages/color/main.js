@@ -248,7 +248,7 @@
 
                 // “Slightly lighter” is very dependent on the initial amount of lightness as well as how light (or dark) the surroundings are.
                 if (this.seedLightness < 0.06) {
-                    color.oklch.l += 0.28;
+                    color.oklch.l += 0.08;
                 }
 
                 if (this.seedLightness > 0.06 && this.seedLightness < 0.14) {
@@ -291,11 +291,11 @@
                 }
 
                 if (this.seedLightness >= 0.4 && this.seedLightness < 0.7) {
-                    color.oklch.l -= 0.02;
+                    color.oklch.l -= 0.08;
                 }
 
                 if (this.seedLightness >= 0.7) {
-                    color.oklch.l -= 0.01;
+                    color.oklch.l -= 0.12;
                 }
 
                 return color;
