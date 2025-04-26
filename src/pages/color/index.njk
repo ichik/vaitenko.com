@@ -1,5 +1,5 @@
 {% extends "case.njk" %}
-{% set title = "Algorithmic Palettes" %}
+{% set title = "" %}
 {% set slug = "appsmith" %}
 {% set description = "Magically accessible and harmonious color palettes for UI made from a single* input" %}
 {% block colors %}
@@ -8,6 +8,7 @@
         --bg: #f2f2f2;
         --fg: #0c2e44;
         --radius-base: 0.25em;
+        --time-update: 1s;
     }
     .case-grid figure.demo {
         flex-direction: row;
@@ -18,8 +19,11 @@
     .demo .slice {
         max-width: 50%;
         display: flex;
+        flex-direction: column;
+        gap: var(--space-2xs);
         justify-content: center;
         padding: var(--space-3xl) var(--space-l);
+        transition: background-color var(--time-update) ease-in-out;
     }
     .slice.light {
         background-color: var(--color-light-bg);
@@ -33,9 +37,13 @@
         border: none;
         border-radius: round(var(--radius-base), 1px);
         padding: var(--space-3xs);
+        transition: all var(--time-update) ease-in-out;
+        font-weight: 500;
+        letter-spacing: -0.02em;
     }
     .slice.light button {
         background-color: var(--color-light-bgAccent);
+        color: var(--color-light-fgOnAccent);
     }
     .slice.light button:hover {
         background-color: var(--color-light-bgAccentHover);
@@ -45,12 +53,37 @@
     }
     .slice.dark button {
         background-color: var(--color-dark-bgAccent);
+        color: var(--color-dark-fgOnAccent);
     }
     .slice.dark button:hover {
         background-color: var(--color-dark-bgAccentHover);
     }
     .slice.dark button:active {
         background-color: var(--color-dark-bgAccentActive);
+    }
+
+    .slice input {
+        max-width: 30ch;
+        border: none;
+        border-radius: round(var(--radius-base), 1px);
+        padding: var(--space-3xs);
+        transition: all var(--time-update) ease-in-out;
+        font-weight: 400;
+    }
+    .slice input::placeholder {
+        font-weight: 400;
+    }
+    .slice.light input {
+        background-color: var(--color-light-bgNeutralSubtle);
+    }
+    .slice.light input::placeholder {
+        color: var(--color-light-fgNeutralSubtle);
+    }
+    .slice.dark input {
+        background-color: var(--color-dark-bgNeutralSubtle);
+    }
+    .slice.dark input::placeholder {
+        color: var(--color-dark-fgNeutralSubtle);
     }
 </style>
 {% endblock %}
@@ -59,6 +92,8 @@
 <script src='https://colorjs.io/dist/color.global.min.js'></script>
 <script src='../main.js'></script>
 <script>
+    let intervalId;
+
     function appendCssRules(lightTheme, darkTheme) {
         const root = document.querySelector(':root');
 
@@ -73,7 +108,6 @@
         });
     }
 
-    // Debounce function to delay updates
     function debounce(func, delay) {
         let debounceTimer;
         return function (...args) {
@@ -108,7 +142,18 @@
         appendCssRules(lightTheme, darkTheme);
     }
 
-    // Run on initial page load
+    function checkFocusAndSetInterval() {
+        const inputElement = document.getElementById('myInput');
+        if (document.activeElement === inputElement) {
+            if (!intervalId) {
+                intervalId = setInterval(updateDefaultValue, 4000);
+            }
+        } else {
+            clearInterval(intervalId);
+            intervalId = null;
+        }
+    }
+
     window.addEventListener('DOMContentLoaded', () => {
         const defaultValue = '#0080ff';
         const inputElement = document.getElementById('myInput');
@@ -118,20 +163,23 @@
         const darkTheme = new DarkTheme(defaultValue).getColors();
         appendCssRules(lightTheme, darkTheme);
 
-        // Add input event listener with debounce
         inputElement.addEventListener('input', debounce(handleInput, 300));
-        setInterval(updateDefaultValue, 10000);
+        inputElement.addEventListener('focus', checkFocusAndSetInterval);
+        inputElement.addEventListener('blur', checkFocusAndSetInterval);
     });
 </script>
 {% endblock %}
 
 {% block content %}
+<h1><strong>New</strong> Interface Colors</h1>
 <input type='text' id='myInput'>
 <figure class='full demo'>
     <div class='slice light'>
+        <input type='text' placeholder="User's input">
         <button>Do the Thing</button>
     </div>
     <div class='slice dark'>
+        <input type='text' placeholder="User's input">
         <button>Do the Thing</button>
     </div>
 </figure>
