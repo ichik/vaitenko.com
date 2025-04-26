@@ -168,6 +168,138 @@
             },
         });
 
+        Object.defineProperty(this, 'bgAccentSubtle', {
+            get: function () {
+                // Subtle variant of bgAccent. Lighter and less saturated.
+                const color = this.seedColor.clone();
+
+                if (this.seedIsVeryLight) {
+                    color.oklch.l = 0.935;
+                }
+
+                if (!this.seedIsVeryLight) {
+                    color.oklch.l = 0.91;
+                }
+
+                // Colder seeds require a bit more chroma to not seem completely washed out
+                if (this.seedChroma > 0.09 && this.seedIsCold) {
+                    color.oklch.c = 0.09;
+                }
+
+                if (this.seedChroma > 0.06 && !this.seedIsCold) {
+                    color.oklch.c = 0.06;
+                }
+
+                if (this.seedIsAchromatic) {
+                    color.oklch.c = 0;
+                }
+
+                return color;
+            },
+        });
+
+        Object.defineProperty(this, 'bgNeutralSubtle', {
+            get: function () {
+                const color = this.bgAccentSubtle.clone();
+
+                // Adjusted version of bgAccentSubtle (less or no chroma), slightly higher lightness since neutrals are perceived heavier than saturated colors
+                if (this.seedIsVeryLight) {
+                    color.oklch.l = 0.89;
+                }
+
+                if (!this.seedIsVeryLight) {
+                    color.oklch.l = 0.92;
+                }
+
+                if (this.seedChroma > 0.002) {
+                    color.oklch.c = 0.002;
+                }
+
+                return color;
+            },
+        });
+
+        Object.defineProperty(this, 'fg', {
+            get: function () {
+                // Main application foreground color.
+                // Applies to static text and similar. In dark mode it is light (and therefore desatured) tint of user-set seed color.
+                // This ensures harmonious combination with main accents and neutrals.
+                const color = this.seedColor.clone();
+
+                color.oklch.l = 0.91;
+
+                // If seed color didn't have substantial amount of chroma make sure fg is achromatic.
+                if (this.seedIsAchromatic) {
+                    color.oklch.c = 0;
+                }
+
+                if (!this.seedIsAchromatic) {
+                    color.oklch.c = 0.065;
+                }
+
+                return color;
+            },
+        });
+
+        Object.defineProperty(this, 'fgNeutral', {
+            get: function () {
+                // Neutral foreground. Slightly less prominent than main fg
+                const color = this.fg.clone();
+
+                color.oklch.l -= 0.05;
+                color.oklch.c -= 0.04;
+
+                if (color.oklch.c < 0) {
+                    color.oklch.c = 0;
+                }
+
+                return color;
+            },
+        });
+
+        Object.defineProperty(this, 'fgNeutralSubtle', {
+            get: function () {
+                const color = this.fgNeutral.clone();
+
+                color.oklch.l -= 0.2;
+
+                return color;
+            },
+        });
+
+        Object.defineProperty(this, 'fgOnAccent', {
+            get: function () {
+                // Foreground for content on top of bgAccent
+                const tint = this.seedColor.clone();
+                const shade = this.seedColor.clone();
+
+                if (this.seedIsAchromatic) {
+                    tint.oklch.c = 0;
+                    shade.oklch.c = 0;
+                }
+
+                // Light and dark derivatives of the seed
+                tint.oklch.l = 0.96;
+                shade.oklch.l = 0.23;
+
+                // Chroma limits for tint and shade
+                if (tint.oklch.c >= 0.015) {
+                    tint.oklch.c = 0.015;
+                }
+
+                if (shade.oklch.c >= 0.03) {
+                    shade.oklch.c = 0.03;
+                }
+
+                // Check which of them has better contrast with bgAccent
+                if (-this.bgAccent.contrastAPCA(tint) >= this.bgAccent.contrastAPCA(shade)) {
+                    return tint;
+                }
+
+                return shade;
+            },
+        });
+
         // Method to get all colors
         this.getColors = function () {
             return {
@@ -175,6 +307,12 @@
                 bgAccent: this.bgAccent.to('sRGB').toString(),
                 bgAccentHover: this.bgAccentHover.to('sRGB').toString(),
                 bgAccentActive: this.bgAccentActive.to('sRGB').toString(),
+                bgAccentSubtle: this.bgAccentSubtle.to('sRGB').toString(),
+                bgNeutralSubtle: this.bgNeutralSubtle.to('sRGB').toString(),
+                fg: this.fg.to('sRGB').toString(),
+                fgNeutral: this.fgNeutral.to('sRGB').toString(),
+                fgNeutralSubtle: this.fgNeutralSubtle.to('sRGB').toString(),
+                fgOnAccent: this.fgOnAccent.to('sRGB').toString(),
             };
         };
     }
@@ -302,6 +440,139 @@
             },
         });
 
+        Object.defineProperty(this, 'bgAccentSubtle', {
+            get: function () {
+                // Subtle variant of bgAccent. Darker and less saturated.
+                const color = this.seedColor.clone();
+
+                if (this.seedLightness > 0.22) {
+                    color.oklch.l = 0.22;
+                }
+
+                // If the color is too dark it won't be visible against bg.
+                if (this.seedLightness < 0.2) {
+                    color.oklch.l = 0.2;
+                }
+
+                if (this.seedChroma > 0.1) {
+                    color.oklch.c = 0.1;
+                }
+
+                if (this.seedIsAchromatic) {
+                    color.oklch.c = 0;
+                }
+
+                return color;
+            },
+        });
+
+        Object.defineProperty(this, 'bgNeutralSubtle', {
+            get: function () {
+                const color = this.bgAccentSubtle.clone();
+
+                // Adjusted version of bgAccentSubtle (less or no chroma)
+                if (this.seedLightness > 0.26) {
+                    color.oklch.l = 0.26;
+                }
+
+                // If the color is too dark it won't be visible against bg.
+                if (this.seedLightness < 0.22) {
+                    color.oklch.l = 0.22;
+                }
+
+                if (this.seedChroma > 0.025) {
+                    color.oklch.c = 0.025;
+                }
+
+                if (this.seedIsAchromatic) {
+                    color.oklch.c = 0;
+                }
+
+                return color;
+            },
+        });
+
+        Object.defineProperty(this, 'fg', {
+            get: function () {
+                // Main application foreground color.
+                // Applies to static text and similar. In light mode it is dark shade of user-set seed color.
+                // This ensures harmonious combination with main accents and neutrals.
+                const color = this.seedColor.clone();
+
+                color.oklch.l = 0.37;
+
+                // If seed color didn't have substantial amount of chroma make sure fg is achromatic.
+                if (this.seedIsAchromatic) {
+                    color.oklch.c = 0;
+                }
+
+                if (!this.seedIsAchromatic) {
+                    color.oklch.c = 0.039;
+                }
+
+                return color;
+            },
+        });
+
+        Object.defineProperty(this, 'fgNeutral', {
+            get: function () {
+                // Neutral foreground. Slightly less prominent than main fg
+                const color = this.fg.clone();
+
+                color.oklch.l += 0.05;
+                color.oklch.c -= 0.02;
+
+                if (color.oklch.c < 0) {
+                    color.oklch.c = 0;
+                }
+
+                return color;
+            },
+        });
+
+        Object.defineProperty(this, 'fgNeutralSubtle', {
+            get: function () {
+                const color = this.fgNeutral.clone();
+
+                color.oklch.l += 0.12;
+
+                return color;
+            },
+        });
+
+        Object.defineProperty(this, 'fgOnAccent', {
+            get: function () {
+                // Foreground for content on top of bgAccent
+                const tint = this.seedColor.clone();
+                const shade = this.seedColor.clone();
+
+                if (this.seedIsAchromatic) {
+                    tint.oklch.c = 0;
+                    shade.oklch.c = 0;
+                }
+
+                // Light and dark derivatives of the seed
+                tint.oklch.l = 0.96;
+                shade.oklch.l = 0.23;
+
+                // Chroma limits for tint and shade
+                if (tint.oklch.c >= 0.015) {
+                    tint.oklch.c = 0.015;
+                }
+
+                if (shade.oklch.c >= 0.03) {
+                    shade.oklch.c = 0.03;
+                }
+
+                // Check which of them has better contrast with bgAccent
+                if (-this.bgAccent.contrastAPCA(tint) >= this.bgAccent.contrastAPCA(shade)) {
+                    return tint;
+                }
+
+                return shade;
+            },
+        });
+
         // Method to get all colors
         this.getColors = function () {
             return {
@@ -309,6 +580,12 @@
                 bgAccent: this.bgAccent.to('sRGB').toString(),
                 bgAccentHover: this.bgAccentHover.to('sRGB').toString(),
                 bgAccentActive: this.bgAccentActive.to('sRGB').toString(),
+                bgAccentSubtle: this.bgAccentSubtle.to('sRGB').toString(),
+                bgNeutralSubtle: this.bgNeutralSubtle.to('sRGB').toString(),
+                fg: this.fg.to('sRGB').toString(),
+                fgNeutral: this.fgNeutral.to('sRGB').toString(),
+                fgNeutralSubtle: this.fgNeutralSubtle.to('sRGB').toString(),
+                fgOnAccent: this.fgOnAccent.to('sRGB').toString(),
             };
         };
     }
